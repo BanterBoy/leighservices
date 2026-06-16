@@ -27,11 +27,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install Dart Sass
-        run: |
-          curl -fsSL https://github.com/sass/dart-sass/releases/latest/download/dart-sass-linux-x64.tar.gz \
-            | tar -xz -C /usr/local/bin --strip-components=1 dart-sass/sass
-          sass --version
+      - name: Install Sass
+        run: npm install -g sass
 
       - name: Compile SCSS
         run: sass assets/sass/main.scss assets/css/main.css --style=compressed --no-source-map
