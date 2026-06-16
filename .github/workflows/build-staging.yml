@@ -1,0 +1,69 @@
+name: Build & Deploy — Staging
+
+on:
+  push:
+    branches:
+      - staging
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+  pull-requests: write
+
+concurrency:
+  group: staging-deploy
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    name: Build & Deploy to Staging
+    runs-on: ubuntu-latest
+    environment:
+      name: staging
+      url: ${{ steps.deploy.outputs.page_url }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Dart Sass
+        run: |
+          curl -fsSL https://github.com/sass/dart-sass/releases/latest/download/dart-sass-linux-x64.tar.gz \
+            | tar -xz -C /usr/local/bin --strip-components=1 dart-sass/sass
+          sass --version
+
+      - name: Compile SCSS
+        run: sass assets/sass/main.scss assets/css/main.css --style=compressed --no-source-map
+
+      - name: Setup GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: Deploy to GitHub Pages (staging)
+        id: deploy
+        uses: actions/deploy-pages@v4
+
+      - name: Comment preview URL on open PRs
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const url = '${{ steps.deploy.outputs.page_url }}';
+            const prs = await github.rest.pulls.list({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              base: 'staging'
+            });
+            for (const pr of prs.data) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: pr.number,
+                body: `🚀 **Staging preview deployed**: ${url}`
+              });
+            }

@@ -1,0 +1,42 @@
+name: PR Checks
+
+on:
+  pull_request:
+    branches:
+      - staging
+      - master
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  scss-check:
+    name: SCSS Compile Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Dart Sass
+        run: |
+          curl -fsSL https://github.com/sass/dart-sass/releases/latest/download/dart-sass-linux-x64.tar.gz \
+            | tar -xz -C /usr/local/bin --strip-components=1 dart-sass/sass
+          sass --version
+
+      - name: Compile SCSS
+        run: sass assets/sass/main.scss /tmp/main-check.css --style=compressed --no-source-map
+
+  html-check:
+    name: HTML Lint Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install html-validator-cli
+        run: npm install -g html-validate
+
+      - name: Validate HTML pages
+        run: |
+          html-validate index.html generic.html || true
