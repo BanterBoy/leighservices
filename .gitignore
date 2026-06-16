@@ -1,0 +1,22 @@
+# OS artefacts
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor artefacts
+*.code-search
+*.swp
+*.swo
+*~
+
+# VS Code — keep settings.json but exclude sensitive/generated files
+.vscode/launch.json
+.vscode/*.log
+
+# Node (in case npm is ever used locally)
+node_modules/
+npm-debug.log*
+
+# Sass cache
+.sass-cache/
+*.css.map

@@ -1,23 +1,105 @@
 <!DOCTYPE HTML>
-<!--
-	Industrious by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
 <html>
 	<head>
-		<title>Industrious by TEMPLATED</title>
+		<title>Leigh Services | IT Infrastructure &amp; Data Engineering</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
+		<meta name="description" content="Leigh Services — Expert IT Infrastructure, PowerShell Automation, Data Engineering and Security &amp; Compliance consulting based in Essex, UK." />
+		<meta name="keywords" content="IT infrastructure, PowerShell automation, data engineering, cloud, security, compliance, PCI DSS, Essex, UK" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			/* Team cards */
+			.team-grid {
+				display: -ms-flexbox;
+				display: flex;
+				-ms-flex-wrap: wrap;
+				flex-wrap: wrap;
+				gap: 2em;
+				-ms-flex-pack: center;
+				justify-content: center;
+				margin-top: 2em;
+			}
+			.team-card {
+				background: #f6f6f6;
+				border: 1px solid #e4e4e4;
+				border-radius: 4px;
+				padding: 2.5em 2em;
+				-ms-flex: 1 1 400px;
+				flex: 1 1 400px;
+				max-width: 520px;
+			}
+			.team-card h3 {
+				margin: 0 0 0.2em 0;
+				font-size: 1.4em;
+			}
+			.team-card .tc-role {
+				color: #ce1b28;
+				font-size: 0.8em;
+				font-weight: 700;
+				text-transform: uppercase;
+				letter-spacing: 0.12em;
+				margin: 0 0 1em 0;
+			}
+			.team-card p {
+				font-size: 0.95em;
+				line-height: 1.7;
+				color: #555;
+			}
+			.team-card .tc-skills {
+				display: -ms-flexbox;
+				display: flex;
+				-ms-flex-wrap: wrap;
+				flex-wrap: wrap;
+				gap: 0.4em;
+				margin-top: 1.2em;
+			}
+			.team-card .tc-skill {
+				background: #111;
+				color: #fff;
+				font-size: 0.72em;
+				font-weight: 600;
+				letter-spacing: 0.05em;
+				padding: 0.3em 0.8em;
+				border-radius: 2px;
+			}
+			.team-card .tc-links {
+				margin-top: 1.4em;
+			}
+			.team-card .tc-links a {
+				color: #ce1b28;
+				font-size: 0.88em;
+				margin-right: 1em;
+				text-decoration: none;
+				font-weight: 600;
+			}
+			.team-card .tc-links a:hover {
+				text-decoration: underline;
+			}
+			/* Photo wrapper — 4:3 aspect ratio, image centred */
+			.tc-photo {
+				position: relative;
+				width: 100%;
+				padding-top: 75%; /* 4:3 */
+				border-radius: 4px;
+				overflow: hidden;
+				margin-bottom: 1.4em;
+			}
+			.tc-photo img {
+				position: absolute;
+				top: 0; left: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: center top;
+				display: block;
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
 		<!-- Header -->
 			<header id="header">
-				<a class="logo" href="index.html">Industrious</a>
+				<a class="logo" href="index.html">Leigh Services</a>
 				<nav>
 					<a href="#menu">Menu</a>
 				</nav>
@@ -27,81 +109,81 @@
 			<nav id="menu">
 				<ul class="links">
 					<li><a href="index.html">Home</a></li>
-					<li><a href="elements.html">Elements</a></li>
-					<li><a href="generic.html">Generic</a></li>
+					<li><a href="generic.html">Meet the Team</a></li>
 				</ul>
 			</nav>
 
 		<!-- Banner -->
 			<section id="banner">
 				<div class="inner">
-					<h1>Industrious</h1>
-					<p>A responsive business oriented template with a video background<br />
-					designed by <a href="https://templated.co/">TEMPLATED</a> and released under the Creative Commons License.</p>
+					<h1>Leigh Services</h1>
+					<p>Expert IT Infrastructure, PowerShell Automation,<br />
+					Data Engineering &amp; Security Consulting.</p>
+					<a href="generic.html" class="button primary fit small">Meet the Team</a>
 				</div>
 				<video autoplay loop muted playsinline src="images/banner.mp4"></video>
 			</section>
 
-		<!-- Highlights -->
+		<!-- Services Highlights -->
 			<section class="wrapper">
 				<div class="inner">
 					<header class="special">
-						<h2>Sem turpis amet semper</h2>
-						<p>In arcu accumsan arcu adipiscing accumsan orci ac. Felis id enim aliquet. Accumsan ac integer lobortis commodo ornare aliquet accumsan erat tempus amet porttitor.</p>
+						<h2>What We Do</h2>
+						<p>Leigh Services brings together deep expertise across infrastructure engineering, automation, data platforms and security compliance — delivering reliable, well-engineered solutions for organisations of all sizes.</p>
 					</header>
 					<div class="highlights">
 						<section>
 							<div class="content">
 								<header>
-									<a href="#" class="icon fa-vcard-o"><span class="label">Icon</span></a>
-									<h3>Feugiat consequat</h3>
+									<a href="#" class="icon fa-server"><span class="label">IT Infrastructure</span></a>
+									<h3>IT Infrastructure</h3>
 								</header>
-								<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+								<p>End-to-end infrastructure design, implementation and support. From server management and virtualisation to Microsoft 365 and Azure deployments — we keep your systems running reliably and securely.</p>
 							</div>
 						</section>
 						<section>
 							<div class="content">
 								<header>
-									<a href="#" class="icon fa-files-o"><span class="label">Icon</span></a>
-									<h3>Ante sem integer</h3>
+									<a href="#" class="icon fa-cogs"><span class="label">PowerShell &amp; Automation</span></a>
+									<h3>PowerShell &amp; Automation</h3>
 								</header>
-								<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+								<p>Specialist PowerShell development for infrastructure automation, toolmaking and DevOps workflows. From custom modules to scheduled jobs, we remove manual effort and enforce consistency at scale.</p>
 							</div>
 						</section>
 						<section>
 							<div class="content">
 								<header>
-									<a href="#" class="icon fa-floppy-o"><span class="label">Icon</span></a>
-									<h3>Ipsum consequat</h3>
+									<a href="#" class="icon fa-cloud"><span class="label">Cloud Solutions</span></a>
+									<h3>Cloud Solutions</h3>
 								</header>
-								<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+								<p>Cloud architecture and migration across Microsoft Azure and Google Cloud Platform. Licensing, identity, storage, networking and SaaS integration — designed for security and cost-efficiency.</p>
 							</div>
 						</section>
 						<section>
 							<div class="content">
 								<header>
-									<a href="#" class="icon fa-line-chart"><span class="label">Icon</span></a>
-									<h3>Interdum gravida</h3>
+									<a href="#" class="icon fa-database"><span class="label">Data Engineering</span></a>
+									<h3>Data Engineering</h3>
 								</header>
-								<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+								<p>Building and stabilising data pipelines and improving integrity and reliability. From legacy SAS migrations to modern cloud data lakes, we make your data accurate, complete and trustworthy.</p>
 							</div>
 						</section>
 						<section>
 							<div class="content">
 								<header>
-									<a href="#" class="icon fa-paper-plane-o"><span class="label">Icon</span></a>
-									<h3>Faucibus consequat</h3>
+									<a href="#" class="icon fa-shield"><span class="label">Security &amp; Compliance</span></a>
+									<h3>Security &amp; Compliance</h3>
 								</header>
-								<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+								<p>PCI DSS compliance, security hardening, Active Directory governance and audit-ready frameworks. Practical security delivered by engineers who have achieved compliance on real-world complex infrastructures.</p>
 							</div>
 						</section>
 						<section>
 							<div class="content">
 								<header>
-									<a href="#" class="icon fa-qrcode"><span class="label">Icon</span></a>
-									<h3>Accumsan viverra</h3>
+									<a href="#" class="icon fa-lock"><span class="label">DevSecOps</span></a>
+									<h3>DevSecOps</h3>
 								</header>
-								<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+								<p>Integrating security into platforms from the ground up. Pipeline hardening, vulnerability management, SIEM analysis and risk reduction built into your development and operational processes.</p>
 							</div>
 						</section>
 					</div>
@@ -111,58 +193,70 @@
 		<!-- CTA -->
 			<section id="cta" class="wrapper">
 				<div class="inner">
-					<h2>Curabitur ullamcorper ultricies</h2>
-					<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing. Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing sed feugiat eu faucibus. Integer ac sed amet praesent. Nunc lacinia ante nunc ac gravida.</p>
+					<h2>Ready to work together?</h2>
+					<p>Whether you need infrastructure support, automation tooling, data platform engineering or compliance guidance — we bring the expertise to get the job done. Get in touch and let's talk about what we can do for you.</p>
+					<a href="generic.html" class="button fit small">Get in Touch</a>
 				</div>
 			</section>
 
-		<!-- Testimonials -->
+		<!-- Meet the Owners -->
 			<section class="wrapper">
 				<div class="inner">
 					<header class="special">
-						<h2>Faucibus consequat lorem</h2>
-						<p>In arcu accumsan arcu adipiscing accumsan orci ac. Felis id enim aliquet. Accumsan ac integer lobortis commodo ornare aliquet accumsan erat tempus amet porttitor.</p>
+						<h2>Meet the Owners</h2>
+						<p>Leigh Services is built on the combined experience of two seasoned engineers — Luke Leigh and Mark Leigh — with over 50 years of industry expertise between them.</p>
 					</header>
-					<div class="testimonials">
-						<section>
-							<div class="content">
-								<blockquote>
-									<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
-								</blockquote>
-								<div class="author">
-									<div class="image">
-										<img src="images/pic01.jpg" alt="" />
-									</div>
-									<p class="credit">- <strong>Jane Doe</strong> <span>CEO - ABC Inc.</span></p>
-								</div>
+					<div class="team-grid">
+
+						<div class="team-card">
+							<div class="tc-photo">
+								<img src="images/lukeleigh.jpg" alt="Luke Leigh" />
 							</div>
-						</section>
-						<section>
-							<div class="content">
-								<blockquote>
-									<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
-								</blockquote>
-								<div class="author">
-									<div class="image">
-										<img src="images/pic03.jpg" alt="" />
-									</div>
-									<p class="credit">- <strong>John Doe</strong> <span>CEO - ABC Inc.</span></p>
-								</div>
+							<h3>Luke Leigh</h3>
+							<p class="tc-role">Infrastructure Engineer &amp; Owner</p>
+							<p>A dependable and analytical Infrastructure Engineer with deep expertise in IT infrastructure, PowerShell development and automation. Currently serving as Infrastructure Engineer at Rail Delivery Group, Luke's primary focus is on-premises to Microsoft 365 migrations, system management and PowerShell automation — delivering reliable, well-engineered solutions across a wide range of industries over 25+ years.</p>
+							<div class="tc-skills">
+								<span class="tc-skill">PowerShell</span>
+								<span class="tc-skill">Automation</span>
+								<span class="tc-skill">Incident Management</span>
+								<span class="tc-skill">Azure / M365</span>
+								<span class="tc-skill">VMware</span>
+								<span class="tc-skill">On-prem / O365 Migration</span>
+								<span class="tc-skill">PCI DSS</span>
+								<span class="tc-skill">Exchange Online</span>
 							</div>
-						</section>
-						<section>
-							<div class="content">
-								<blockquote>
-									<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
-								</blockquote>
-								<div class="author">
-									<div class="image">
-										<img src="images/pic02.jpg" alt="" />
-									</div>
-									<p class="credit">- <strong>Janet Smith</strong> <span>CEO - ABC Inc.</span></p>
-								</div>
+							<div class="tc-links">
+								<a href="https://www.linkedin.com/in/lukeleigh" target="_blank" rel="noopener noreferrer"><i class="icon fa-linkedin">&nbsp;</i>LinkedIn</a>
+								<a href="https://github.com/BanterBoy" target="_blank" rel="noopener noreferrer"><i class="icon fa-github">&nbsp;</i>GitHub</a>
+								<a href="https://blog.lukeleigh.com" target="_blank" rel="noopener noreferrer"><i class="icon fa-rss">&nbsp;</i>Blog</a>
 							</div>
-						</section>
+						</div>
+
+						<div class="team-card">
+							<div class="tc-photo">
+								<img src="images/markleigh.jpg" alt="Mark Leigh" />
+							</div>
+							<h3>Mark Leigh</h3>
+							<p class="tc-role">Senior Data Engineer &amp; Security Specialist</p>
+							<p>A senior data engineer focused on improving the integrity, reliability and security of data platforms. CompTIA Security+ certified with CREST CPSA ongoing, Mark brings a DevSecOps mindset to data engineering — building platforms with security, control and risk management considered from the outset. His work at Swarovski led a legacy SAS-to-GCP migration delivering &euro;1m in annual cost savings. He has also delivered regulatory reporting solutions in complex banking environments including Lloyds Banking Group.</p>
+							<div class="tc-skills">
+								<span class="tc-skill">Data Engineering</span>
+								<span class="tc-skill">DevSecOps</span>
+								<span class="tc-skill">Python</span>
+								<span class="tc-skill">SQL</span>
+								<span class="tc-skill">SAS</span>
+								<span class="tc-skill">Google Cloud (GCP)</span>
+								<span class="tc-skill">CompTIA Security+</span>
+								<span class="tc-skill">CREST CPSA</span>
+							</div>
+							<div class="tc-links">
+								<a href="https://www.linkedin.com/in/markleigh" target="_blank" rel="noopener noreferrer"><i class="icon fa-linkedin">&nbsp;</i>LinkedIn</a>
+							</div>
+						</div>
+
+					</div>
+					<div style="text-align:center; margin-top:2.5em;">
+						<a href="generic.html" class="button">Full Team Profiles</a>
 					</div>
 				</div>
 			</section>
@@ -172,30 +266,33 @@
 				<div class="inner">
 					<div class="content">
 						<section>
-							<h3>Accumsan montes viverra</h3>
-							<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing. Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing sed feugiat eu faucibus. Integer ac sed amet praesent. Nunc lacinia ante nunc ac gravida.</p>
+							<h3>Leigh Services</h3>
+							<p>Expert IT Infrastructure, Automation and Data Engineering consulting based in Southend-on-Sea, Essex. Serving clients across the UK and internationally.</p>
+						<p>63 Archer Avenue, Southend on Sea, Essex SS2 4QU</p>
 						</section>
 						<section>
-							<h4>Sem turpis amet semper</h4>
+							<h4>Services</h4>
 							<ul class="alt">
-								<li><a href="#">Dolor pulvinar sed etiam.</a></li>
-								<li><a href="#">Etiam vel lorem sed amet.</a></li>
-								<li><a href="#">Felis enim feugiat viverra.</a></li>
-								<li><a href="#">Dolor pulvinar magna etiam.</a></li>
+								<li><a href="#">IT Infrastructure</a></li>
+								<li><a href="#">PowerShell &amp; Automation</a></li>
+								<li><a href="#">Cloud Solutions</a></li>
+								<li><a href="#">Data Engineering</a></li>
+								<li><a href="index.html">Security &amp; Compliance</a></li>
+								<li><a href="index.html">DevSecOps</a></li>
 							</ul>
 						</section>
 						<section>
-							<h4>Magna sed ipsum</h4>
+							<h4>Connect</h4>
 							<ul class="plain">
-								<li><a href="#"><i class="icon fa-twitter">&nbsp;</i>Twitter</a></li>
-								<li><a href="#"><i class="icon fa-facebook">&nbsp;</i>Facebook</a></li>
-								<li><a href="#"><i class="icon fa-instagram">&nbsp;</i>Instagram</a></li>
-								<li><a href="#"><i class="icon fa-github">&nbsp;</i>Github</a></li>
+								<li><a href="https://www.linkedin.com/in/lukeleigh" target="_blank" rel="noopener noreferrer"><i class="icon fa-linkedin">&nbsp;</i>Luke on LinkedIn</a></li>
+								<li><a href="https://www.linkedin.com/in/markleigh" target="_blank" rel="noopener noreferrer"><i class="icon fa-linkedin">&nbsp;</i>Mark on LinkedIn</a></li>
+								<li><a href="https://github.com/BanterBoy" target="_blank" rel="noopener noreferrer"><i class="icon fa-github">&nbsp;</i>GitHub (BanterBoy)</a></li>
+								<li><a href="https://blog.lukeleigh.com" target="_blank" rel="noopener noreferrer"><i class="icon fa-rss">&nbsp;</i>Luke's Blog</a></li>
 							</ul>
 						</section>
 					</div>
 					<div class="copyright">
-						&copy; Untitled. Photos <a href="https://unsplash.co">Unsplash</a>, Video <a href="https://coverr.co">Coverr</a>.
+						&copy; 2024 Leigh IT Services Ltd. All rights reserved.
 					</div>
 				</div>
 			</footer>
