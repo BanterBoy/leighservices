@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /elements.html
+
+Sitemap: https://leigh-services.com/sitemap.xml
