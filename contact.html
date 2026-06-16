@@ -59,6 +59,18 @@
 			.contact-info-col ul li a:hover {
 				text-decoration: underline;
 			}
+			.map-wrap {
+				margin-top: 3em;
+				border-radius: 4px;
+				overflow: hidden;
+				box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+			}
+			.map-wrap iframe {
+				display: block;
+				width: 100%;
+				height: 340px;
+				border: 0;
+			}
 		</style>
 		<!-- Microsoft Clarity -->
 		<script type="text/javascript">
@@ -120,7 +132,7 @@
 
 							<!-- Form -->
 							<div class="contact-form-col">
-							<form method="post" action="https://formspree.io/xvowjgjd">
+								<form method="post" action="https://formspree.io/xvowjgjd">
 									<div class="fields">
 										<div class="field half">
 											<label for="name">Name</label>
@@ -180,9 +192,20 @@
 
 						</div>
 
+					<!-- Map -->
+					<div class="map-wrap">
+						<iframe
+							src="https://maps.google.com/maps?q=Leigh+IT+Services+Limited,+63+Archer+Avenue,+Southend-on-Sea,+Essex+SS2+4QU&output=embed"
+							loading="lazy"
+							referrerpolicy="no-referrer-when-downgrade"
+							title="Leigh IT Services Limited location map"
+							allowfullscreen=""
+						></iframe>
 					</div>
+
 				</div>
-			</section>
+			</div>
+		</section>
 
 		<!-- Footer -->
 			<footer id="footer">
