@@ -10,6 +10,7 @@ permissions:
   pages: write
   id-token: write
   pull-requests: write
+  issues: write
 
 concurrency:
   group: staging-deploy
