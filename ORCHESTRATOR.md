@@ -8,14 +8,14 @@
 
 ## Repo Identity
 
-| Property | Value |
-|---|---|
-| Site | leigh-services.com |
-| Repo | BanterBoy/leighservices |
-| Type | Static GitHub Pages — HTML5 + SCSS + jQuery |
-| Theme | Stellar (HTML5 UP) |
-| Local build system | None |
-| SCSS compilation | CI only (GitHub Actions) |
+| Property           | Value                                       |
+| ------------------ | ------------------------------------------- |
+| Site               | leigh-services.com                          |
+| Repo               | BanterBoy/leighservices                     |
+| Type               | Static GitHub Pages — HTML5 + SCSS + jQuery |
+| Theme              | Stellar (HTML5 UP)                          |
+| Local build system | None                                        |
+| SCSS compilation   | CI only (GitHub Actions)                    |
 
 ---
 
@@ -35,37 +35,42 @@ feature/xxx  →  staging  →  master (production)
 
 ## Pages
 
-| File | Purpose |
-|---|---|
-| `index.html` | Homepage — hero video banner, highlights, CTA, testimonials |
-| `team.html` | Meet the Team |
-| `services.html` | Services overview |
-| `certifications.html` | Certifications |
-| `case-studies.html` | Case studies |
-| `testimonials.html` | Testimonials |
-| `blog.html` | Blog |
-| `contact.html` | Contact |
-| `generic.html` | Reusable template skeleton |
-| `elements.html` | Component showcase (not a public page) |
+| File                  | Purpose                                                     |
+| --------------------- | ----------------------------------------------------------- |
+| `index.html`          | Homepage — hero video banner, highlights, CTA, testimonials |
+| `team.html`           | Meet the Team                                               |
+| `services.html`       | Services overview                                           |
+| `certifications.html` | Certifications                                              |
+| `case-studies.html`   | Case studies                                                |
+| `testimonials.html`   | Testimonials                                                |
+| `blog.html`           | Blog                                                        |
+| `contact.html`        | Contact                                                     |
+| `generic.html`        | Reusable template skeleton                                  |
+| `elements.html`       | Component showcase (not a public page)                      |
 
 ---
 
 ## CI/CD Workflows
 
 ### `pr-checks.yml` — runs on PRs to `staging` or `master`
+
 1. SCSS compile check (`sass assets/sass/main.scss /tmp/main-check.css`)
 2. HTML lint (`html-validate index.html generic.html`)
+
 - **This must pass before any PR can be merged.**
 
 ### `build-staging.yml` — runs on push to `staging`
+
 1. Compile SCSS → `assets/css/main.css` (CI owns this file — never commit it manually)
 2. Deploy to staging GitHub Pages
 3. Post preview URL comment on open PRs targeting `staging`
 
 ### `deploy-production.yml` — runs on push to `master`
+
 1. Compile SCSS → `assets/css/main.css`
 2. Deploy to production GitHub Pages (leigh-services.com)
 3. Auto-create release tag `v1.YYYY.MM.DD[-N]`
+
 - Requires manual approval in the `production` GitHub Environment gate.
 
 ---
@@ -78,14 +83,15 @@ Import order in `assets/sass/main.scss`:
 libs/ → base/ → components/ → layout/
 ```
 
-| Layer | Key files |
-|---|---|
-| `libs/` | `_vars.scss` (colours, sizes), `_mixins.scss`, `_breakpoints.scss`, `_functions.scss` |
-| `base/` | `_reset.scss`, `_page.scss`, `_typography.scss` |
+| Layer         | Key files                                                                              |
+| ------------- | -------------------------------------------------------------------------------------- |
+| `libs/`       | `_vars.scss` (colours, sizes), `_mixins.scss`, `_breakpoints.scss`, `_functions.scss`  |
+| `base/`       | `_reset.scss`, `_page.scss`, `_typography.scss`                                        |
 | `components/` | `_button.scss`, `_form.scss`, `_box.scss`, `_highlights.scss`, `_testimonials.scss`, … |
-| `layout/` | `_header.scss`, `_banner.scss`, `_menu.scss`, `_footer.scss`, `_main.scss`, … |
+| `layout/`     | `_header.scss`, `_banner.scss`, `_menu.scss`, `_footer.scss`, `_main.scss`, …          |
 
 Key tokens:
+
 - `accent1 = #ce1b28`, `accent2 = #111111`
 - 7 breakpoint levels — use `@include breakpoint('<=medium')`
 - `@include color(accent1)` cascades to ALL components — handle with care
@@ -109,10 +115,10 @@ Key tokens:
 
 ## Content Owners
 
-| Person | Role | Links |
-|---|---|---|
-| Luke Leigh | Infrastructure Engineer, Rail Delivery Group | LinkedIn `/in/lukeleigh`, GitHub `BanterBoy`, Blog `blog.lukeleigh.com`, PowerShell Gallery |
-| Mark Leigh | Senior Data Engineer & Security Specialist (CompTIA Security+, CREST CPSA) | LinkedIn `/in/markleigh` |
+| Person     | Role                                                                       | Links                                                                                       |
+| ---------- | -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| Luke Leigh | Infrastructure Engineer, Rail Delivery Group                               | LinkedIn `/in/lukeleigh`, GitHub `BanterBoy`, Blog `blog.lukeleigh.com`, PowerShell Gallery |
+| Mark Leigh | Senior Data Engineer & Security Specialist (CompTIA Security+, CREST CPSA) | LinkedIn `/in/markleigh`                                                                    |
 
 - **Never include email addresses or phone numbers on any page.**
 - Footer must include: Leigh Services name, address (63 Archer Avenue, Southend on Sea, Essex SS2 4QU), social links.
@@ -133,29 +139,29 @@ Key tokens:
 
 ## Agents & Prompts
 
-| Path | Purpose |
-|---|---|
+| Path                                     | Purpose                                                          |
+| ---------------------------------------- | ---------------------------------------------------------------- |
 | `.github/agents/LeighServicesAIagent.md` | Orchestrator agent definition — role, workflow, and branch rules |
-| `.github/copilot-instructions.md` | Repo-wide Copilot instructions (auto-attached to every chat) |
-| `.github/prompts/` | Any stored prompt files |
+| `.github/copilot-instructions.md`        | Repo-wide Copilot instructions (auto-attached to every chat)     |
+| `.github/prompts/`                       | Any stored prompt files                                          |
 
 ---
 
 ## Decision Log
 
-| Date | Decision | Rationale |
-|---|---|---|
-| 2026-06-17 | Created ORCHESTRATOR.md | User requested initialization so agent contract matches reality |
+| Date       | Decision                                                         | Rationale                                                       |
+| ---------- | ---------------------------------------------------------------- | --------------------------------------------------------------- |
+| 2026-06-17 | Created ORCHESTRATOR.md                                          | User requested initialization so agent contract matches reality |
 | 2026-06-17 | Analytics centralized into `assets/js/metrics.js` (GTM-5NBQFP8F) | Feature branch `feature/centralize-analytics`, merged via PR #8 |
 
 ---
 
 ## Current Task State
 
-| Status | Task | Branch | Notes |
-|---|---|---|---|
+| Status      | Task                       | Branch                      | Notes                   |
+| ----------- | -------------------------- | --------------------------- | ----------------------- |
 | ✅ Complete | Initialize ORCHESTRATOR.md | `feature/init-orchestrator` | PR to `staging` pending |
 
 ---
 
-*Last updated: 2026-06-17 — ORCHESTRATOR.md initialized.*
+_Last updated: 2026-06-17 — ORCHESTRATOR.md initialized._
