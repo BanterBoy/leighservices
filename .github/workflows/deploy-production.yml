@@ -64,3 +64,36 @@ jobs:
             --title "Release $FINAL_TAG" \
             --generate-notes \
             --repo ${{ github.repository }}
+
+  submit-indexnow:
+    name: Submit URLs to IndexNow
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    needs: build-and-deploy
+    steps:
+      - name: Submit all pages to IndexNow
+        run: |
+          STATUS="$(curl -sS -o /dev/null -w '%{http_code}' \
+            -X POST "https://api.indexnow.org/IndexNow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d '{
+              "host": "leigh-services.com",
+              "key": "d8dec56125d3bc36231d3517b959e55a",
+              "keyLocation": "https://leigh-services.com/d8dec56125d3bc36231d3517b959e55a.txt",
+              "urlList": [
+                "https://leigh-services.com/",
+                "https://leigh-services.com/services.html",
+                "https://leigh-services.com/team.html",
+                "https://leigh-services.com/case-studies.html",
+                "https://leigh-services.com/testimonials.html",
+                "https://leigh-services.com/blog.html",
+                "https://leigh-services.com/contact.html",
+                "https://leigh-services.com/certifications.html"
+              ]
+            }')" || { echo "IndexNow submission request failed"; exit 1; }
+
+          if [[ ! "$STATUS" =~ ^2 ]]; then
+            echo "IndexNow submission returned HTTP $STATUS"
+            exit 1
+          fi
