@@ -74,7 +74,7 @@ jobs:
     steps:
       - name: Submit all pages to IndexNow
         run: |
-          curl -s -o /dev/null -w "%{http_code}" \
+          STATUS="$(curl -sS -o /dev/null -w '%{http_code}' \
             -X POST "https://api.indexnow.org/IndexNow" \
             -H "Content-Type: application/json; charset=utf-8" \
             -d '{
@@ -91,4 +91,9 @@ jobs:
                 "https://leigh-services.com/contact.html",
                 "https://leigh-services.com/certifications.html"
               ]
-            }' | grep -qE '^2' || echo "IndexNow submission returned non-2xx response"
+            }')" || { echo "IndexNow submission request failed"; exit 1; }
+
+          if [[ ! "$STATUS" =~ ^2 ]]; then
+            echo "IndexNow submission returned HTTP $STATUS"
+            exit 1
+          fi
