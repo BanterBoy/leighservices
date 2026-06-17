@@ -1,5 +1,5 @@
 ---
-mode: agent
+agent: agent
 description: Update text content, bios, skills or links on the Leigh Services website
 ---
 
@@ -8,7 +8,9 @@ description: Update text content, bios, skills or links on the Leigh Services we
 You are editing content on the **Leigh Services** static website. Follow all rules below exactly.
 
 ## Scope of this prompt
+
 Use this prompt when asked to:
+
 - Update a person's bio, job title or employer
 - Add, remove or change skill tags
 - Update social or professional links
