@@ -35,9 +35,10 @@ Leigh Services is run by:
 ├── services.html         # Services
 ├── case-studies.html     # Case Studies
 ├── certifications.html   # Certifications
+├── testimonials.html     # Testimonials
 ├── blog.html             # Blog
 ├── contact.html          # Contact
-├── testimonials.html     # Testimonials
+├── elements.html         # Component showcase (not a public page)
 ├── assets/
 │   ├── sass/             # SCSS source (edit these for style changes)
 │   │   ├── main.scss     # Entry point

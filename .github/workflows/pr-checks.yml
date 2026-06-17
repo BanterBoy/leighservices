@@ -36,4 +36,4 @@ jobs:
 
       - name: Validate HTML pages
         run: |
-          html-validate index.html generic.html || true
+          html-validate index.html team.html || true

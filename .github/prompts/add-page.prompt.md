@@ -12,10 +12,10 @@ You are adding a new page to the **Leigh Services** static website. Follow all r
 1. **Branch first**: Create a `feature/add-<page-name>` branch from `staging` before making any edits.
 2. **Template structure**: Every new page must include:
    - `<header id="header">` with the logo link to `index.html` and the `#menu` nav toggle
-   - `<nav id="menu">` with links to `index.html` (Home) and `generic.html` (Meet the Team), **plus** a link to the new page
+   - `<nav id="menu">` with links to `index.html` (Home) and `team.html` (Meet the Team), **plus** a link to the new page
    - `<footer id="footer">` — identical to the footer in `index.html`
    - All script tags at the bottom: `jquery.min.js`, `browser.min.js`, `breakpoints.min.js`, `util.js`, `main.js`
-3. **Nav update required**: Add the new page link to the nav in **both** `index.html` and `generic.html` as well as the new file.
+3. **Nav update required**: Add the new page link to the nav in **both** `index.html` and `team.html` as well as the new file.
 4. **CSS**: Link `assets/css/main.css` in the `<head>`. Add page-specific styles in a `<style>` block in the `<head>` — do not modify SCSS files.
 5. **No contact details**: Do not add email addresses or phone numbers.
 6. **External links**: Must have `target="_blank" rel="noopener noreferrer"`.

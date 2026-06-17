@@ -45,7 +45,6 @@ feature/xxx  →  staging  →  master (production)
 | `testimonials.html`   | Testimonials                                                |
 | `blog.html`           | Blog                                                        |
 | `contact.html`        | Contact                                                     |
-| `generic.html`        | Reusable template skeleton                                  |
 | `elements.html`       | Component showcase (not a public page)                      |
 
 ---
@@ -55,7 +54,7 @@ feature/xxx  →  staging  →  master (production)
 ### `pr-checks.yml` — runs on PRs to `staging` or `master`
 
 1. SCSS compile check (`sass assets/sass/main.scss /tmp/main-check.css`)
-2. HTML lint (`html-validate index.html generic.html`)
+2. HTML lint (`html-validate index.html team.html`)
 
 - **This must pass before any PR can be merged.**
 
@@ -132,7 +131,7 @@ Key tokens:
 3. **Menu is JS-only.** No `<noscript>` fallback.
 4. **`.is-preload` class** depends on `main.js` executing successfully. If JS fails, animations freeze.
 5. **`banner.mp4`** — performance risk on mobile; do not add additional video assets without testing.
-6. **`pr-checks.yml` targets `generic.html` for HTML lint**, but the site's actual shared-page template is `generic.html`. If it is renamed or replaced, update the workflow.
+6. **`pr-checks.yml` lints `team.html`** (Meet the Team) alongside `index.html`. If either page is renamed, update the workflow to match.
 7. **`CNAME` and `keybase.txt`** must not be removed — they control domain routing and identity verification.
 
 ---
@@ -158,10 +157,11 @@ Key tokens:
 
 ## Current Task State
 
-| Status      | Task                       | Branch                      | Notes                   |
-| ----------- | -------------------------- | --------------------------- | ----------------------- |
-| ✅ Complete | Initialize ORCHESTRATOR.md | `feature/init-orchestrator` | PR to `staging` pending |
+| Status      | Task                       | Branch                         | Notes                            |
+| ----------- | -------------------------- | ------------------------------ | -------------------------------- |
+| ✅ Complete | Initialize ORCHESTRATOR.md | `feature/init-orchestrator`    | Merged to `master` via `staging` |
+| ✅ Complete | Centralize analytics       | `feature/centralize-analytics` | Merged via PR #8                 |
 
 ---
 
-_Last updated: 2026-06-17 — ORCHESTRATOR.md initialized._
+_Last updated: 2026-06-17 — Current task state and decision log reconciled with master branch._
