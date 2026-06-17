@@ -1,5 +1,5 @@
 ---
-mode: agent
+agent: agent
 description: Add a new HTML page to the Leigh Services website
 ---
 
