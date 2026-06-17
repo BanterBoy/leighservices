@@ -64,3 +64,30 @@ jobs:
             --title "Release $FINAL_TAG" \
             --generate-notes \
             --repo ${{ github.repository }}
+
+  submit-indexnow:
+    name: Submit URLs to IndexNow
+    runs-on: ubuntu-latest
+    needs: build-and-deploy
+
+    steps:
+      - name: Submit all pages to IndexNow
+        run: |
+          curl -s -o /dev/null -w "%{http_code}" \
+            -X POST "https://api.indexnow.org/IndexNow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d '{
+              "host": "leigh-services.com",
+              "key": "d8dec56125d3bc36231d3517b959e55a",
+              "keyLocation": "https://leigh-services.com/d8dec56125d3bc36231d3517b959e55a.txt",
+              "urlList": [
+                "https://leigh-services.com/",
+                "https://leigh-services.com/services.html",
+                "https://leigh-services.com/team.html",
+                "https://leigh-services.com/case-studies.html",
+                "https://leigh-services.com/testimonials.html",
+                "https://leigh-services.com/blog.html",
+                "https://leigh-services.com/contact.html",
+                "https://leigh-services.com/certifications.html"
+              ]
+            }' | grep -qE '^2' || echo "IndexNow submission returned non-2xx response"
