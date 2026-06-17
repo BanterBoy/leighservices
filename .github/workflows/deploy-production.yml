@@ -68,8 +68,9 @@ jobs:
   submit-indexnow:
     name: Submit URLs to IndexNow
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     needs: build-and-deploy
-
     steps:
       - name: Submit all pages to IndexNow
         run: |
