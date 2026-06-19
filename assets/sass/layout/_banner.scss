@@ -68,12 +68,12 @@
 		&:before {
 			@include vendor('transition', 'opacity 3s ease');
 			@include vendor('transition-delay', '#{_duration(banner) * 1.25}');
-			background: _palette(accent2,bg);
+			background: rgba(11,19,35,0.75);
 			content: '';
 			display: block;
 			height: 100%;
 			left: 0;
-			opacity: 0.45;
+			opacity: 1;
 			position: absolute;
 			top: 0;
 			width: 100%;

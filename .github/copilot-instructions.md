@@ -8,7 +8,7 @@ This is the repository for **leigh-services.com** — a static GitHub Pages site
 
 - **Type**: Static site (plain HTML + CSS + vanilla JS). No framework, no npm, no build system locally.
 - **Domain**: leigh-services.com (CNAME → BanterBoy/leighservices master branch)
-- **Pages**: `index.html` (home), `team.html` (Meet the Team)
+- **Pages**: `index.html` (Home), `services.html` (Services), `team.html` (Meet the Team), `certifications.html` (Certifications), `case-studies.html` (Case Studies), `testimonials.html` (Testimonials), `blog.html` (Blog), `contact.html` (Contact)
 - **Styling**: SASS source lives in `assets/sass/`. Compiled output is `assets/css/main.css`.
 - **Icons**: Font Awesome 4.x (loaded from `assets/css/font-awesome.min.css`)
 - **JS**: jQuery-based, no bundler. Scripts live in `assets/js/`.
@@ -50,7 +50,7 @@ feature/xxx  →  staging  →  master (production)
 ### Pages
 
 - Every page must include the shared `<header id="header">`, `<nav id="menu">`, and `<footer id="footer">`.
-- Nav links: `index.html` (Home) and `team.html` (Meet the Team) only. Update both files if nav changes.
+- Nav links: `index.html` (Home), `services.html` (Services), `team.html` (Meet the Team), `certifications.html` (Certifications), `case-studies.html` (Case Studies), `testimonials.html` (Testimonials), `blog.html` (Blog), `contact.html` (Contact). Update all pages if nav changes.
 - Footer must include: Leigh Services name, address (63 Archer Avenue, Southend on Sea, Essex SS2 4QU), social/professional links. No email addresses or phone numbers on the public site.
 - All external links must have `target="_blank" rel="noopener noreferrer"`.
 

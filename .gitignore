@@ -20,3 +20,6 @@ npm-debug.log*
 # Sass cache
 .sass-cache/
 *.css.map
+
+# Stitch redesign reference (local only)
+stitch_leigh_services_responsive_redesign/

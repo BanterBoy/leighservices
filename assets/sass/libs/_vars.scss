@@ -23,7 +23,7 @@
 
 // Font.
 	$font: (
-		family:				('Raleway', Arial, Helvetica, sans-serif),
+		family:				('Geist', Arial, Helvetica, sans-serif),
 		family-fixed:		('Courier New', monospace),
 		weight:				400,
 		weight-light:		300,
@@ -33,34 +33,34 @@
 
 // Palette.
 	$palette: (
-		bg:					#ffffff,
-		fg:					#444444,
-		fg-bold:			#555555,
-		fg-light:			#bbbbbb,
-		border:				rgba(0,0,0,0.25),
-		border-bg:			rgba(0,0,0,0.075),
-		border-lt:			rgba(0,0,0,0.025),
+		bg:					#0b1323,
+		fg:					#c9d4e0,
+		fg-bold:			#ffffff,
+		fg-light:			#6a7f9a,
+		border:				rgba(0,229,255,0.15),
+		border-bg:			rgba(0,229,255,0.07),
+		border-lt:			rgba(0,229,255,0.04),
 		highlight:			accent1,
 
 		accent1: (
-			bg:				#ce1b28,
-			fg:				rgba(255,255,255,0.75),
-			fg-bold:		#ffffff,
-			fg-light:		rgba(255,255,255,0.4),
-			border:			rgba(255,255,255,0.25),
-			border-bg:		rgba(255,255,255,0.075),
-			border-lt:		rgba(255,255,255,0.025),
+			bg:				#00e5ff,
+			fg:				rgba(11,19,35,0.85),
+			fg-bold:		#0b1323,
+			fg-light:		rgba(11,19,35,0.55),
+			border:			rgba(11,19,35,0.25),
+			border-bg:		rgba(11,19,35,0.075),
+			border-lt:		rgba(11,19,35,0.025),
 			highlight:		accent1
 		),
 
 		accent2: (
-			bg:				#111111,
-			fg:				rgba(255,255,255,0.5),
+			bg:				#060d1a,
+			fg:				rgba(201,212,224,0.7),
 			fg-bold:		#ffffff,
-			fg-light:		rgba(255,255,255,0.4),
-			border:			rgba(255,255,255,0.25),
-			border-bg:		rgba(255,255,255,0.075),
-			border-lt:		rgba(255,255,255,0.025),
+			fg-light:		rgba(106,127,154,0.9),
+			border:			rgba(0,229,255,0.15),
+			border-bg:		rgba(0,229,255,0.07),
+			border-lt:		rgba(0,229,255,0.04),
 			highlight:		accent1
 		)
 	);
