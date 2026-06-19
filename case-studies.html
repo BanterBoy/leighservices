@@ -1,214 +1,971 @@
-<!DOCTYPE HTML>
-<html lang="en-gb">
-	<head>
-		<title>Case Studies | Leigh Services</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="Real-world project delivery by Leigh Services — infrastructure migrations, PCI DSS compliance programmes, data platform engineering and PowerShell automation." />
-		<meta name="keywords" content="IT case studies, PCI DSS, infrastructure migration, data engineering, PowerShell automation, Leigh Services" />
-		<meta property="og:title" content="Case Studies | Leigh Services" />
-		<meta property="og:description" content="Real-world project delivery — infrastructure migrations, PCI compliance, data platform engineering and automation." />
-		<meta property="og:url" content="https://leigh-services.com/case-studies.html" />
-		<meta property="og:image" content="https://leigh-services.com/images/banner.jpg" />
-		<meta property="og:type" content="website" />
-		<meta property="og:site_name" content="Leigh Services" />
-		<meta http-equiv="content-language" content="en-gb" />
-		<link rel="canonical" href="https://leigh-services.com/case-studies.html" />
-		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:title" content="Case Studies | Leigh Services" />
-		<meta name="twitter:description" content="Real-world project delivery — infrastructure migrations, PCI compliance, data platform engineering and automation." />
-		<meta name="twitter:image" content="https://leigh-services.com/images/banner.jpg" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<style>
-			.case-meta {
-				font-size: 0.78em;
-				font-weight: 700;
-				text-transform: uppercase;
-				letter-spacing: 0.1em;
-				color: #ce1b28;
-				margin-bottom: 0.6em;
-			}
-			.case-outcome {
-				margin-top: 1em;
-				padding: 0.7em 1em;
-				background: #111;
-				color: #fff;
-				border-radius: 4px;
-				font-size: 0.82em;
-				font-weight: 600;
-				letter-spacing: 0.04em;
-			}
-		</style>
-		<script src="assets/js/metrics.js"></script>
-	</head>
-	<body class="is-preload">
-		<!-- Google Tag Manager (noscript) -->
-		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5NBQFP8F" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-		<!-- End Google Tag Manager (noscript) -->
+<!doctype html>
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Case Studies | Leigh Services</title>
+    <meta
+      name="description"
+      content="Real-world project delivery by Leigh Services — infrastructure migrations, PCI DSS compliance programmes, data platform engineering and PowerShell automation."
+    />
+    <meta
+      name="keywords"
+      content="IT case studies, PCI DSS, infrastructure migration, data engineering, PowerShell automation, Leigh Services"
+    />
+    <link rel="canonical" href="https://leigh-services.com/case-studies.html" />
+    <meta property="og:title" content="Case Studies | Leigh Services" />
+    <meta
+      property="og:description"
+      content="Real-world project delivery — infrastructure migrations, PCI compliance, data platform engineering and automation."
+    />
+    <meta
+      property="og:url"
+      content="https://leigh-services.com/case-studies.html"
+    />
+    <meta
+      property="og:image"
+      content="https://leigh-services.com/images/banner.jpg"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Leigh Services" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Case Studies | Leigh Services" />
+    <meta
+      name="twitter:description"
+      content="Real-world project delivery — infrastructure migrations, PCI compliance, data platform engineering and automation."
+    />
+    <meta
+      name="twitter:image"
+      content="https://leigh-services.com/images/banner.jpg"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=JetBrains+Mono:wght@100..800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-low": "#131c2b",
+              "outline-variant": "#3b494c",
+              "on-error": "#690005",
+              "on-tertiary-fixed": "#001945",
+              "surface-container-lowest": "#060e1d",
+              "on-background": "#dbe2f8",
+              "error-container": "#93000a",
+              "on-secondary": "#1b247f",
+              "surface-tint": "#00daf3",
+              "tertiary-container": "#bfd0ff",
+              "primary-container": "#00e5ff",
+              "on-tertiary-fixed-variant": "#00429c",
+              "on-secondary-fixed-variant": "#343d96",
+              "inverse-surface": "#dbe2f8",
+              "inverse-primary": "#006875",
+              "surface-container": "#18202f",
+              surface: "#0b1323",
+              "on-primary-container": "#00626e",
+              "on-primary-fixed": "#001f24",
+              error: "#ffb4ab",
+              "surface-container-high": "#222a3a",
+              "secondary-fixed": "#e0e0ff",
+              "on-secondary-container": "#a8afff",
+              "tertiary-fixed-dim": "#b0c6ff",
+              "secondary-container": "#343d96",
+              "primary-fixed-dim": "#00daf3",
+              tertiary: "#e8ecff",
+              "on-tertiary-container": "#2455af",
+              "on-primary-fixed-variant": "#004f58",
+              "on-secondary-fixed": "#000767",
+              primary: "#c3f5ff",
+              background: "#0b1323",
+              "on-tertiary": "#002d6f",
+              "on-primary": "#00363d",
+              "on-error-container": "#ffdad6",
+              "inverse-on-surface": "#283041",
+              "surface-variant": "#2d3546",
+              "surface-container-highest": "#2d3546",
+              secondary: "#bdc2ff",
+              outline: "#849396",
+              "on-surface-variant": "#bac9cc",
+              "surface-bright": "#31394a",
+              "primary-fixed": "#9cf0ff",
+              "tertiary-fixed": "#d9e2ff",
+              "surface-dim": "#0b1323",
+              "on-surface": "#dbe2f8",
+              "secondary-fixed-dim": "#bdc2ff",
+            },
+            borderRadius: {
+              DEFAULT: "0.125rem",
+              lg: "0.25rem",
+              xl: "0.5rem",
+              full: "0.75rem",
+            },
+            spacing: {
+              xs: "4px",
+              margin: "24px",
+              lg: "24px",
+              xl: "40px",
+              gutter: "16px",
+              base: "4px",
+              sm: "8px",
+              md: "16px",
+            },
+            fontFamily: {
+              "headline-lg": ["Geist"],
+              "title-md": ["Geist"],
+              "label-sm": ["JetBrains Mono"],
+              "label-md": ["JetBrains Mono"],
+              "body-sm": ["Geist"],
+              "body-lg": ["Geist"],
+              "display-lg": ["Geist"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        background-color: #0b1323;
+        color: #dbe2f8;
+        font-family: "Geist", sans-serif;
+      }
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      .glass-panel {
+        background: rgba(13, 71, 161, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(0, 229, 255, 0.1);
+      }
+      .case-card:hover {
+        border-color: #00e5ff;
+        box-shadow: 0 0 20px rgba(0, 229, 255, 0.1);
+      }
+      .glow-hover:hover {
+        box-shadow: 0 0 15px #00e5ff;
+      }
+    </style>
+  </head>
+  <body
+    class="selection:bg-primary-container selection:text-on-primary-container"
+  >
+    <!-- Top Navigation Bar -->
+    <header
+      class="bg-surface-container-lowest border-b border-outline-variant sticky top-0 z-50"
+    >
+      <nav
+        class="flex justify-between items-center px-lg py-md w-full max-w-7xl mx-auto"
+      >
+        <a
+          class="font-headline-lg text-headline-lg font-bold text-primary-fixed-dim tracking-tight"
+          href="index.html"
+          >Leigh Services</a
+        >
+        <!-- Desktop Nav -->
+        <div class="hidden md:flex items-center gap-lg">
+          <a
+            class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200"
+            href="index.html"
+            >Home</a
+          >
+          <a
+            class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200"
+            href="services.html"
+            >Services</a
+          >
+          <a
+            class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200"
+            href="team.html"
+            >Meet the Team</a
+          >
+          <a
+            class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200"
+            href="certifications.html"
+            >Certifications</a
+          >
+          <a
+            class="text-primary-fixed-dim font-bold border-b-2 border-primary-fixed-dim pb-1"
+            href="case-studies.html"
+            >Case Studies</a
+          >
+          <a
+            class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200"
+            href="testimonials.html"
+            >Testimonials</a
+          >
+          <a
+            class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200"
+            href="blog.html"
+            >Blog</a
+          >
+          <a
+            class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200"
+            href="contact.html"
+            >Contact</a
+          >
+          <a
+            class="ml-md bg-primary-container text-on-primary-fixed px-md py-sm rounded font-bold hover:opacity-80 transition-all"
+            href="contact.html"
+            >Consultation</a
+          >
+        </div>
+        <!-- Mobile Menu Toggle -->
+        <button
+          class="md:hidden text-primary-fixed-dim"
+          onclick="
+            document.getElementById('mobile-menu').classList.toggle('hidden')
+          "
+        >
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </nav>
+    </header>
+    <!-- Mobile Menu -->
+    <div
+      class="hidden md:hidden fixed inset-0 z-[110] bg-surface-container-lowest p-lg"
+      id="mobile-menu"
+    >
+      <div class="flex flex-col gap-md">
+        <div class="flex justify-between items-center mb-xl">
+          <span class="font-headline-lg text-headline-lg text-primary-fixed-dim"
+            >Leigh Services</span
+          >
+          <button
+            onclick="
+              document.getElementById('mobile-menu').classList.add('hidden')
+            "
+          >
+            <span class="material-symbols-outlined">close</span>
+          </button>
+        </div>
+        <a class="text-title-md py-sm" href="index.html">Home</a>
+        <a class="text-title-md py-sm" href="services.html">Services</a>
+        <a class="text-title-md py-sm" href="team.html">Meet the Team</a>
+        <a class="text-title-md py-sm" href="certifications.html"
+          >Certifications</a
+        >
+        <a
+          class="text-title-md py-sm text-primary-fixed-dim font-bold"
+          href="case-studies.html"
+          >Case Studies</a
+        >
+        <a class="text-title-md py-sm" href="testimonials.html">Testimonials</a>
+        <a class="text-title-md py-sm" href="blog.html">Blog</a>
+        <a class="text-title-md py-sm" href="contact.html">Contact</a>
+        <a
+          class="mt-md bg-primary-container text-on-primary-fixed text-center px-md py-md rounded font-bold"
+          href="contact.html"
+          >Consultation</a
+        >
+      </div>
+    </div>
 
-		<!-- Header -->
-			<header id="header">
-				<a class="logo" href="index.html">Leigh Services</a>
-				<nav>
-					<a href="#menu">Menu</a>
-				</nav>
-			</header>
+    <main class="relative">
+      <!-- Hero Section -->
+      <section class="relative h-[400px] flex items-center overflow-hidden">
+        <div class="relative z-10 max-w-7xl mx-auto px-lg w-full">
+          <div class="max-w-2xl">
+            <span class="font-label-md text-primary-fixed-dim mb-sm block"
+              >OPERATIONAL INTEGRITY</span
+            >
+            <h1 class="font-display-lg text-display-lg mb-md leading-tight">
+              Proven Engineering <br />
+              <span class="text-primary-fixed-dim">Case Studies</span>
+            </h1>
+            <p class="font-body-lg text-body-lg text-on-surface-variant">
+              A selection of projects delivered by the Leigh Services team —
+              from large-scale infrastructure migrations to data platform
+              engineering and compliance programmes.
+            </p>
+          </div>
+        </div>
+      </section>
 
-		<!-- Nav -->
-			<nav id="menu">
-				<ul class="links">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="services.html">Services</a></li>
-					<li><a href="team.html">Meet the Team</a></li>
-					<li><a href="certifications.html">Certifications</a></li>
-					<li><a href="case-studies.html">Case Studies</a></li>
-					<li><a href="testimonials.html">Testimonials</a></li>
-					<li><a href="blog.html">Blog</a></li>
-					<li><a href="contact.html">Contact</a></li>
-				</ul>
-			</nav>
+      <!-- Case Studies Grid -->
+      <section class="py-xl max-w-7xl mx-auto px-lg">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+          <!-- Project 1: PCI DSS Compliance Programme (Luke) -->
+          <div
+            class="case-card glass-panel p-lg rounded-xl flex flex-col transition-all duration-300 group"
+          >
+            <div class="flex justify-between items-start mb-md">
+              <span
+                class="font-label-sm px-sm py-1 bg-secondary-container text-on-secondary-container rounded"
+                >SECURITY &amp; COMPLIANCE</span
+              >
+              <span class="font-label-sm text-outline">8 Years</span>
+            </div>
+            <h3
+              class="font-headline-lg text-headline-lg mb-sm group-hover:text-primary-fixed-dim transition-colors"
+            >
+              PCI DSS Compliance Programme
+            </h3>
+            <p
+              class="font-label-sm text-outline mb-sm uppercase tracking-widest"
+            >
+              Insurance · 300+ users · Multi-site
+            </p>
+            <p
+              class="font-body-sm text-body-sm text-on-surface-variant mb-lg flex-grow"
+            >
+              Owned and maintained a PCI DSS compliance programme across a
+              four-office WAN infrastructure for eight years. Delivered a full
+              data centre migration to Wales, WAN amalgamation and Mapfre Global
+              WAN integration — while maintaining continuous compliance across
+              the cardholder data environment.
+            </p>
+            <div class="flex flex-wrap gap-xs mb-lg">
+              <span
+                class="font-label-sm bg-surface-container-high px-2 py-1 rounded"
+                >PCI DSS</span
+              >
+              <span
+                class="font-label-sm bg-surface-container-high px-2 py-1 rounded"
+                >WAN</span
+              >
+              <span
+                class="font-label-sm bg-surface-container-high px-2 py-1 rounded"
+                >Data Centre Migration</span
+              >
+              <span
+                class="font-label-sm bg-surface-container-high px-2 py-1 rounded"
+                >Mapfre</span
+              >
+            </div>
+            <p class="font-body-sm text-body-sm text-primary-fixed-dim mb-md">
+              <span class="font-bold">Outcome:</span> Continuous PCI DSS
+              compliance maintained across an 8-year tenure. Full data centre
+              migration completed with zero compliance gap.
+            </p>
+            <a
+              class="inline-flex items-center gap-xs font-label-md text-primary-fixed-dim uppercase tracking-widest group-hover:gap-sm transition-all"
+              href="services.html#security-compliance"
+            >
+              View Project Scope
+              <span class="material-symbols-outlined text-[18px]"
+                >arrow_forward</span
+              >
+            </a>
+          </div>
 
-		<!-- Heading -->
-			<div id="heading">
-				<h1>Case Studies</h1>
-			</div>
+          <!-- Project 2: SAS to GCP Migration (Mark, Swarovski) -->
+          <div
+            class="case-card glass-panel p-lg rounded-xl flex flex-col transition-all duration-300 group"
+          >
+            <div class="flex justify-between items-start mb-md">
+              <span
+                class="font-label-sm px-sm py-1 bg-primary-container/20 text-primary-fixed-dim rounded"
+                >DATA ENGINEERING</span
+              >
+              <span class="font-label-sm text-outline">9 Months</span>
+            </div>
+            <h3
+              class="font-headline-lg text-headline-lg mb-sm group-hover:text-primary-fixed-dim transition-colors"
+            >
+              SAS to GCP Data Platform Migration
+            </h3>
+            <p
+              class="font-label-sm text-outline mb-sm uppercase tracking-widest"
+            >
+              Luxury Retail (Swarovski) · International · Zurich
+            </p>
+            <p
+              class="font-body-sm text-body-sm text-on-surface-variant mb-lg flex-grow"
+            >
+              Led the migration of a complex, undocumented legacy SAS analytics
+              environment to Google Cloud Platform for a global luxury retailer.
+              Delivered within 9 months, reducing pipeline failure rates from
+              ~25% to 2% and cutting processing time by over 50%.
+            </p>
+            <div class="flex flex-wrap gap-xs mb-lg">
+              <span
+                class="font-label-sm bg-surface-container-high px-2 py-1 rounded"
+                >SAS</span
+              >
+              <span
+                class="font-label-sm bg-surface-container-high px-2 py-1 rounded"
+                >GCP</span
+              >
+              <span
+                class="font-label-sm bg-surface-container-high px-2 py-1 rounded"
+                >Data Pipelines</span
+              >
+              <span
+                class="font-label-sm bg-surface-container-high px-2 py-1 rounded"
+                >Analytics</span
+              >
+            </div>
+            <p class="font-body-sm text-body-sm text-primary-fixed-dim mb-md">
+              <span class="font-bold">Outcome:</span> €1m in annual cost
+              savings. Failure rate reduced from 25% to 2%. Processing time cut
+              by 50%+.
+            </p>
+            <a
+              class="inline-flex items-center gap-xs font-label-md text-primary-fixed-dim uppercase tracking-widest group-hover:gap-sm transition-all"
+              href="services.html#data-engineering"
+            >
+              View Project Scope
+              <span class="material-symbols-outlined text-[18px]"
+                >arrow_forward</span
+              >
+            </a>
+          </div>
 
-		<!-- Case Studies Grid -->
-			<section class="wrapper">
-				<div class="inner">
-					<header class="special">
-						<h2>Project Delivery</h2>
-						<p>A selection of projects delivered by the Leigh Services team — from large-scale infrastructure migrations to data platform engineering and compliance programmes.</p>
-					</header>
-					<div class="highlights">
+          <!-- Project 3: Ventrica - PowerShell + PCI (Luke) -->
+          <div
+            class="case-card glass-panel p-lg rounded-xl flex flex-col transition-all duration-300 group"
+          >
+            <div class="flex justify-between items-start mb-md">
+              <span
+                class="font-label-sm px-sm py-1 bg-error-container/20 text-error rounded"
+                >AUTOMATION &amp; SECURITY</span
+              >
+              <span class="font-label-sm text-outline">Fixed Deadline</span>
+            </div>
+            <h3
+              class="font-headline-lg text-headline-lg mb-sm group-hover:text-primary-fixed-dim transition-colors"
+            >
+              Infrastructure Automation &amp; PCI Remediation
+            </h3>
+            <p
+              class="font-label-sm text-outline mb-sm uppercase tracking-widest"
+            >
+              Contact Centre (Ventrica) · Fixed Deadline
+            </p>
+            <p
+              class="font-body-sm text-body-sm text-on-surface-variant mb-lg flex-grow"
+            >
+              Engaged to deliver a full PCI DSS compliance programme within a
+              non-negotiable year-end deadline. Delivered Juniper firewall
+              upgrades, patch management, Active Directory hardening and
+              Exchange Server 2013 security hardening — with PowerShell
+              automation driving consistency across the remediation effort.
+            </p>
+            <div class="flex flex-wrap gap-xs mb-lg">
+              <span
+                class="font-label-sm bg-surface-container-high px-2 py-1 rounded"
+                >PowerShell</span
+              >
+              <span
+                class="font-label-sm bg-surface-container-high px-2 py-1 rounded"
+                >PCI DSS</span
+              >
+              <span
+                class="font-label-sm bg-surface-container-high px-2 py-1 rounded"
+                >Juniper</span
+              >
+              <span
+                class="font-label-sm bg-surface-container-high px-2 py-1 rounded"
+                >Exchange 2013</span
+              >
+              <span
+                class="font-label-sm bg-surface-container-high px-2 py-1 rounded"
+                >Active Directory</span
+              >
+            </div>
+            <p class="font-body-sm text-body-sm text-primary-fixed-dim mb-md">
+              <span class="font-bold">Outcome:</span> PCI DSS compliance
+              achieved by December 31st deadline. All remediation items closed.
+            </p>
+            <a
+              class="inline-flex items-center gap-xs font-label-md text-primary-fixed-dim uppercase tracking-widest group-hover:gap-sm transition-all"
+              href="services.html#powershell-automation"
+            >
+              View Project Scope
+              <span class="material-symbols-outlined text-[18px]"
+                >arrow_forward</span
+              >
+            </a>
+          </div>
 
-						<section>
-							<div class="content">
-								<header>
-									<a href="services.html#security-compliance" class="icon fa-shield"><span class="label">PCI DSS Compliance</span></a>
-									<h3>PCI DSS Compliance Programme</h3>
-								</header>
-								<p class="case-meta">Insurance &middot; 300+ users &middot; Multi-site</p>
-								<p>Owned and maintained a PCI DSS compliance programme across a four-office WAN infrastructure for eight years. Delivered a full data centre migration to Wales, WAN amalgamation and Mapfre Global WAN integration — while maintaining continuous compliance across the cardholder data environment.</p>
-								<p class="case-outcome">Outcome: Continuous PCI DSS compliance maintained across an 8-year tenure. Full data centre migration completed with zero compliance gap.</p>
-							</div>
-						</section>
+          <!-- Project 4: Carpetright - M365 + VMware (Luke) -->
+          <div
+            class="case-card glass-panel p-lg rounded-xl flex flex-col transition-all duration-300 group"
+          >
+            <div class="flex justify-between items-start mb-md">
+              <span
+                class="font-label-sm px-sm py-1 bg-tertiary-container/20 text-on-tertiary-container rounded"
+                >INFRASTRUCTURE</span
+              >
+              <span class="font-label-sm text-outline">UK-wide</span>
+            </div>
+            <h3
+              class="font-headline-lg text-headline-lg mb-sm group-hover:text-primary-fixed-dim transition-colors"
+            >
+              Microsoft 365 Migration &amp; Virtualisation
+            </h3>
+            <p
+              class="font-label-sm text-outline mb-sm uppercase tracking-widest"
+            >
+              Retail (Carpetright) · 200+ stores · UK-wide
+            </p>
+            <p
+              class="font-body-sm text-body-sm text-on-surface-variant mb-lg flex-grow"
+            >
+              Delivered a Microsoft 365 migration and VMware virtualisation
+              programme for a UK-wide retail group, covering messaging
+              platforms, change management and ongoing IT infrastructure
+              support. Managed transition during an organisationally complex
+              period.
+            </p>
+            <div class="flex flex-wrap gap-xs mb-lg">
+              <span
+                class="font-label-sm bg-surface-container-high px-2 py-1 rounded"
+                >Microsoft 365</span
+              >
+              <span
+                class="font-label-sm bg-surface-container-high px-2 py-1 rounded"
+                >VMware</span
+              >
+              <span
+                class="font-label-sm bg-surface-container-high px-2 py-1 rounded"
+                >Migration</span
+              >
+              <span
+                class="font-label-sm bg-surface-container-high px-2 py-1 rounded"
+                >Change Management</span
+              >
+            </div>
+            <p class="font-body-sm text-body-sm text-primary-fixed-dim mb-md">
+              <span class="font-bold">Outcome:</span> Successful M365 migration
+              delivered. Virtualisation estate stabilised and handed over.
+            </p>
+            <a
+              class="inline-flex items-center gap-xs font-label-md text-primary-fixed-dim uppercase tracking-widest group-hover:gap-sm transition-all"
+              href="services.html#it-infrastructure"
+            >
+              View Project Scope
+              <span class="material-symbols-outlined text-[18px]"
+                >arrow_forward</span
+              >
+            </a>
+          </div>
 
-						<section>
-							<div class="content">
-								<header>
-									<a href="services.html#data-engineering" class="icon fa-database"><span class="label">Data Platform Migration</span></a>
-									<h3>SAS to GCP Data Platform Migration</h3>
-								</header>
-								<p class="case-meta">Luxury Retail &middot; International &middot; Zurich</p>
-								<p>Led the migration of a complex, undocumented legacy SAS analytics environment to Google Cloud Platform for a global luxury retailer. Delivered within 9 months, reducing pipeline failure rates from ~25% to 2% and cutting processing time by over 50%.</p>
-								<p class="case-outcome">Outcome: &euro;1m in annual cost savings. Failure rate reduced from 25% to 2%. Processing time cut by 50%+.</p>
-							</div>
-						</section>
+          <!-- Project 5: Lloyds FINREP (Mark) -->
+          <div
+            class="case-card glass-panel p-lg rounded-xl flex flex-col transition-all duration-300 group"
+          >
+            <div class="flex justify-between items-start mb-md">
+              <span
+                class="font-label-sm px-sm py-1 bg-secondary-container text-on-secondary-container rounded"
+                >REGULATORY REPORTING</span
+              >
+              <span class="font-label-sm text-outline">Halifax</span>
+            </div>
+            <h3
+              class="font-headline-lg text-headline-lg mb-sm group-hover:text-primary-fixed-dim transition-colors"
+            >
+              FINREP Regulatory Reporting Programme
+            </h3>
+            <p
+              class="font-label-sm text-outline mb-sm uppercase tracking-widest"
+            >
+              Banking (Lloyds) · Regulatory · Halifax
+            </p>
+            <p
+              class="font-body-sm text-body-sm text-on-surface-variant mb-lg flex-grow"
+            >
+              Lead developer on a FINREP (Financial Reporting) regulatory
+              programme within a major UK bank — bridging project management and
+              development to deliver a complex regulatory data solution. Also
+              contributed to a Collections &amp; Recoveries migration applying
+              Agile principles within a Waterfall-governed environment.
+            </p>
+            <div class="flex flex-wrap gap-xs mb-lg">
+              <span
+                class="font-label-sm bg-surface-container-high px-2 py-1 rounded"
+                >FINREP</span
+              >
+              <span
+                class="font-label-sm bg-surface-container-high px-2 py-1 rounded"
+                >Regulatory</span
+              >
+              <span
+                class="font-label-sm bg-surface-container-high px-2 py-1 rounded"
+                >SAS</span
+              >
+              <span
+                class="font-label-sm bg-surface-container-high px-2 py-1 rounded"
+                >Agile</span
+              >
+            </div>
+            <p class="font-body-sm text-body-sm text-primary-fixed-dim mb-md">
+              <span class="font-bold">Outcome:</span> FINREP solution delivered
+              to regulatory deadline. Agile delivery model introduced within a
+              traditional Waterfall programme.
+            </p>
+            <a
+              class="inline-flex items-center gap-xs font-label-md text-primary-fixed-dim uppercase tracking-widest group-hover:gap-sm transition-all"
+              href="services.html#data-engineering"
+            >
+              View Project Scope
+              <span class="material-symbols-outlined text-[18px]"
+                >arrow_forward</span
+              >
+            </a>
+          </div>
 
-						<section>
-							<div class="content">
-								<header>
-									<a href="services.html#powershell-automation" class="icon fa-cogs"><span class="label">PowerShell Automation</span></a>
-									<h3>Infrastructure Automation &amp; PCI Remediation</h3>
-								</header>
-								<p class="case-meta">Contact Centre &middot; Fixed Deadline</p>
-								<p>Engaged to deliver a full PCI DSS compliance programme within a non-negotiable year-end deadline. Delivered Juniper firewall upgrades, patch management, Active Directory hardening and Exchange Server 2013 security hardening — with PowerShell automation driving consistency across the remediation effort.</p>
-								<p class="case-outcome">Outcome: PCI DSS compliance achieved by December 31st deadline. All remediation items closed.</p>
-							</div>
-						</section>
+          <!-- Project 6: Solopress - VMware + Exchange (Luke) -->
+          <div
+            class="case-card glass-panel p-lg rounded-xl flex flex-col transition-all duration-300 group"
+          >
+            <div class="flex justify-between items-start mb-md">
+              <span
+                class="font-label-sm px-sm py-1 bg-primary-container/20 text-primary-fixed-dim rounded"
+                >CLOUD &amp; VIRTUALISATION</span
+              >
+              <span class="font-label-sm text-outline">Southend-on-Sea</span>
+            </div>
+            <h3
+              class="font-headline-lg text-headline-lg mb-sm group-hover:text-primary-fixed-dim transition-colors"
+            >
+              VMware &amp; Exchange Cloud Migration
+            </h3>
+            <p
+              class="font-label-sm text-outline mb-sm uppercase tracking-widest"
+            >
+              Print Industry (Solopress) · Southend-on-Sea
+            </p>
+            <p
+              class="font-body-sm text-body-sm text-on-surface-variant mb-lg flex-grow"
+            >
+              Implemented a Dell EMC and VMware 6.5 virtual environment from
+              scratch, migrated from GFI Kerio Connect to Exchange 365, and
+              integrated with Azure Active Directory — delivering a modern,
+              cloud-connected infrastructure for a growing print business.
+            </p>
+            <div class="flex flex-wrap gap-xs mb-lg">
+              <span
+                class="font-label-sm bg-surface-container-high px-2 py-1 rounded"
+                >Dell EMC</span
+              >
+              <span
+                class="font-label-sm bg-surface-container-high px-2 py-1 rounded"
+                >VMware 6.5</span
+              >
+              <span
+                class="font-label-sm bg-surface-container-high px-2 py-1 rounded"
+                >Exchange 365</span
+              >
+              <span
+                class="font-label-sm bg-surface-container-high px-2 py-1 rounded"
+                >Azure AD</span
+              >
+            </div>
+            <p class="font-body-sm text-body-sm text-primary-fixed-dim mb-md">
+              <span class="font-bold">Outcome:</span> Full virtualisation
+              completed. Exchange 365 live with Azure AD integration.
+              Infrastructure modernised within a single engagement.
+            </p>
+            <a
+              class="inline-flex items-center gap-xs font-label-md text-primary-fixed-dim uppercase tracking-widest group-hover:gap-sm transition-all"
+              href="services.html#cloud-solutions"
+            >
+              View Project Scope
+              <span class="material-symbols-outlined text-[18px]"
+                >arrow_forward</span
+              >
+            </a>
+          </div>
+        </div>
+      </section>
 
-						<section>
-							<div class="content">
-								<header>
-									<a href="services.html#it-infrastructure" class="icon fa-server"><span class="label">Infrastructure Migration</span></a>
-									<h3>Microsoft 365 Migration &amp; Virtualisation</h3>
-								</header>
-								<p class="case-meta">Retail &middot; 200+ stores &middot; UK-wide</p>
-								<p>Delivered a Microsoft 365 migration and VMware virtualisation programme for a UK-wide retail group, covering messaging platforms, change management and ongoing IT infrastructure support. Managed transition during an organisationally complex period.</p>
-								<p class="case-outcome">Outcome: Successful M365 migration delivered. Virtualisation estate stabilised and handed over.</p>
-							</div>
-						</section>
+      <!-- Operational Excellence Metrics -->
+      <section class="py-xl bg-surface-container-low">
+        <div class="max-w-7xl mx-auto px-lg">
+          <h2
+            class="font-headline-lg text-headline-lg mb-xl border-l-4 border-primary-fixed-dim pl-md"
+          >
+            Operational Excellence Metrics
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-md">
+            <div
+              class="p-lg bg-surface-container-high rounded-xl border border-outline-variant flex flex-col justify-center text-center"
+            >
+              <div class="text-display-lg font-bold text-primary-fixed-dim">
+                €1M+
+              </div>
+              <div class="font-label-md uppercase text-outline">
+                Annual Cost Savings
+              </div>
+              <div class="mt-sm font-body-sm text-on-surface-variant">
+                SAS-to-GCP Migration (Swarovski)
+              </div>
+            </div>
+            <div
+              class="p-lg bg-surface-container-high rounded-xl border border-outline-variant flex flex-col justify-center text-center"
+            >
+              <div class="text-display-lg font-bold text-primary-fixed-dim">
+                8 Yrs
+              </div>
+              <div class="font-label-md uppercase text-outline">
+                Continuous Compliance
+              </div>
+              <div class="mt-sm font-body-sm text-on-surface-variant">
+                PCI DSS Programme Tenure
+              </div>
+            </div>
+            <div
+              class="p-lg bg-surface-container-high rounded-xl border border-outline-variant flex flex-col justify-center text-center"
+            >
+              <div class="text-display-lg font-bold text-primary-fixed-dim">
+                6
+              </div>
+              <div class="font-label-md uppercase text-outline">
+                Projects Delivered
+              </div>
+              <div class="mt-sm font-body-sm text-on-surface-variant">
+                Across Retail, Banking &amp; Insurance
+              </div>
+            </div>
+            <div
+              class="p-lg bg-surface-container-high rounded-xl border border-outline-variant flex flex-col justify-center text-center"
+            >
+              <div class="text-display-lg font-bold text-primary-fixed-dim">
+                50%+
+              </div>
+              <div class="font-label-md uppercase text-outline">
+                Processing Time Cut
+              </div>
+              <div class="mt-sm font-body-sm text-on-surface-variant">
+                Failure rate 25% → 2%
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-						<section>
-							<div class="content">
-								<header>
-									<a href="services.html#data-engineering" class="icon fa-line-chart"><span class="label">Regulatory Reporting</span></a>
-									<h3>FINREP Regulatory Reporting Programme</h3>
-								</header>
-								<p class="case-meta">Banking &middot; Regulatory &middot; Halifax</p>
-								<p>Lead developer on a FINREP (Financial Reporting) regulatory programme within a major UK bank — bridging project management and development to deliver a complex regulatory data solution. Also contributed to a Collections &amp; Recoveries migration applying Agile principles within a Waterfall-governed environment.</p>
-								<p class="case-outcome">Outcome: FINREP solution delivered to regulatory deadline. Agile delivery model introduced within a traditional Waterfall programme.</p>
-							</div>
-						</section>
+      <!-- CTA Section -->
+      <section class="py-xl max-w-7xl mx-auto px-lg text-center">
+        <div class="glass-panel p-xl rounded-2xl relative overflow-hidden">
+          <h2 class="font-display-lg text-display-lg mb-md">
+            Have a similar challenge?
+          </h2>
+          <p
+            class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-lg"
+          >
+            Whether you are facing a compliance deadline, a platform migration
+            or a data integrity problem, we have likely seen it before. Get in
+            touch and let's talk through what is possible.
+          </p>
+          <div class="flex flex-col sm:flex-row justify-center gap-md">
+            <a
+              class="bg-primary-container text-on-primary-container px-xl py-md font-bold rounded-full glow-hover transition-all"
+              href="contact.html"
+              >Start Your Consultation</a
+            >
+            <a
+              class="border border-primary-fixed-dim text-primary-fixed-dim px-xl py-md font-bold rounded-full hover:bg-primary-fixed-dim/10 transition-all"
+              href="team.html"
+              >Meet the Team</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
 
-						<section>
-							<div class="content">
-								<header>
-									<a href="services.html#cloud-solutions" class="icon fa-cloud"><span class="label">Cloud &amp; Virtualisation</span></a>
-									<h3>VMware &amp; Exchange Cloud Migration</h3>
-								</header>
-								<p class="case-meta">Print Industry &middot; Southend-on-Sea</p>
-								<p>Implemented a Dell EMC and VMware 6.5 virtual environment from scratch, migrated from GFI Kerio Connect to Exchange 365, and integrated with Azure Active Directory — delivering a modern, cloud-connected infrastructure for a growing print business.</p>
-								<p class="case-outcome">Outcome: Full virtualisation completed. Exchange 365 live with Azure AD integration. Infrastructure modernised within a single engagement.</p>
-							</div>
-						</section>
+    <!-- Footer -->
+    <footer class="bg-surface-container-lowest border-t border-outline-variant">
+      <div
+        class="grid grid-cols-1 md:grid-cols-4 gap-xl px-lg py-xl max-w-7xl mx-auto"
+      >
+        <div>
+          <div
+            class="font-title-md text-title-md font-bold text-primary-fixed-dim mb-md"
+          >
+            Leigh Services
+          </div>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">
+            Expert IT Infrastructure, Automation and Data Engineering consulting
+            based in Southend-on-Sea, Essex. Serving clients across the UK and
+            internationally.
+          </p>
+          <div class="mt-md font-body-sm text-on-surface-variant">
+            63 Archer Avenue,<br />
+            Southend on Sea, Essex SS2 4QU
+          </div>
+        </div>
+        <div>
+          <h4
+            class="font-label-md text-primary-fixed-dim mb-md uppercase tracking-wider"
+          >
+            Services
+          </h4>
+          <ul class="space-y-sm font-body-sm text-on-surface-variant">
+            <li>
+              <a
+                class="hover:text-primary transition-colors"
+                href="services.html#it-infrastructure"
+                >IT Infrastructure</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-primary transition-colors"
+                href="services.html#powershell-automation"
+                >PowerShell &amp; Automation</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-primary transition-colors"
+                href="services.html#cloud-solutions"
+                >Cloud Solutions</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-primary transition-colors"
+                href="services.html#data-engineering"
+                >Data Engineering</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-primary transition-colors"
+                href="services.html#security-compliance"
+                >Security &amp; Compliance</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-primary transition-colors"
+                href="services.html#devsecops"
+                >DevSecOps</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4
+            class="font-label-md text-primary-fixed-dim mb-md uppercase tracking-wider"
+          >
+            Connect
+          </h4>
+          <ul class="space-y-sm font-body-sm text-on-surface-variant">
+            <li class="flex items-center gap-xs">
+              <span class="material-symbols-outlined text-[18px]">link</span>
+              <a
+                class="hover:text-primary transition-colors"
+                href="https://www.linkedin.com/in/lukeleigh"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Luke on LinkedIn</a
+              >
+            </li>
+            <li class="flex items-center gap-xs">
+              <span class="material-symbols-outlined text-[18px]">link</span>
+              <a
+                class="hover:text-primary transition-colors"
+                href="https://www.linkedin.com/in/markleigh"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Mark on LinkedIn</a
+              >
+            </li>
+            <li class="flex items-center gap-xs">
+              <span class="material-symbols-outlined text-[18px]"
+                >terminal</span
+              >
+              <a
+                class="hover:text-primary transition-colors"
+                href="https://github.com/BanterBoy"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub (BanterBoy)</a
+              >
+            </li>
+            <li class="flex items-center gap-xs">
+              <span class="material-symbols-outlined text-[18px]"
+                >rss_feed</span
+              >
+              <a
+                class="hover:text-primary transition-colors"
+                href="https://blog.lukeleigh.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Luke's Blog</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4
+            class="font-label-md text-primary-fixed-dim mb-md uppercase tracking-wider"
+          >
+            Navigation
+          </h4>
+          <ul class="space-y-sm font-body-sm text-on-surface-variant">
+            <li>
+              <a class="hover:text-primary transition-colors" href="index.html"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-primary-fixed-dim font-bold"
+                href="case-studies.html"
+                >Case Studies</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-primary transition-colors"
+                href="testimonials.html"
+                >Testimonials</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="blog.html"
+                >Blog</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="px-lg py-md border-t border-outline-variant/30 text-center font-body-sm text-body-sm text-on-surface-variant/60"
+      >
+        &copy; 2024&ndash;2026 Leigh IT Services Ltd. All rights reserved.
+      </div>
+    </footer>
 
-					</div>
-				</div>
-			</section>
-
-		<!-- CTA -->
-			<section id="cta" class="wrapper">
-				<div class="inner">
-					<h2>Have a similar challenge?</h2>
-					<p>Whether you are facing a compliance deadline, a platform migration or a data integrity problem, we have likely seen it before. Get in touch and let's talk through what is possible.</p>
-					<a href="contact.html" class="button fit small">Get in Touch</a>
-				</div>
-			</section>
-
-		<!-- Footer -->
-			<footer id="footer">
-				<div class="inner">
-					<div class="content">
-						<section>
-							<h3>Leigh Services</h3>
-							<p>Expert IT Infrastructure, Automation and Data Engineering consulting based in Southend-on-Sea, Essex. Serving clients across the UK and internationally.</p>
-							<p>63 Archer Avenue, Southend on Sea, Essex SS2 4QU</p>
-						</section>
-						<section>
-							<h4>Services</h4>
-							<ul class="alt">
-								<li><a href="services.html#it-infrastructure">IT Infrastructure</a></li>
-								<li><a href="services.html#powershell-automation">PowerShell &amp; Automation</a></li>
-								<li><a href="services.html#cloud-solutions">Cloud Solutions</a></li>
-								<li><a href="services.html#data-engineering">Data Engineering</a></li>
-								<li><a href="services.html#security-compliance">Security &amp; Compliance</a></li>
-								<li><a href="services.html#devsecops">DevSecOps</a></li>
-							</ul>
-						</section>
-						<section>
-							<h4>Connect</h4>
-							<ul class="plain">
-								<li><a href="https://www.linkedin.com/in/lukeleigh" target="_blank" rel="noopener noreferrer"><i class="icon fa-linkedin">&nbsp;</i>Luke on LinkedIn</a></li>
-								<li><a href="https://www.linkedin.com/in/markleigh" target="_blank" rel="noopener noreferrer"><i class="icon fa-linkedin">&nbsp;</i>Mark on LinkedIn</a></li>
-								<li><a href="https://github.com/BanterBoy" target="_blank" rel="noopener noreferrer"><i class="icon fa-github">&nbsp;</i>GitHub (BanterBoy)</a></li>
-								<li><a href="https://blog.lukeleigh.com" target="_blank" rel="noopener noreferrer"><i class="icon fa-rss">&nbsp;</i>Luke's Blog</a></li>
-							</ul>
-						</section>
-					</div>
-					<div class="copyright">
-						&copy; 2024&ndash;2026 Leigh IT Services Ltd. All rights reserved.
-					</div>
-				</div>
-			</footer>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+    <script>
+      // Smooth reveal for case cards
+      const cards = document.querySelectorAll(".case-card");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("opacity-100", "translate-y-0");
+              entry.target.classList.remove("opacity-0", "translate-y-8");
+            }
+          });
+        },
+        { threshold: 0.1 },
+      );
+      cards.forEach((card) => {
+        card.classList.add(
+          "opacity-0",
+          "translate-y-8",
+          "transition-all",
+          "duration-500",
+        );
+        observer.observe(card);
+      });
+    </script>
+  </body>
 </html>

@@ -1,391 +1,1110 @@
-<!DOCTYPE HTML>
-<html lang="en-gb">
-	<head>
-		<title>Meet the Team | Leigh Services</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="Meet Luke Leigh and Mark Leigh — the founders and owners of Leigh Services, bringing 50+ years of IT infrastructure and data engineering expertise." />
-		<meta name="keywords" content="Luke Leigh, Mark Leigh, Leigh Services, IT infrastructure, PowerShell, data engineering, security" />
-		<meta http-equiv="content-language" content="en-gb" />
-		<link rel="canonical" href="https://leigh-services.com/team.html" />
-		<meta property="og:type" content="website" />
-		<meta property="og:site_name" content="Leigh Services" />
-		<meta property="og:title" content="Meet the Team | Leigh Services" />
-		<meta property="og:description" content="Meet Luke Leigh and Mark Leigh — the founders and owners of Leigh Services, bringing 50+ years of IT infrastructure and data engineering expertise." />
-		<meta property="og:url" content="https://leigh-services.com/team.html" />
-		<meta property="og:image" content="https://leigh-services.com/images/banner.jpg" />
-		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:title" content="Meet the Team | Leigh Services" />
-		<meta name="twitter:description" content="Meet Luke Leigh and Mark Leigh — the founders and owners of Leigh Services, bringing 50+ years of IT infrastructure and data engineering expertise." />
-		<meta name="twitter:image" content="https://leigh-services.com/images/banner.jpg" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<style>
-			/* Profile layout */
-			.profile-section {
-				display: -ms-flexbox;
-				display: flex;
-				-ms-flex-wrap: wrap;
-				flex-wrap: wrap;
-				gap: 3em;
-				align-items: flex-start;
-				padding: 3em 0;
-				border-bottom: 1px solid #e4e4e4;
-			}
-			.profile-section:last-of-type {
-				border-bottom: none;
-			}
-			.profile-photo {
-				-ms-flex: 0 0 260px;
-				flex: 0 0 260px;
-				max-width: 260px;
-			}
-			/* Photo wrapper — 4:3 aspect ratio */
-			.profile-photo .photo-wrap {
-				position: relative;
-				width: 100%;
-				padding-top: 125%; /* taller crop for portrait headshots */
-				border-radius: 4px;
-				overflow: hidden;
-				margin-bottom: 1.2em;
-			}
-			.profile-photo .photo-wrap img {
-				position: absolute;
-				top: 0; left: 0;
-				width: 100%;
-				height: 100%;
-				object-fit: cover;
-				object-position: center top;
-				display: block;
-			}
-			.profile-photo .photo-meta {
-				margin-top: 1.2em;
-			}
-			.profile-photo .photo-meta a {
-				display: block;
-				color: #ce1b28;
-				font-size: 0.88em;
-				font-weight: 600;
-				margin-bottom: 0.4em;
-				text-decoration: none;
-			}
-			.profile-photo .photo-meta a:hover {
-				text-decoration: underline;
-			}
-			.profile-body {
-				-ms-flex: 1 1 320px;
-				flex: 1 1 320px;
-			}
-			.profile-body h2 {
-				margin-bottom: 0.15em;
-			}
-			.profile-role {
-				color: #ce1b28;
-				font-size: 0.8em;
-				font-weight: 700;
-				text-transform: uppercase;
-				letter-spacing: 0.12em;
-				margin: 0 0 1.2em 0;
-			}
-			.profile-body p {
-				color: #555;
-				line-height: 1.75;
-				margin-bottom: 1em;
-			}
-			.profile-body h4 {
-				margin: 1.6em 0 0.6em 0;
-				font-size: 0.85em;
-				text-transform: uppercase;
-				letter-spacing: 0.1em;
-				color: #111;
-			}
-			.skill-tags {
-				display: -ms-flexbox;
-				display: flex;
-				-ms-flex-wrap: wrap;
-				flex-wrap: wrap;
-				gap: 0.4em;
-				margin-bottom: 1.2em;
-			}
-			.skill-tag {
-				background: #111;
-				color: #fff;
-				font-size: 0.72em;
-				font-weight: 600;
-				letter-spacing: 0.05em;
-				padding: 0.3em 0.8em;
-				border-radius: 2px;
-			}
-			.exp-item {
-				margin-bottom: 1.2em;
-			}
-			.exp-item strong {
-				display: block;
-				font-size: 0.95em;
-				color: #111;
-			}
-			.exp-item span {
-				font-size: 0.82em;
-				color: #888;
-			}
-			.exp-item p {
-				margin-top: 0.4em;
-				font-size: 0.9em;
-				margin-bottom: 0;
-			}
-			@media screen and (max-width: 640px) {
-				.profile-photo {
-					-ms-flex: 0 0 100%;
-					flex: 0 0 100%;
-					max-width: 100%;
-				}
-				.profile-photo .photo-wrap {
+﻿<!doctype html>
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Meet the Team | Leigh Services</title>
+    <meta
+      name="description"
+      content="Meet Luke Leigh and Mark Leigh — the founders of Leigh Services, bringing 50+ years of IT infrastructure, automation and data engineering expertise."
+    />
+    <meta
+      name="keywords"
+      content="Luke Leigh, Mark Leigh, Leigh Services, IT infrastructure, PowerShell, data engineering, security"
+    />
+    <link rel="canonical" href="https://leigh-services.com/team.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Leigh Services" />
+    <meta property="og:title" content="Meet the Team | Leigh Services" />
+    <meta
+      property="og:description"
+      content="Meet Luke Leigh and Mark Leigh — the founders of Leigh Services, bringing 50+ years of IT infrastructure and data engineering expertise."
+    />
+    <meta property="og:url" content="https://leigh-services.com/team.html" />
+    <meta
+      property="og:image"
+      content="https://leigh-services.com/images/banner.jpg"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;family=Geist:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-low": "#131c2b",
+              "outline-variant": "#3b494c",
+              "on-error": "#690005",
+              "on-tertiary-fixed": "#001945",
+              "surface-container-lowest": "#060e1d",
+              "on-background": "#dbe2f8",
+              "error-container": "#93000a",
+              "on-secondary": "#1b247f",
+              "surface-tint": "#00daf3",
+              "tertiary-container": "#bfd0ff",
+              "primary-container": "#00e5ff",
+              "on-tertiary-fixed-variant": "#00429c",
+              "on-secondary-fixed-variant": "#343d96",
+              "inverse-surface": "#dbe2f8",
+              "inverse-primary": "#006875",
+              "surface-container": "#18202f",
+              surface: "#0b1323",
+              "on-primary-container": "#00626e",
+              "on-primary-fixed": "#001f24",
+              error: "#ffb4ab",
+              "surface-container-high": "#222a3a",
+              "secondary-fixed": "#e0e0ff",
+              "on-secondary-container": "#a8afff",
+              "tertiary-fixed-dim": "#b0c6ff",
+              "secondary-container": "#343d96",
+              "primary-fixed-dim": "#00daf3",
+              tertiary: "#e8ecff",
+              "on-tertiary-container": "#2455af",
+              "on-primary-fixed-variant": "#004f58",
+              "on-secondary-fixed": "#000767",
+              primary: "#c3f5ff",
+              background: "#0b1323",
+              "on-tertiary": "#002d6f",
+              "on-primary": "#00363d",
+              "on-error-container": "#ffdad6",
+              "inverse-on-surface": "#283041",
+              "surface-variant": "#2d3546",
+              "surface-container-highest": "#2d3546",
+              secondary: "#bdc2ff",
+              outline: "#849396",
+              "on-surface-variant": "#bac9cc",
+              "surface-bright": "#31394a",
+              "primary-fixed": "#9cf0ff",
+              "tertiary-fixed": "#d9e2ff",
+              "surface-dim": "#0b1323",
+              "on-surface": "#dbe2f8",
+              "secondary-fixed-dim": "#bdc2ff",
+            },
+            borderRadius: {
+              DEFAULT: "0.125rem",
+              lg: "0.25rem",
+              xl: "0.5rem",
+              full: "0.75rem",
+            },
+            spacing: {
+              xs: "4px",
+              margin: "24px",
+              lg: "24px",
+              xl: "40px",
+              gutter: "16px",
+              base: "4px",
+              sm: "8px",
+              md: "16px",
+            },
+            fontFamily: {
+              "headline-lg-mobile": ["Geist"],
+              "title-md": ["Geist"],
+              "label-sm": ["JetBrains Mono"],
+              "headline-lg": ["Geist"],
+              "body-sm": ["Geist"],
+              "label-md": ["JetBrains Mono"],
+              "body-lg": ["Geist"],
+              "display-lg": ["Geist"],
+            },
+            fontSize: {
+              "headline-lg-mobile": [
+                "24px",
+                { lineHeight: "32px", fontWeight: "600" },
+              ],
+              "title-md": ["20px", { lineHeight: "28px", fontWeight: "500" }],
+              "label-sm": [
+                "10px",
+                {
+                  lineHeight: "14px",
+                  letterSpacing: "0.05em",
+                  fontWeight: "500",
+                },
+              ],
+              "headline-lg": [
+                "32px",
+                { lineHeight: "40px", fontWeight: "600" },
+              ],
+              "body-sm": ["14px", { lineHeight: "20px", fontWeight: "400" }],
+              "label-md": [
+                "12px",
+                {
+                  lineHeight: "16px",
+                  letterSpacing: "0.05em",
+                  fontWeight: "500",
+                },
+              ],
+              "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+              "display-lg": [
+                "48px",
+                {
+                  lineHeight: "56px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "700",
+                },
+              ],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .text-shadow-glow {
+        text-shadow: 0 0 12px rgba(0, 229, 255, 0.4);
+      }
+      .noise-overlay {
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        opacity: 0.03;
+        pointer-events: none;
+      }
+      .profile-photo-wrap {
+        position: relative;
+        width: 100%;
+        padding-top: 125%;
+        overflow: hidden;
+        border-radius: 0.5rem;
+      }
+      .profile-photo-wrap img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+        display: block;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background text-on-background font-body-lg overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container"
+  >
+    <div class="fixed inset-0 noise-overlay z-50"></div>
 
-					max-width: 280px;
-					margin: 0 auto;
-				}
-			}
-		</style>
-		<script src="assets/js/metrics.js"></script>
-	</head>
-	<body class="is-preload">
-		<!-- Google Tag Manager (noscript) -->
-		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5NBQFP8F" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-		<!-- End Google Tag Manager (noscript) -->
+    <!-- Navigation Header -->
+    <nav
+      class="bg-surface-container-lowest border-b border-outline-variant sticky top-0 z-[100] w-full"
+    >
+      <div
+        class="flex justify-between items-center px-lg py-md w-full max-w-7xl mx-auto"
+      >
+        <a
+          class="font-headline-lg text-headline-lg font-bold text-primary-fixed-dim tracking-tight"
+          href="index.html"
+          >Leigh Services</a
+        >
+        <div class="hidden md:flex items-center gap-lg">
+          <a
+            class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200"
+            href="index.html"
+            >Home</a
+          >
+          <a
+            class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200"
+            href="services.html"
+            >Services</a
+          >
+          <a
+            class="text-primary-fixed-dim font-bold border-b-2 border-primary-fixed-dim pb-1"
+            href="team.html"
+            >Meet the Team</a
+          >
+          <a
+            class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200"
+            href="certifications.html"
+            >Certifications</a
+          >
+          <a
+            class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200"
+            href="case-studies.html"
+            >Case Studies</a
+          >
+          <a
+            class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200"
+            href="testimonials.html"
+            >Testimonials</a
+          >
+          <a
+            class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200"
+            href="blog.html"
+            >Blog</a
+          >
+          <a
+            class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200"
+            href="contact.html"
+            >Contact</a
+          >
+          <a
+            class="ml-md bg-primary-container text-on-primary-fixed px-md py-sm rounded font-bold hover:opacity-80 transition-all"
+            href="contact.html"
+            >Consultation</a
+          >
+        </div>
+        <button
+          class="md:hidden text-primary-fixed-dim"
+          onclick="
+            document.getElementById('mobile-menu').classList.toggle('hidden')
+          "
+        >
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </div>
+    </nav>
 
-		<!-- Header -->
-			<header id="header">
-				<a class="logo" href="index.html">Leigh Services</a>
-				<nav>
-					<a href="#menu">Menu</a>
-				</nav>
-			</header>
+    <!-- Mobile Menu -->
+    <div
+      class="hidden md:hidden fixed inset-0 z-[110] bg-surface-container-lowest p-lg"
+      id="mobile-menu"
+    >
+      <div class="flex flex-col gap-md">
+        <div class="flex justify-between items-center mb-xl">
+          <span
+            class="font-headline-lg-mobile text-headline-lg-mobile text-primary-fixed-dim"
+            >Leigh Services</span
+          >
+          <button
+            onclick="
+              document.getElementById('mobile-menu').classList.add('hidden')
+            "
+          >
+            <span class="material-symbols-outlined">close</span>
+          </button>
+        </div>
+        <a class="text-title-md py-sm" href="index.html">Home</a>
+        <a class="text-title-md py-sm" href="services.html">Services</a>
+        <a
+          class="text-title-md py-sm text-primary-fixed-dim font-bold"
+          href="team.html"
+          >Meet the Team</a
+        >
+        <a class="text-title-md py-sm" href="certifications.html"
+          >Certifications</a
+        >
+        <a class="text-title-md py-sm" href="case-studies.html">Case Studies</a>
+        <a class="text-title-md py-sm" href="testimonials.html">Testimonials</a>
+        <a class="text-title-md py-sm" href="blog.html">Blog</a>
+        <a class="text-title-md py-sm" href="contact.html">Contact</a>
+        <a
+          class="mt-md bg-primary-container text-on-primary-fixed text-center px-md py-md rounded font-bold"
+          href="contact.html"
+          >Consultation</a
+        >
+      </div>
+    </div>
 
-		<!-- Nav -->
-			<nav id="menu">
-				<ul class="links">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="services.html">Services</a></li>
-					<li><a href="team.html">Meet the Team</a></li>
-					<li><a href="certifications.html">Certifications</a></li>
-					<li><a href="case-studies.html">Case Studies</a></li>
-					<li><a href="testimonials.html">Testimonials</a></li>
-					<li><a href="blog.html">Blog</a></li>
-					<li><a href="contact.html">Contact</a></li>
-				</ul>
-			</nav>
+    <main class="relative">
+      <!-- Hero -->
+      <section
+        class="relative py-xl md:py-24 border-b border-outline-variant overflow-hidden"
+      >
+        <div
+          class="max-w-7xl mx-auto px-lg relative z-10 text-center md:text-left"
+        >
+          <div
+            class="inline-flex items-center gap-xs px-sm py-xs bg-surface-container-high border border-outline-variant text-primary-fixed-dim mb-md"
+          >
+            <span class="material-symbols-outlined text-[16px]"
+              >engineering</span
+            >
+            <span class="font-label-md text-label-md"
+              >EXPERT LED CONSULTANCY</span
+            >
+          </div>
+          <h1
+            class="font-display-lg text-display-lg md:text-[64px] leading-tight mb-md text-primary max-w-4xl"
+          >
+            Meet the <span class="text-white">Founding Team.</span>
+          </h1>
+          <p class="text-body-lg text-on-surface-variant max-w-3xl">
+            Leigh Services was founded by Luke and Mark Leigh — two engineers
+            with a shared commitment to doing IT right: reliably, securely and
+            without unnecessary complexity. Between them they bring over 50
+            years of hands-on experience across infrastructure engineering,
+            PowerShell automation, data platform engineering and security
+            compliance.
+          </p>
+        </div>
+      </section>
 
-		<!-- Heading -->
-			<div id="heading">
-				<h1>Meet the Team</h1>
-			</div>
+      <!-- Team Profiles -->
+      <section class="py-xl md:py-32 bg-surface">
+        <div class="max-w-6xl mx-auto px-lg flex flex-col gap-xl">
+          <!-- Luke Leigh Card -->
+          <article
+            class="group bg-surface-container-low border border-outline-variant rounded-xl overflow-hidden hover:border-primary-fixed-dim/50 transition-all duration-300 p-md md:p-xl"
+          >
+            <!-- Hero row -->
+            <div class="flex flex-col md:flex-row gap-xl mb-xl">
+              <div class="w-full md:w-1/3 lg:w-1/4 flex-shrink-0">
+                <div class="profile-photo-wrap">
+                  <img alt="Luke Leigh" src="images/lukeleigh.jpg" />
+                </div>
+              </div>
+              <div class="flex-1 flex flex-col">
+                <div class="mb-md">
+                  <h2
+                    class="font-headline-lg text-headline-lg md:text-[40px] text-white mb-xs"
+                  >
+                    Luke Leigh
+                  </h2>
+                  <p
+                    class="font-label-md text-label-md text-primary-fixed-dim tracking-widest uppercase"
+                  >
+                    Infrastructure Engineer &amp; Owner
+                  </p>
+                </div>
+                <div
+                  class="text-body-lg text-on-surface-variant leading-relaxed space-y-md"
+                >
+                  <p>
+                    A dependable, diligent and analytical Infrastructure
+                    Engineer with expertise and in-depth knowledge of IT
+                    infrastructure and resolving support issues. Luke works well
+                    under pressure while keeping communication channels open, is
+                    quick to familiarise himself with the latest technology, and
+                    consistently delivers innovative solutions to complex
+                    problems.
+                  </p>
+                  <p>
+                    Currently serving as Infrastructure Engineer at Rail
+                    Delivery Group, Luke's primary focus is on-premises to
+                    Microsoft 365 migrations, system management and PowerShell
+                    automation. He has delivered infrastructure projects across
+                    retail, contact centres, financial services, cloud managed
+                    services and insurance — covering PCI DSS compliance
+                    programmes, virtualisation and Microsoft 365 deployments. He
+                    also publishes open-source PowerShell tooling on GitHub and
+                    the PowerShell Gallery.
+                  </p>
+                </div>
+                <div class="mt-lg flex flex-wrap gap-md">
+                  <a
+                    class="inline-flex items-center gap-xs text-on-surface-variant hover:text-primary-fixed-dim transition-colors font-label-md text-label-md uppercase tracking-wider"
+                    href="https://www.linkedin.com/in/lukeleigh"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span class="material-symbols-outlined text-[18px]"
+                      >link</span
+                    >
+                    LinkedIn
+                  </a>
+                  <a
+                    class="inline-flex items-center gap-xs text-on-surface-variant hover:text-primary-fixed-dim transition-colors font-label-md text-label-md uppercase tracking-wider"
+                    href="https://github.com/BanterBoy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span class="material-symbols-outlined text-[18px]"
+                      >code</span
+                    >
+                    GitHub (BanterBoy)
+                  </a>
+                  <a
+                    class="inline-flex items-center gap-xs text-on-surface-variant hover:text-primary-fixed-dim transition-colors font-label-md text-label-md uppercase tracking-wider"
+                    href="https://blog.lukeleigh.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span class="material-symbols-outlined text-[18px]"
+                      >article</span
+                    >
+                    Blog
+                  </a>
+                  <a
+                    class="inline-flex items-center gap-xs text-on-surface-variant hover:text-primary-fixed-dim transition-colors font-label-md text-label-md uppercase tracking-wider"
+                    href="https://www.powershellgallery.com/packages/PSCiscoMeraki"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span class="material-symbols-outlined text-[18px]"
+                      >deployed_code</span
+                    >
+                    PowerShell Gallery
+                  </a>
+                </div>
+              </div>
+            </div>
 
-		<!-- Main -->
-			<section id="main" class="wrapper">
-				<div class="inner">
-					<div class="content">
+            <!-- Core Skills -->
+            <div class="border-t border-outline-variant pt-xl mb-xl">
+              <h3
+                class="font-label-md text-label-md text-primary-fixed-dim uppercase tracking-widest mb-md"
+              >
+                Core Skills
+              </h3>
+              <div class="flex flex-wrap gap-xs">
+                <span
+                  class="bg-surface-container-high border border-outline-variant rounded-lg px-3 py-1 text-label-sm font-label-sm text-primary-fixed-dim"
+                  >PowerShell</span
+                >
+                <span
+                  class="bg-surface-container-high border border-outline-variant rounded-lg px-3 py-1 text-label-sm font-label-sm text-primary-fixed-dim"
+                  >Automation</span
+                >
+                <span
+                  class="bg-surface-container-high border border-outline-variant rounded-lg px-3 py-1 text-label-sm font-label-sm text-primary-fixed-dim"
+                  >Incident Management</span
+                >
+                <span
+                  class="bg-surface-container-high border border-outline-variant rounded-lg px-3 py-1 text-label-sm font-label-sm text-primary-fixed-dim"
+                  >Azure / Microsoft 365</span
+                >
+                <span
+                  class="bg-surface-container-high border border-outline-variant rounded-lg px-3 py-1 text-label-sm font-label-sm text-primary-fixed-dim"
+                  >VMware</span
+                >
+                <span
+                  class="bg-surface-container-high border border-outline-variant rounded-lg px-3 py-1 text-label-sm font-label-sm text-primary-fixed-dim"
+                  >On-prem / O365 Migration</span
+                >
+                <span
+                  class="bg-surface-container-high border border-outline-variant rounded-lg px-3 py-1 text-label-sm font-label-sm text-primary-fixed-dim"
+                  >PCI DSS</span
+                >
+                <span
+                  class="bg-surface-container-high border border-outline-variant rounded-lg px-3 py-1 text-label-sm font-label-sm text-primary-fixed-dim"
+                  >Exchange Online</span
+                >
+                <span
+                  class="bg-surface-container-high border border-outline-variant rounded-lg px-3 py-1 text-label-sm font-label-sm text-primary-fixed-dim"
+                  >Active Directory</span
+                >
+                <span
+                  class="bg-surface-container-high border border-outline-variant rounded-lg px-3 py-1 text-label-sm font-label-sm text-primary-fixed-dim"
+                  >Windows Server</span
+                >
+                <span
+                  class="bg-surface-container-high border border-outline-variant rounded-lg px-3 py-1 text-label-sm font-label-sm text-primary-fixed-dim"
+                  >Mimecast</span
+                >
+                <span
+                  class="bg-surface-container-high border border-outline-variant rounded-lg px-3 py-1 text-label-sm font-label-sm text-primary-fixed-dim"
+                  >Juniper</span
+                >
+              </div>
+            </div>
 
-						<header>
-							<h2>The People Behind Leigh Services</h2>
-							<p>Leigh Services was founded by Luke and Mark Leigh, two engineers with a shared commitment to doing IT right — reliably, securely and without unnecessary complexity. Between them they bring over 50 years of hands-on experience across infrastructure engineering, PowerShell automation, data platform engineering and security compliance.</p>
-						</header>
+            <!-- Experience Timeline -->
+            <div class="border-t border-outline-variant pt-xl">
+              <h3
+                class="font-label-md text-label-md text-primary-fixed-dim uppercase tracking-widest mb-lg"
+              >
+                Experience
+              </h3>
+              <div class="flex flex-col">
+                <div class="py-md">
+                  <p
+                    class="font-label-md text-label-md text-primary-fixed-dim uppercase tracking-widest mb-xs"
+                  >
+                    September 2022 – Present · London
+                  </p>
+                  <p
+                    class="font-title-md text-title-md text-white font-semibold mb-xs"
+                  >
+                    Infrastructure Engineer @ Rail Delivery Group
+                  </p>
+                  <p class="text-body-sm text-on-surface-variant">
+                    Recruited to assist in the transition to new premises and
+                    ongoing system management and maintenance.
+                  </p>
+                </div>
+                <div class="py-md border-t border-outline-variant">
+                  <p
+                    class="font-label-md text-label-md text-primary-fixed-dim uppercase tracking-widest mb-xs"
+                  >
+                    September 2022 – Present
+                  </p>
+                  <p
+                    class="font-title-md text-title-md text-white font-semibold"
+                  >
+                    Infrastructure Engineer &amp; Owner @ Leigh IT Services Ltd
+                  </p>
+                </div>
+                <div class="py-md border-t border-outline-variant">
+                  <p
+                    class="font-label-md text-label-md text-primary-fixed-dim uppercase tracking-widest mb-xs"
+                  >
+                    July 2021 – September 2022 · Purfleet
+                  </p>
+                  <p
+                    class="font-title-md text-title-md text-white font-semibold mb-xs"
+                  >
+                    Senior Infrastructure Engineer @ Carpetright
+                  </p>
+                  <p class="text-body-sm text-on-surface-variant">
+                    Managed and delivered project implementations. IT
+                    Infrastructure support for the group including messaging
+                    platforms, virtualisation, change management and Microsoft
+                    stack (on-premises and cloud).
+                  </p>
+                </div>
+                <div class="py-md border-t border-outline-variant">
+                  <p
+                    class="font-label-md text-label-md text-primary-fixed-dim uppercase tracking-widest mb-xs"
+                  >
+                    November 2020 – February 2021
+                  </p>
+                  <p
+                    class="font-title-md text-title-md text-white font-semibold mb-xs"
+                  >
+                    Infrastructure Engineer @ Ventrica
+                  </p>
+                  <p class="text-body-sm text-on-surface-variant">
+                    PCI Compliance programme delivery: Juniper firewall
+                    upgrades, patch management, AD hardening, Exchange Server
+                    2013 security. Compliance achieved by December 31st
+                    deadline.
+                  </p>
+                </div>
+                <div class="py-md border-t border-outline-variant">
+                  <p
+                    class="font-label-md text-label-md text-primary-fixed-dim uppercase tracking-widest mb-xs"
+                  >
+                    2018 – 2019 · London
+                  </p>
+                  <p
+                    class="font-title-md text-title-md text-white font-semibold mb-xs"
+                  >
+                    3rd Line Service Desk Technician @ Six Degrees Group
+                  </p>
+                  <p class="text-body-sm text-on-surface-variant">
+                    Complex incident resolution, change management, major
+                    incident management, mentoring and stakeholder
+                    communications across bespoke client infrastructures.
+                  </p>
+                </div>
+                <div class="py-md border-t border-outline-variant">
+                  <p
+                    class="font-label-md text-label-md text-primary-fixed-dim uppercase tracking-widest mb-xs"
+                  >
+                    July 2018 – December 2018 · Southend-on-Sea
+                  </p>
+                  <p
+                    class="font-title-md text-title-md text-white font-semibold mb-xs"
+                  >
+                    Senior IT Administrator @ Solopress
+                  </p>
+                  <p class="text-body-sm text-on-surface-variant">
+                    Implemented Dell EMC + VMware 6.5 virtual environment,
+                    migrated from GFI Kerio Connect to Exchange 365, integrated
+                    with Azure Active Directory. Also built the PSCiscoMeraki
+                    PowerShell module as a personal development project during
+                    this period.
+                  </p>
+                </div>
+                <div class="py-md border-t border-outline-variant">
+                  <p
+                    class="font-label-md text-label-md text-primary-fixed-dim uppercase tracking-widest mb-xs"
+                  >
+                    February 2017 – December 2017 · Upminster
+                  </p>
+                  <p
+                    class="font-title-md text-title-md text-white font-semibold mb-xs"
+                  >
+                    Infrastructure Engineer @ FSI Cloud
+                  </p>
+                  <p class="text-body-sm text-on-surface-variant">
+                    3rd line support for managed private cloud services.
+                    ISO9001/ISO27001 compliance, SIEM analysis, network
+                    performance optimisation, PowerShell automation
+                    architecture.
+                  </p>
+                </div>
+                <div class="py-md border-t border-outline-variant">
+                  <p
+                    class="font-label-md text-label-md text-primary-fixed-dim uppercase tracking-widest mb-xs"
+                  >
+                    March 2008 – September 2016 · Southend-on-Sea &amp; Bristol
+                  </p>
+                  <p
+                    class="font-title-md text-title-md text-white font-semibold mb-xs"
+                  >
+                    Network Architect | Webmaster | PCI Compliance Specialist @
+                    Insure and Go Insurance Services
+                  </p>
+                  <p class="text-body-sm text-on-surface-variant">
+                    8+ year tenure owning the WAN infrastructure and PCI DSS
+                    compliance programme. Delivered WAN amalgamation across four
+                    offices, Mapfre Global WAN integration, full virtualisation
+                    and data centre migration to Wales.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
 
-						<!-- Luke -->
-						<div class="profile-section">
-							<div class="profile-photo">
-							<div class="photo-wrap">
-								<img src="images/lukeleigh.jpg" alt="Luke Leigh" />
-							</div>
-								<div class="photo-meta">
-									<a href="https://www.linkedin.com/in/lukeleigh" target="_blank" rel="noopener noreferrer"><i class="icon fa-linkedin">&nbsp;</i>LinkedIn</a>
-									<a href="https://github.com/BanterBoy" target="_blank" rel="noopener noreferrer"><i class="icon fa-github">&nbsp;</i>GitHub (BanterBoy)</a>
-									<a href="https://blog.lukeleigh.com" target="_blank" rel="noopener noreferrer"><i class="icon fa-rss">&nbsp;</i>Blog</a>
-									<a href="https://www.powershellgallery.com/packages/PSCiscoMeraki" target="_blank" rel="noopener noreferrer"><i class="icon fa-cube">&nbsp;</i>PowerShell Gallery</a>
-								</div>
-							</div>
-							<div class="profile-body">
-								<h2>Luke Leigh</h2>
-								<p class="profile-role">Infrastructure Engineer &amp; Owner</p>
-								<p>A dependable, diligent and analytical Infrastructure Engineer with expertise and in-depth knowledge of IT infrastructure and resolving support issues. Luke works well under pressure while keeping communication channels open, is quick to familiarise himself with the latest technology, and consistently delivers innovative solutions to complex problems.</p>
-								<p>Currently serving as Infrastructure Engineer at Rail Delivery Group, Luke's primary focus is on-premises to Microsoft 365 migrations, system management and PowerShell automation. He has delivered infrastructure projects across retail, contact centres, financial services, cloud managed services and insurance — covering PCI DSS compliance programmes, virtualisation and Microsoft 365 deployments. He also publishes open-source PowerShell tooling on GitHub and the PowerShell Gallery.</p>
+          <!-- Mark Leigh Card -->
+          <article
+            class="group bg-surface-container-low border border-outline-variant rounded-xl overflow-hidden hover:border-primary-fixed-dim/50 transition-all duration-300 p-md md:p-xl"
+          >
+            <!-- Hero row -->
+            <div class="flex flex-col md:flex-row gap-xl mb-xl">
+              <div class="w-full md:w-1/3 lg:w-1/4 flex-shrink-0">
+                <div class="profile-photo-wrap">
+                  <img alt="Mark Leigh" src="images/markleigh.jpg" />
+                </div>
+              </div>
+              <div class="flex-1 flex flex-col">
+                <div class="mb-md">
+                  <h2
+                    class="font-headline-lg text-headline-lg md:text-[40px] text-white mb-xs"
+                  >
+                    Mark Leigh
+                  </h2>
+                  <p
+                    class="font-label-md text-label-md text-primary-fixed-dim tracking-widest uppercase"
+                  >
+                    Senior Data Engineer &amp; Security Specialist
+                  </p>
+                </div>
+                <div
+                  class="text-body-lg text-on-surface-variant leading-relaxed space-y-md"
+                >
+                  <p>
+                    A senior data engineer focused on improving the integrity,
+                    reliability and security of data platforms. Most of Mark's
+                    work starts when something isn't quite right — data that
+                    can't be trusted, pipelines that aren't behaving as
+                    expected, or systems risk that isn't fully understood. He's
+                    skilled at cutting through the noise to identify what's
+                    actually going wrong beneath the surface, and putting in
+                    place solutions that make things stable, predictable and
+                    safe.
+                  </p>
+                  <p>
+                    CompTIA Security+ certified with CREST CPSA ongoing, Mark
+                    has naturally moved closer to DevSecOps and cyber-focused
+                    practices — not as a separate discipline, but as part of how
+                    platforms should be built and run, with security, control
+                    and risk considered from the outset. His most notable
+                    delivery: leading a legacy SAS-to-Google Cloud Platform
+                    migration at Swarovski within 9 months, enabling €1m in
+                    annual cost savings.
+                  </p>
+                </div>
+                <div class="mt-lg flex flex-wrap gap-md">
+                  <a
+                    class="inline-flex items-center gap-xs text-on-surface-variant hover:text-primary-fixed-dim transition-colors font-label-md text-label-md uppercase tracking-wider"
+                    href="https://www.linkedin.com/in/markleigh"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span class="material-symbols-outlined text-[18px]"
+                      >link</span
+                    >
+                    LinkedIn
+                  </a>
+                </div>
+              </div>
+            </div>
 
-								<h4>Core Skills</h4>
-								<div class="skill-tags">
-									<span class="skill-tag">PowerShell</span>
-									<span class="skill-tag">Automation</span>
-									<span class="skill-tag">Incident Management</span>
-									<span class="skill-tag">Azure / Microsoft 365</span>
-									<span class="skill-tag">VMware</span>
-									<span class="skill-tag">On-prem / O365 Migration</span>
-									<span class="skill-tag">PCI DSS</span>
-									<span class="skill-tag">Exchange Online</span>
-									<span class="skill-tag">Active Directory</span>
-									<span class="skill-tag">Windows Server</span>
-									<span class="skill-tag">Mimecast</span>
-									<span class="skill-tag">Juniper</span>
-								</div>
+            <!-- Core Skills -->
+            <div class="border-t border-outline-variant pt-xl mb-xl">
+              <h3
+                class="font-label-md text-label-md text-primary-fixed-dim uppercase tracking-widest mb-md"
+              >
+                Core Skills
+              </h3>
+              <div class="flex flex-wrap gap-xs">
+                <span
+                  class="bg-surface-container-high border border-outline-variant rounded-lg px-3 py-1 text-label-sm font-label-sm text-primary-fixed-dim"
+                  >Data Engineering</span
+                >
+                <span
+                  class="bg-surface-container-high border border-outline-variant rounded-lg px-3 py-1 text-label-sm font-label-sm text-primary-fixed-dim"
+                  >DevSecOps</span
+                >
+                <span
+                  class="bg-surface-container-high border border-outline-variant rounded-lg px-3 py-1 text-label-sm font-label-sm text-primary-fixed-dim"
+                  >Python</span
+                >
+                <span
+                  class="bg-surface-container-high border border-outline-variant rounded-lg px-3 py-1 text-label-sm font-label-sm text-primary-fixed-dim"
+                  >SQL</span
+                >
+                <span
+                  class="bg-surface-container-high border border-outline-variant rounded-lg px-3 py-1 text-label-sm font-label-sm text-primary-fixed-dim"
+                  >SAS</span
+                >
+                <span
+                  class="bg-surface-container-high border border-outline-variant rounded-lg px-3 py-1 text-label-sm font-label-sm text-primary-fixed-dim"
+                  >GCP</span
+                >
+                <span
+                  class="bg-surface-container-high border border-outline-variant rounded-lg px-3 py-1 text-label-sm font-label-sm text-primary-fixed-dim"
+                  >Data Pipeline Security</span
+                >
+                <span
+                  class="bg-surface-container-high border border-outline-variant rounded-lg px-3 py-1 text-label-sm font-label-sm text-primary-fixed-dim"
+                  >Data Integrity &amp; Lineage</span
+                >
+                <span
+                  class="bg-surface-container-high border border-outline-variant rounded-lg px-3 py-1 text-label-sm font-label-sm text-primary-fixed-dim"
+                  >Root Cause Analysis</span
+                >
+                <span
+                  class="bg-surface-container-high border border-outline-variant rounded-lg px-3 py-1 text-label-sm font-label-sm text-primary-fixed-dim"
+                  >Governance &amp; Compliance</span
+                >
+                <span
+                  class="bg-surface-container-high border border-outline-variant rounded-lg px-3 py-1 text-label-sm font-label-sm text-primary-fixed-dim"
+                  >CompTIA Security+</span
+                >
+                <span
+                  class="bg-surface-container-high border border-outline-variant rounded-lg px-3 py-1 text-label-sm font-label-sm text-primary-fixed-dim"
+                  >CREST CPSA</span
+                >
+              </div>
+            </div>
 
-								<h4>Experience</h4>
+            <!-- Certifications -->
+            <div class="border-t border-outline-variant pt-xl mb-xl">
+              <h3
+                class="font-label-md text-label-md text-primary-fixed-dim uppercase tracking-widest mb-md"
+              >
+                Certifications
+              </h3>
+              <div class="flex flex-wrap gap-xs">
+                <span
+                  class="bg-surface-container-high border border-outline-variant rounded-lg px-3 py-1 text-label-sm font-label-sm text-primary-fixed-dim"
+                  >CompTIA Security+ — Optima Training (2026)</span
+                >
+                <span
+                  class="bg-surface-container-high border border-outline-variant rounded-lg px-3 py-1 text-label-sm font-label-sm text-primary-fixed-dim"
+                  >CREST CPSA — Optima Training (ongoing)</span
+                >
+                <span
+                  class="bg-surface-container-high border border-outline-variant rounded-lg px-3 py-1 text-label-sm font-label-sm text-primary-fixed-dim"
+                  >BSc Applied Computer Science — De Montfort University</span
+                >
+              </div>
+            </div>
 
-								<div class="exp-item">
-									<strong>Rail Delivery Group — Infrastructure Engineer</strong>
-									<span>September 2022 – Present &middot; London</span>
-									<p>Recruited to assist in the transition to new premises and ongoing system management and maintenance.</p>
-								</div>
-								<div class="exp-item">
-									<strong>Leigh IT Services Ltd — Infrastructure Engineer &amp; Owner</strong>
-									<span>September 2022 – Present</span>
-								</div>
-								<div class="exp-item">
-									<strong>Carpetright — Senior Infrastructure Engineer</strong>
-									<span>July 2021 – September 2022 &middot; Purfleet</span>
-									<p>Managed and delivered project implementations. IT Infrastructure support for the group including messaging platforms, virtualisation, change management and Microsoft stack (on-premises and cloud).</p>
-								</div>
-								<div class="exp-item">
-									<strong>Ventrica — Infrastructure Engineer</strong>
-									<span>November 2020 – February 2021</span>
-									<p>PCI Compliance programme delivery: Juniper firewall upgrades, patch management, AD hardening, Exchange Server 2013 security. Compliance achieved by December 31st deadline.</p>
-								</div>
-								<div class="exp-item">
-									<strong>Six Degrees Group — 3rd Line Service Desk Technician</strong>
-									<span>2018 – 2019 &middot; London</span>
-									<p>Complex incident resolution, change management, major incident management, mentoring and stakeholder communications across bespoke client infrastructures.</p>
-								</div>
-								<div class="exp-item">
-									<strong>Solopress — Senior IT Administrator</strong>
-									<span>July 2018 – December 2018 &middot; Southend-on-Sea</span>
-									<p>Implemented Dell EMC + VMware 6.5 virtual environment, migrated from GFI Kerio Connect to Exchange 365, integrated with Azure Active Directory. Also built the PSCiscoMeraki PowerShell module as a personal development project during this period.</p>
-								</div>
-								<div class="exp-item">
-									<strong>FSI Cloud — Infrastructure Engineer</strong>
-									<span>February 2017 – December 2017 &middot; Upminster</span>
-									<p>3rd line support for managed private cloud services. ISO9001/ISO27001 compliance, SIEM analysis, network performance optimisation, PowerShell automation architecture.</p>
-								</div>
-								<div class="exp-item">
-									<strong>Insure and Go Insurance Services — Network Architect | Webmaster | PCI Compliance Specialist</strong>
-									<span>March 2008 – September 2016 &middot; Southend-on-Sea &amp; Bristol</span>
-									<p>8+ year tenure owning the WAN infrastructure and PCI DSS compliance programme. Delivered WAN amalgamation across four offices, Mapfre Global WAN integration, full virtualisation and data centre migration to Wales.</p>
-								</div>
-							</div>
-						</div>
+            <!-- Experience Timeline -->
+            <div class="border-t border-outline-variant pt-xl">
+              <h3
+                class="font-label-md text-label-md text-primary-fixed-dim uppercase tracking-widest mb-lg"
+              >
+                Experience
+              </h3>
+              <div class="flex flex-col">
+                <div class="py-md">
+                  <p
+                    class="font-label-md text-label-md text-primary-fixed-dim uppercase tracking-widest mb-xs"
+                  >
+                    March 2020 – January 2024 · Zurich
+                  </p>
+                  <p
+                    class="font-title-md text-title-md text-white font-semibold mb-xs"
+                  >
+                    Senior Data Engineer @ Swarovski
+                  </p>
+                  <p class="text-body-sm text-on-surface-variant">
+                    Initially contracted to stabilise a poorly performing,
+                    undocumented SAS analytics environment; transitioned into a
+                    permanent role as the most senior engineer on the Data Lake
+                    team. Led the migration of a complex SAS platform to GCP in
+                    9 months, enabling €1m in annual savings. Reduced failure
+                    rates from ~25% to 2% and cut processing time by over 50%.
+                  </p>
+                </div>
+                <div class="py-md border-t border-outline-variant">
+                  <p
+                    class="font-label-md text-label-md text-primary-fixed-dim uppercase tracking-widest mb-xs"
+                  >
+                    January 2016 – September 2019 · Halifax
+                  </p>
+                  <p
+                    class="font-title-md text-title-md text-white font-semibold mb-xs"
+                  >
+                    SAS Consultant, Lead Developer (FINREP) @ Lloyds Banking
+                    Group
+                  </p>
+                  <p class="text-body-sm text-on-surface-variant">
+                    Lead developer on a regulatory reporting programme, bridging
+                    project management and development to deliver a complex
+                    FINREP solution. Key contributor to a Collections &amp;
+                    Recoveries migration applying Agile principles within a
+                    Waterfall environment.
+                  </p>
+                </div>
+                <div class="py-md border-t border-outline-variant">
+                  <p
+                    class="font-label-md text-label-md text-primary-fixed-dim uppercase tracking-widest mb-xs"
+                  >
+                    September 2014 – December 2015 · West Midlands
+                  </p>
+                  <p
+                    class="font-title-md text-title-md text-white font-semibold mb-xs"
+                  >
+                    SAS Consultant @ RWE Npower
+                  </p>
+                  <p class="text-body-sm text-on-surface-variant">
+                    Delivered data extraction and transformation solutions for
+                    targeted marketing campaigns. Secured stakeholder buy-in to
+                    improve data quality and consistency, reducing rework.
+                    Mentored team members on SAS Enterprise Guide.
+                  </p>
+                </div>
+                <div class="py-md border-t border-outline-variant">
+                  <p
+                    class="font-label-md text-label-md text-primary-fixed-dim uppercase tracking-widest mb-xs"
+                  >
+                    January 2014 – May 2014 · Pendeford
+                  </p>
+                  <p
+                    class="font-title-md text-title-md text-white font-semibold mb-xs"
+                  >
+                    SAS Consultant, MMR @ Lloyds Banking Group
+                  </p>
+                  <p class="text-body-sm text-on-surface-variant">
+                    Supported delivery of regulatory change under the Mortgage
+                    Market Review, developing and testing data solutions within
+                    a controlled banking environment.
+                  </p>
+                </div>
+                <div class="py-md border-t border-outline-variant">
+                  <p
+                    class="font-label-md text-label-md text-primary-fixed-dim uppercase tracking-widest mb-xs"
+                  >
+                    April 2001 – May 2007
+                  </p>
+                  <p
+                    class="font-title-md text-title-md text-white font-semibold"
+                  >
+                    Senior Systems Analyst @ Royal Bank of Scotland
+                  </p>
+                </div>
+                <div class="py-md border-t border-outline-variant">
+                  <p
+                    class="font-label-md text-label-md text-primary-fixed-dim uppercase tracking-widest mb-xs"
+                  >
+                    Earlier Roles
+                  </p>
+                  <p
+                    class="font-title-md text-title-md text-white font-semibold"
+                  >
+                    Barclaycard · Capgemini · Nationwide Building Society · CSC
+                    Sverige AB · Direct Line
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
 
-						<!-- Mark -->
-						<div class="profile-section">
-							<div class="profile-photo">
-							<div class="photo-wrap">
-								<img src="images/markleigh.jpg" alt="Mark Leigh" />
-							</div>
-								<div class="photo-meta">
-									<a href="https://www.linkedin.com/in/markleigh" target="_blank" rel="noopener noreferrer"><i class="icon fa-linkedin">&nbsp;</i>LinkedIn</a>
-								</div>
-							</div>
-							<div class="profile-body">
-								<h2>Mark Leigh</h2>
-								<p class="profile-role">Senior Data Engineer &amp; Security Specialist</p>
-								<p>A senior data engineer focused on improving the integrity, reliability and security of data platforms. Most of Mark's work starts when something isn't quite right — data that can't be trusted, pipelines that aren't behaving as expected, or systems risk that isn't fully understood. He's skilled at cutting through the noise to identify what's actually going wrong beneath the surface, and putting in place solutions that make things stable, predictable and safe.</p>
-								<p>CompTIA Security+ certified with CREST CPSA ongoing, Mark has naturally moved closer to DevSecOps and cyber-focused practices — not as a separate discipline, but as part of how platforms should be built and run, with security, control and risk considered from the outset. His most notable delivery: leading a legacy SAS-to-Google Cloud Platform migration at Swarovski within 9 months, enabling &euro;1m in annual cost savings.</p>
+      <!-- Credentials / Stats Strip -->
+      <section
+        class="py-xl bg-surface-container-lowest border-y border-outline-variant"
+      >
+        <div class="max-w-7xl mx-auto px-lg">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-lg text-center">
+            <div>
+              <div
+                class="font-display-lg text-display-lg text-primary-fixed-dim mb-xs"
+              >
+                50+
+              </div>
+              <p class="font-label-md text-label-md text-on-surface-variant">
+                YEARS EXPERIENCE
+              </p>
+            </div>
+            <div>
+              <div
+                class="font-display-lg text-display-lg text-primary-fixed-dim mb-xs"
+              >
+                €1M
+              </div>
+              <p class="font-label-md text-label-md text-on-surface-variant">
+                CLIENT SAVINGS
+              </p>
+            </div>
+            <div>
+              <div
+                class="font-display-lg text-display-lg text-primary-fixed-dim mb-xs"
+              >
+                100+
+              </div>
+              <p class="font-label-md text-label-md text-on-surface-variant">
+                AUTOMATION TOOLS
+              </p>
+            </div>
+            <div>
+              <div
+                class="font-display-lg text-display-lg text-primary-fixed-dim mb-xs"
+              >
+                Sec+
+              </div>
+              <p class="font-label-md text-label-md text-on-surface-variant">
+                CERTIFIED EXPERTS
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-								<h4>Core Skills</h4>
-								<div class="skill-tags">
-									<span class="skill-tag">Data Engineering</span>
-									<span class="skill-tag">DevSecOps</span>
-									<span class="skill-tag">Python</span>
-									<span class="skill-tag">SQL</span>
-									<span class="skill-tag">SAS (Base / Macro / DI Studio)</span>
-									<span class="skill-tag">Google Cloud Platform</span>
-									<span class="skill-tag">Data Pipeline Security</span>
-									<span class="skill-tag">Data Integrity &amp; Lineage</span>
-									<span class="skill-tag">Root Cause Analysis</span>
-									<span class="skill-tag">Governance &amp; Compliance</span>
-									<span class="skill-tag">CompTIA Security+</span>
-									<span class="skill-tag">CREST CPSA</span>
-								</div>
+      <!-- CTA -->
+      <section class="py-32 relative overflow-hidden">
+        <div class="absolute inset-0 bg-primary-container/5"></div>
+        <div class="max-w-3xl mx-auto px-lg text-center relative z-10">
+          <h2
+            class="font-headline-lg text-headline-lg md:text-[48px] text-white mb-md"
+          >
+            Ready to work with the experts?
+          </h2>
+          <p class="text-body-lg text-on-surface-variant mb-xl">
+            Whether you need infrastructure support, automation tooling, data
+            platform engineering or compliance guidance — we bring the expertise
+            to get the job done.
+          </p>
+          <div class="flex flex-col md:flex-row gap-md justify-center">
+            <a
+              class="px-xl py-md bg-primary-container text-on-primary-fixed font-bold rounded-lg hover:brightness-110 transition-all shadow-lg shadow-primary-container/20"
+              href="contact.html"
+              >Get in Touch</a
+            >
+            <a
+              class="px-xl py-md border border-outline text-white font-bold rounded-lg hover:bg-white/10 transition-all"
+              href="services.html"
+              >View Our Services</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
 
-								<h4>Certifications</h4>
-								<div class="skill-tags">
-									<span class="skill-tag">BSc Applied Computer Science — De Montfort University</span>
-									<span class="skill-tag">CompTIA Security+ — Optima Training (2026)</span>
-									<span class="skill-tag">CREST CPSA — Optima Training (ongoing)</span>
-								</div>
+    <!-- Footer -->
+    <footer class="bg-surface-container-lowest border-t border-outline-variant">
+      <div
+        class="grid grid-cols-1 md:grid-cols-4 gap-xl px-lg py-xl max-w-7xl mx-auto"
+      >
+        <div class="col-span-1 md:col-span-1">
+          <div
+            class="font-title-md text-title-md font-bold text-primary-fixed-dim mb-md"
+          >
+            Leigh Services
+          </div>
+          <p
+            class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+          >
+            Expert IT Infrastructure, Automation and Data Engineering consulting
+            based in Southend-on-Sea, Essex.
+          </p>
+          <p
+            class="font-body-sm text-body-sm text-on-surface-variant mt-md italic"
+          >
+            63 Archer Avenue, Southend on Sea, Essex SS2 4QU
+          </p>
+        </div>
+        <div>
+          <div
+            class="font-label-md text-label-md text-primary-fixed-dim mb-md uppercase tracking-wider"
+          >
+            Quick Links
+          </div>
+          <div class="flex flex-col gap-sm">
+            <a
+              class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
+              href="index.html"
+              >Home</a
+            >
+            <a
+              class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
+              href="services.html"
+              >Services</a
+            >
+            <a
+              class="font-body-sm text-body-sm text-primary-fixed-dim font-bold"
+              href="team.html"
+              >Meet the Team</a
+            >
+            <a
+              class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
+              href="certifications.html"
+              >Certifications</a
+            >
+          </div>
+        </div>
+        <div>
+          <div
+            class="font-label-md text-label-md text-primary-fixed-dim mb-md uppercase tracking-wider"
+          >
+            Connect
+          </div>
+          <div class="flex flex-col gap-sm">
+            <a
+              class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors inline-flex items-center gap-xs"
+              href="https://www.linkedin.com/in/lukeleigh"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="material-symbols-outlined text-sm">link</span> Luke
+              on LinkedIn
+            </a>
+            <a
+              class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors inline-flex items-center gap-xs"
+              href="https://www.linkedin.com/in/markleigh"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="material-symbols-outlined text-sm">link</span> Mark
+              on LinkedIn
+            </a>
+            <a
+              class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors inline-flex items-center gap-xs"
+              href="https://github.com/BanterBoy"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="material-symbols-outlined text-sm">code</span> GitHub
+            </a>
+          </div>
+        </div>
+        <div>
+          <div
+            class="font-label-md text-label-md text-primary-fixed-dim mb-md uppercase tracking-wider"
+          >
+            Legal
+          </div>
+          <p class="font-body-sm text-body-sm text-on-surface-variant mb-md">
+            © 2024–2026 Leigh IT Services Ltd. All rights reserved.
+          </p>
+          <div class="flex gap-md">
+            <span class="material-symbols-outlined text-outline-variant"
+              >verified_user</span
+            >
+            <span class="material-symbols-outlined text-outline-variant"
+              >shield</span
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
 
-								<h4>Experience</h4>
-
-								<div class="exp-item">
-									<strong>SWAROVSKI — Senior Data Engineer</strong>
-									<span>March 2020 – January 2024 &middot; Zurich</span>
-									<p>Initially contracted to stabilise a poorly performing, undocumented SAS analytics environment; transitioned into a permanent role as the most senior engineer on the Data Lake team. Led the migration of a complex SAS platform to GCP in 9 months, enabling &euro;1m in annual savings. Reduced failure rates from ~25% to 2% and cut processing time by over 50%.</p>
-								</div>
-								<div class="exp-item">
-									<strong>Lloyds Banking Group — SAS Consultant, Lead Developer (FINREP)</strong>
-									<span>January 2016 – September 2019 &middot; Halifax</span>
-									<p>Lead developer on a regulatory reporting programme, bridging project management and development to deliver a complex FINREP solution. Key contributor to a Collections &amp; Recoveries migration applying Agile principles within a Waterfall environment.</p>
-								</div>
-								<div class="exp-item">
-									<strong>RWE Npower — SAS Consultant</strong>
-									<span>September 2014 – December 2015 &middot; West Midlands</span>
-									<p>Delivered data extraction and transformation solutions for targeted marketing campaigns. Secured stakeholder buy-in to improve data quality and consistency, reducing rework. Mentored team members on SAS Enterprise Guide.</p>
-								</div>
-								<div class="exp-item">
-									<strong>Lloyds Banking Group — SAS Consultant, MMR</strong>
-									<span>January 2014 – May 2014 &middot; Pendeford</span>
-									<p>Supported delivery of regulatory change under the Mortgage Market Review, developing and testing data solutions within a controlled banking environment.</p>
-								</div>
-								<div class="exp-item">
-									<strong>Royal Bank of Scotland — Senior Systems Analyst</strong>
-									<span>April 2001 – May 2007</span>
-								</div>
-								<div class="exp-item">
-									<strong>Earlier roles</strong>
-									<span>Barclaycard, Capgemini, Nationwide Building Society, CSC Sverige AB, Direct Line</span>
-								</div>
-							</div>
-						</div>
-
-					</div>
-				</div>
-			</section>
-
-		<!-- Footer -->
-			<footer id="footer">
-				<div class="inner">
-					<div class="content">
-						<section>
-							<h3>Leigh Services</h3>
-							<p>Expert IT Infrastructure, Automation and Data Engineering consulting based in Southend-on-Sea, Essex. Serving clients across the UK and internationally.</p>
-						<p>63 Archer Avenue, Southend on Sea, Essex SS2 4QU</p>
-						</section>
-						<section>
-							<h4>Services</h4>
-							<ul class="alt">
-							<li><a href="services.html#it-infrastructure">IT Infrastructure</a></li>
-							<li><a href="services.html#powershell-automation">PowerShell &amp; Automation</a></li>
-							<li><a href="services.html#cloud-solutions">Cloud Solutions</a></li>
-							<li><a href="services.html#data-engineering">Data Engineering</a></li>
-							<li><a href="services.html#security-compliance">Security &amp; Compliance</a></li>
-							<li><a href="services.html#devsecops">DevSecOps</a></li>
-							</ul>
-						</section>
-						<section>
-							<h4>Connect</h4>
-							<ul class="plain">
-								<li><a href="https://www.linkedin.com/in/lukeleigh" target="_blank" rel="noopener noreferrer"><i class="icon fa-linkedin">&nbsp;</i>Luke on LinkedIn</a></li>
-								<li><a href="https://www.linkedin.com/in/markleigh" target="_blank" rel="noopener noreferrer"><i class="icon fa-linkedin">&nbsp;</i>Mark on LinkedIn</a></li>
-								<li><a href="https://github.com/BanterBoy" target="_blank" rel="noopener noreferrer"><i class="icon fa-github">&nbsp;</i>GitHub (BanterBoy)</a></li>
-								<li><a href="https://blog.lukeleigh.com" target="_blank" rel="noopener noreferrer"><i class="icon fa-rss">&nbsp;</i>Luke's Blog</a></li>
-							</ul>
-						</section>
-					</div>
-					<div class="copyright">
-					&copy; 2024&ndash;2026 Leigh IT Services Ltd. All rights reserved.
-					</div>
-				</div>
-			</footer>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+    <script>
+      // Mobile menu close on link click
+      document.querySelectorAll("#mobile-menu a").forEach((link) => {
+        link.addEventListener("click", () => {
+          document.getElementById("mobile-menu").classList.add("hidden");
+        });
+      });
+    </script>
+  </body>
 </html>
