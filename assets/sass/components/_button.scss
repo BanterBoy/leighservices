@@ -109,10 +109,11 @@
 				@else {
 					background-color: _palette($highlight, bg);
 					color: _palette($highlight, fg-bold) !important;
+					box-shadow: 0 0 20px rgba(0,229,255,0.35);
 
 					&:hover {
 						background-color: lighten(_palette($highlight, bg), 5);
-						box-shadow: none;
+						box-shadow: 0 0 30px rgba(0,229,255,0.55);
 
 						&:active {
 							background-color: darken(_palette($highlight, bg), 5);

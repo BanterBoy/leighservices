@@ -44,17 +44,7 @@
 						text-decoration: none;
 
 						&:hover {
-							color: _palette($accent, fg-bold);
-						}
-					}
-
-					&:first-child {
-						> a {
-							border-top: 0;
-						}
-					}
-				}
-			}
+						color: #00e5ff;
 		}
 
 		.close {
