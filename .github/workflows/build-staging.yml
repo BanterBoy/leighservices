@@ -28,11 +28,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v5
 
-      - name: Install Sass
-        run: npm install -g sass
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install build dependencies
+        run: npm ci
 
       - name: Compile SCSS
-        run: sass assets/sass/main.scss assets/css/main.css --style=compressed --no-source-map
+        run: npm run build:sass
+
+      - name: Compile Tailwind
+        run: npm run build:tailwind
 
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v6

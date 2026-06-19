@@ -13,7 +13,7 @@ Desktop.ini
 .vscode/launch.json
 .vscode/*.log
 
-# Node (in case npm is ever used locally)
+# Node (used by CI for the Tailwind/Sass build only)
 node_modules/
 npm-debug.log*
 

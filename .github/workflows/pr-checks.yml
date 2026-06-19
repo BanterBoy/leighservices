@@ -24,6 +24,25 @@ jobs:
       - name: Compile SCSS
         run: sass assets/sass/main.scss /tmp/main-check.css --style=compressed --no-source-map
 
+  tailwind-check:
+    name: Tailwind Compile Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install build dependencies
+        run: npm ci
+
+      - name: Compile Tailwind
+        run: npm run build:tailwind
+
   html-check:
     name: HTML Lint Check
     runs-on: ubuntu-latest
