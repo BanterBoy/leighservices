@@ -1,200 +1,717 @@
-<!DOCTYPE HTML>
-<html lang="en-gb">
-	<head>
-		<title>Services | Leigh Services</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="Leigh Services offers IT Infrastructure, PowerShell Automation, Cloud Solutions, Data Engineering, Security &amp; Compliance, and DevSecOps consulting." />
-		<meta name="keywords" content="IT infrastructure, PowerShell automation, cloud solutions, data engineering, security compliance, DevSecOps, Essex, UK" />
-		<meta property="og:title" content="Services | Leigh Services" />
-		<meta property="og:description" content="Expert IT Infrastructure, PowerShell Automation, Cloud Solutions, Data Engineering, Security &amp; Compliance, and DevSecOps consulting." />
-		<meta property="og:url" content="https://leigh-services.com/services.html" />
-		<meta property="og:image" content="https://leigh-services.com/images/banner.jpg" />
-		<meta property="og:type" content="website" />
-		<meta property="og:site_name" content="Leigh Services" />
-		<meta http-equiv="content-language" content="en-gb" />
-		<link rel="canonical" href="https://leigh-services.com/services.html" />
-		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:title" content="Services | Leigh Services" />
-		<meta name="twitter:description" content="Expert IT Infrastructure, PowerShell Automation, Cloud Solutions, Data Engineering, Security &amp; Compliance, and DevSecOps consulting." />
-		<meta name="twitter:image" content="https://leigh-services.com/images/banner.jpg" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<style>
-			.service-section {
-				padding: 3em 0;
-				border-bottom: 1px solid #e4e4e4;
-			}
-			.service-section:last-of-type {
-				border-bottom: none;
-				padding-bottom: 0;
-			}
-			.service-section .service-icon {
-				font-size: 2.5em;
-				color: #ce1b28;
-				margin-bottom: 0.5em;
-			}
-			.service-section h2 {
-				margin-bottom: 0.5em;
-			}
-			.service-section p {
-				color: #555;
-				line-height: 1.75;
-				margin-bottom: 1em;
-			}
-			.service-cta {
-				margin-top: 1.5em;
-			}
-		</style>
-		<script src="assets/js/metrics.js"></script>
-	</head>
-	<body class="is-preload">
-		<!-- Google Tag Manager (noscript) -->
-		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5NBQFP8F" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-		<!-- End Google Tag Manager (noscript) -->
+﻿<!doctype html>
 
-		<!-- Header -->
-			<header id="header">
-				<a class="logo" href="index.html">Leigh Services</a>
-				<nav>
-					<a href="#menu">Menu</a>
-				</nav>
-			</header>
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Services | Leigh Services - Expert IT &amp; Data Engineering</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=JetBrains+Mono:wght@100..800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-low": "#131c2b",
+              "outline-variant": "#3b494c",
+              "on-error": "#690005",
+              "on-tertiary-fixed": "#001945",
+              "surface-container-lowest": "#060e1d",
+              "on-background": "#dbe2f8",
+              "error-container": "#93000a",
+              "on-secondary": "#1b247f",
+              "surface-tint": "#00daf3",
+              "tertiary-container": "#bfd0ff",
+              "primary-container": "#00e5ff",
+              "on-tertiary-fixed-variant": "#00429c",
+              "on-secondary-fixed-variant": "#343d96",
+              "inverse-surface": "#dbe2f8",
+              "inverse-primary": "#006875",
+              "surface-container": "#18202f",
+              surface: "#0b1323",
+              "on-primary-container": "#00626e",
+              "on-primary-fixed": "#001f24",
+              error: "#ffb4ab",
+              "surface-container-high": "#222a3a",
+              "secondary-fixed": "#e0e0ff",
+              "on-secondary-container": "#a8afff",
+              "tertiary-fixed-dim": "#b0c6ff",
+              "secondary-container": "#343d96",
+              "primary-fixed-dim": "#00daf3",
+              tertiary: "#e8ecff",
+              "on-tertiary-container": "#2455af",
+              "on-primary-fixed-variant": "#004f58",
+              "on-secondary-fixed": "#000767",
+              primary: "#c3f5ff",
+              background: "#0b1323",
+              "on-tertiary": "#002d6f",
+              "on-primary": "#00363d",
+              "on-error-container": "#ffdad6",
+              "inverse-on-surface": "#283041",
+              "surface-variant": "#2d3546",
+              "surface-container-highest": "#2d3546",
+              secondary: "#bdc2ff",
+              outline: "#849396",
+              "on-surface-variant": "#bac9cc",
+              "surface-bright": "#31394a",
+              "primary-fixed": "#9cf0ff",
+              "tertiary-fixed": "#d9e2ff",
+              "surface-dim": "#0b1323",
+              "on-surface": "#dbe2f8",
+              "secondary-fixed-dim": "#bdc2ff",
+            },
+            borderRadius: {
+              DEFAULT: "0.125rem",
+              lg: "0.25rem",
+              xl: "0.5rem",
+              full: "0.75rem",
+            },
+            spacing: {
+              xs: "4px",
+              margin: "24px",
+              lg: "24px",
+              xl: "40px",
+              gutter: "16px",
+              base: "4px",
+              sm: "8px",
+              md: "16px",
+            },
+            fontFamily: {
+              "headline-lg": ["Geist"],
+              "title-md": ["Geist"],
+              "label-sm": ["JetBrains Mono"],
+              "body-sm": ["Geist"],
+              "body-lg": ["Geist"],
+              "display-lg": ["Geist"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      .service-card {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .service-card:hover {
+        border-color: #00e5ff;
+        box-shadow: 0 0 20px rgba(0, 229, 255, 0.1);
+        transform: translateY(-4px);
+      }
+      .active-indicator {
+        position: absolute;
+        left: 0;
+        top: 20%;
+        bottom: 20%;
+        width: 2px;
+        background-color: #00e5ff;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background text-on-background font-body-lg overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container"
+  >
+    <!-- TopNavBar -->
+    <header
+      class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest border-b border-outline-variant"
+    >
+      <nav
+        class="flex justify-between items-center px-lg py-md w-full max-w-7xl mx-auto h-20"
+      >
+        <div class="flex items-center gap-sm">
+          <a
+            class="font-headline-lg text-headline-lg font-bold text-primary-fixed-dim tracking-tight"
+            href="index.html"
+            >Leigh Services</a
+          >
+        </div>
+        <div class="hidden md:flex items-center gap-lg">
+          <a
+            class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200"
+            href="index.html"
+            >Home</a
+          >
+          <a
+            class="text-primary-fixed-dim font-bold border-b-2 border-primary-fixed-dim pb-1 transition-colors duration-200"
+            href="services.html"
+            >Services</a
+          >
+          <a
+            class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200"
+            href="team.html"
+            >Meet the Team</a
+          >
+          <a
+            class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200"
+            href="certifications.html"
+            >Certifications</a
+          >
+          <a
+            class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200"
+            href="case-studies.html"
+            >Case Studies</a
+          >
+          <a
+            class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200"
+            href="testimonials.html"
+            >Testimonials</a
+          >
+          <a
+            class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200"
+            href="blog.html"
+            >Blog</a
+          >
+          <a
+            class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200"
+            href="contact.html"
+            >Contact</a
+          >
+          <a
+            class="ml-md px-md py-sm bg-primary-container text-on-primary-container font-bold rounded hover:opacity-90 transition-all"
+            href="contact.html"
+            >Consultation</a
+          >
+        </div>
+        <!-- Mobile Menu Toggle -->
+        <button
+          class="md:hidden text-on-surface"
+          onclick="
+            document.getElementById('mobile-menu').classList.toggle('hidden')
+          "
+          aria-label="Open menu"
+        >
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </nav>
+    </header>
 
-		<!-- Nav -->
-			<nav id="menu">
-				<ul class="links">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="services.html">Services</a></li>
-					<li><a href="team.html">Meet the Team</a></li>
-					<li><a href="certifications.html">Certifications</a></li>
-					<li><a href="case-studies.html">Case Studies</a></li>
-					<li><a href="testimonials.html">Testimonials</a></li>
-					<li><a href="blog.html">Blog</a></li>
-					<li><a href="contact.html">Contact</a></li>
-				</ul>
-			</nav>
+    <!-- Mobile Menu -->
+    <div
+      class="hidden md:hidden fixed inset-0 z-[110] bg-surface-container-lowest p-lg"
+      id="mobile-menu"
+    >
+      <div class="flex flex-col gap-md">
+        <div class="flex justify-between items-center mb-xl">
+          <span
+            class="font-headline-lg-mobile text-headline-lg-mobile text-primary-fixed-dim"
+            >Leigh Services</span
+          >
+          <button
+            onclick="
+              document.getElementById('mobile-menu').classList.add('hidden')
+            "
+            aria-label="Close menu"
+          >
+            <span class="material-symbols-outlined">close</span>
+          </button>
+        </div>
+        <a class="text-title-md py-sm" href="index.html">Home</a>
+        <a
+          class="text-title-md py-sm text-primary-fixed-dim font-bold"
+          href="services.html"
+          >Services</a
+        >
+        <a class="text-title-md py-sm" href="team.html">Meet the Team</a>
+        <a class="text-title-md py-sm" href="certifications.html"
+          >Certifications</a
+        >
+        <a class="text-title-md py-sm" href="case-studies.html">Case Studies</a>
+        <a class="text-title-md py-sm" href="testimonials.html">Testimonials</a>
+        <a class="text-title-md py-sm" href="blog.html">Blog</a>
+        <a class="text-title-md py-sm" href="contact.html">Contact</a>
+        <a
+          class="mt-md bg-primary-container text-on-primary-container text-center px-md py-md rounded font-bold"
+          href="contact.html"
+          >Consultation</a
+        >
+      </div>
+    </div>
+    <main class="pt-32 pb-xl">
+      <!-- Hero Section -->
+      <section class="max-w-7xl mx-auto px-lg mb-xl relative overflow-hidden">
+        <div class="relative z-10 py-xl max-w-3xl">
+          <h1
+            class="font-display-lg text-display-lg text-primary-fixed-dim mb-md"
+          >
+            Expert IT &amp; Data Infrastructure
+          </h1>
+          <p
+            class="text-on-surface-variant font-body-lg text-lg leading-relaxed mb-lg"
+          >
+            Leigh Services brings together deep expertise across infrastructure
+            engineering, automation, data platforms and security compliance —
+            delivering reliable, well-engineered solutions for organisations of
+            all sizes.
+          </p>
+        </div>
+      </section>
+      <!-- Services Grid - High-End Bento Style -->
+      <section class="max-w-7xl mx-auto px-lg">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-md">
+          <!-- IT Infrastructure -->
+          <div
+            class="md:col-span-8 service-card bg-surface-container p-xl border border-outline-variant relative group"
+            id="it-infrastructure"
+          >
+            <div
+              class="active-indicator opacity-0 group-hover:opacity-100 transition-opacity"
+            ></div>
+            <div class="flex items-start justify-between mb-lg">
+              <span
+                class="material-symbols-outlined text-primary-fixed-dim text-4xl"
+                style="font-variation-settings: &quot;FILL&quot; 1"
+                >dns</span
+              >
+              <span
+                class="font-label-sm text-label-sm text-outline px-sm py-xs border border-outline rounded"
+                >CORE INFRA</span
+              >
+            </div>
+            <h3 class="font-headline-lg text-headline-lg mb-md text-on-surface">
+              IT Infrastructure
+            </h3>
+            <p
+              class="text-on-surface-variant font-body-lg mb-xl leading-relaxed"
+            >
+              End-to-end infrastructure design, implementation and support. From
+              server management and virtualisation to Microsoft 365 and Azure
+              deployments — we keep your systems running reliably and securely.
+            </p>
+            <div class="flex flex-wrap gap-sm">
+              <span
+                class="font-label-md text-label-md bg-surface-container-high px-md py-xs text-secondary"
+                >Azure / M365</span
+              >
+              <span
+                class="font-label-md text-label-md bg-surface-container-high px-md py-xs text-secondary"
+                >VMware</span
+              >
+              <span
+                class="font-label-md text-label-md bg-surface-container-high px-md py-xs text-secondary"
+                >On-prem Migration</span
+              >
+            </div>
+          </div>
+          <!-- PowerShell & Automation -->
+          <div
+            class="md:col-span-4 service-card bg-surface-container p-xl border border-outline-variant relative group"
+            id="powershell-automation"
+          >
+            <div
+              class="active-indicator opacity-0 group-hover:opacity-100 transition-opacity"
+            ></div>
+            <span
+              class="material-symbols-outlined text-primary-fixed-dim text-4xl mb-lg"
+              style="font-variation-settings: &quot;FILL&quot; 1"
+              >terminal</span
+            >
+            <h3 class="font-headline-lg text-headline-lg mb-md text-on-surface">
+              PowerShell &amp; Automation
+            </h3>
+            <p
+              class="text-on-surface-variant font-body-sm leading-relaxed mb-lg"
+            >
+              Specialist PowerShell development for infrastructure automation,
+              toolmaking and DevOps workflows. From custom modules to scheduled
+              jobs, we remove manual effort and enforce consistency at scale.
+            </p>
+            <div class="w-full h-32 mt-auto">
+              <div
+                class="bg-surface-container-lowest p-md rounded font-label-md text-primary opacity-60"
+              >
+                <code
+                  >Get-Service | Where-Object {$_.Status -eq "Running"}</code
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Cloud Solutions -->
+          <div
+            class="md:col-span-4 service-card bg-surface-container p-xl border border-outline-variant relative group"
+            id="cloud-solutions"
+          >
+            <div
+              class="active-indicator opacity-0 group-hover:opacity-100 transition-opacity"
+            ></div>
+            <span
+              class="material-symbols-outlined text-primary-fixed-dim text-4xl mb-lg"
+              style="font-variation-settings: &quot;FILL&quot; 1"
+              >cloud_done</span
+            >
+            <h3 class="font-headline-lg text-headline-lg mb-md text-on-surface">
+              Cloud Solutions
+            </h3>
+            <p class="text-on-surface-variant font-body-sm leading-relaxed">
+              Cloud architecture and migration across Microsoft Azure and Google
+              Cloud Platform. Licensing, identity, storage, networking and SaaS
+              integration — designed for security and cost-efficiency.
+            </p>
+          </div>
+          <!-- Data Engineering -->
+          <div
+            class="md:col-span-8 service-card bg-surface-container p-xl border border-outline-variant relative group flex flex-col md:flex-row gap-lg items-center"
+            id="data-engineering"
+          >
+            <div
+              class="active-indicator opacity-0 group-hover:opacity-100 transition-opacity"
+            ></div>
+            <div class="flex-1">
+              <div class="flex items-center gap-sm mb-md">
+                <span
+                  class="material-symbols-outlined text-primary-fixed-dim text-3xl"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >database</span
+                >
+                <h3 class="font-headline-lg text-headline-lg text-on-surface">
+                  Data Engineering
+                </h3>
+              </div>
+              <p class="text-on-surface-variant font-body-lg mb-lg">
+                Building and stabilising data pipelines and improving integrity
+                and reliability. From legacy SAS migrations to modern cloud data
+                lakes, we make your data accurate, complete and trustworthy.
+              </p>
+              <div class="flex flex-wrap gap-xs">
+                <span
+                  class="font-label-sm text-label-sm px-sm py-1 bg-primary text-on-primary"
+                  >SAS-TO-GCP</span
+                >
+                <span
+                  class="font-label-sm text-label-sm px-sm py-1 bg-primary text-on-primary"
+                  >PIPELINE TUNING</span
+                >
+              </div>
+            </div>
+            <div
+              class="w-full md:w-1/3 aspect-video overflow-hidden border border-outline-variant bg-surface-container-high flex items-center justify-center"
+            >
+              <span
+                class="material-symbols-outlined text-primary-fixed-dim/30"
+                style="
+                  font-size: 80px;
+                  font-variation-settings: &quot;FILL&quot; 1;
+                "
+                >database</span
+              >
+            </div>
+          </div>
+          <!-- Security & Compliance -->
+          <div
+            class="md:col-span-6 service-card bg-surface-container p-xl border border-outline-variant relative group"
+            id="security-compliance"
+          >
+            <div
+              class="active-indicator opacity-0 group-hover:opacity-100 transition-opacity"
+            ></div>
+            <div class="flex items-start gap-md">
+              <div class="bg-surface-container-high p-md rounded">
+                <span
+                  class="material-symbols-outlined text-error text-3xl"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >shield_with_heart</span
+                >
+              </div>
+              <div>
+                <h3
+                  class="font-headline-lg text-headline-lg mb-md text-on-surface"
+                >
+                  Security &amp; Compliance
+                </h3>
+                <p class="text-on-surface-variant font-body-lg leading-relaxed">
+                  PCI DSS compliance, security hardening, Active Directory
+                  governance and audit-ready frameworks. Practical security
+                  delivered by engineers who have achieved compliance on
+                  real-world complex infrastructures.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- DevSecOps -->
+          <div
+            class="md:col-span-6 service-card bg-surface-container p-xl border border-outline-variant relative group"
+            id="devsecops"
+          >
+            <div
+              class="active-indicator opacity-0 group-hover:opacity-100 transition-opacity"
+            ></div>
+            <div class="flex items-start gap-md">
+              <div class="bg-surface-container-high p-md rounded">
+                <span
+                  class="material-symbols-outlined text-primary-fixed-dim text-3xl"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >all_inclusive</span
+                >
+              </div>
+              <div>
+                <h3
+                  class="font-headline-lg text-headline-lg mb-md text-on-surface"
+                >
+                  DevSecOps
+                </h3>
+                <p class="text-on-surface-variant font-body-lg leading-relaxed">
+                  Integrating security into platforms from the ground up.
+                  Pipeline hardening, vulnerability management, SIEM analysis
+                  and risk reduction built into your development and operational
+                  processes.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Ready to work together -->
+      <section class="max-w-7xl mx-auto px-lg mt-xl">
+        <div
+          class="bg-primary-container p-xl flex flex-col md:flex-row items-center justify-between gap-xl"
+        >
+          <div class="max-w-2xl">
+            <h2
+              class="font-display-lg text-display-lg text-on-primary-container mb-md"
+            >
+              Ready to work together?
+            </h2>
+            <p class="text-on-primary-container text-lg font-medium opacity-90">
+              Whether you need infrastructure support, automation tooling, data
+              platform engineering or compliance guidance — we bring the
+              expertise to get the job done. Get in touch and let's talk about
+              what we can do for you.
+            </p>
+          </div>
+          <a
+            class="px-xl py-lg bg-surface-container-lowest text-primary-fixed-dim font-bold text-headline-lg rounded hover:scale-105 transition-transform duration-300 shadow-xl"
+            href="contact.html"
+          >
+            Get in Touch
+          </a>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-surface-container-lowest border-t border-outline-variant">
+      <div
+        class="grid grid-cols-1 md:grid-cols-4 gap-xl px-lg py-xl max-w-7xl mx-auto"
+      >
+        <div class="md:col-span-1">
+          <span
+            class="font-title-md text-title-md font-bold text-primary-fixed-dim block mb-md"
+            >Leigh Services</span
+          >
+          <p class="font-body-sm text-body-sm text-on-surface-variant mb-lg">
+            Expert IT Infrastructure, Automation and Data Engineering consulting
+            based in Southend-on-Sea, Essex.
+          </p>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">
+            63 Archer Avenue,<br />Southend on Sea,<br />Essex SS2 4QU
+          </p>
+        </div>
+        <div>
+          <h4
+            class="text-primary-fixed-dim font-bold mb-md uppercase tracking-wider text-xs"
+          >
+            Services
+          </h4>
+          <ul class="space-y-sm">
+            <li>
+              <a
+                class="text-on-surface-variant hover:text-primary transition-colors text-body-sm"
+                href="services.html#it-infrastructure"
+                >IT Infrastructure</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-on-surface-variant hover:text-primary transition-colors text-body-sm"
+                href="services.html#powershell-automation"
+                >PowerShell &amp; Automation</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-on-surface-variant hover:text-primary transition-colors text-body-sm"
+                href="services.html#cloud-solutions"
+                >Cloud Solutions</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-on-surface-variant hover:text-primary transition-colors text-body-sm"
+                href="services.html#data-engineering"
+                >Data Engineering</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-on-surface-variant hover:text-primary transition-colors text-body-sm"
+                href="services.html#security-compliance"
+                >Security &amp; Compliance</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-on-surface-variant hover:text-primary transition-colors text-body-sm"
+                href="services.html#devsecops"
+                >DevSecOps</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4
+            class="text-primary-fixed-dim font-bold mb-md uppercase tracking-wider text-xs"
+          >
+            Explore
+          </h4>
+          <ul class="space-y-sm">
+            <li>
+              <a
+                class="text-on-surface-variant hover:text-primary transition-colors text-body-sm"
+                href="index.html"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-on-surface-variant hover:text-primary transition-colors text-body-sm"
+                href="team.html"
+                >Meet the Team</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-on-surface-variant hover:text-primary transition-colors text-body-sm"
+                href="certifications.html"
+                >Certifications</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-on-surface-variant hover:text-primary transition-colors text-body-sm"
+                href="case-studies.html"
+                >Case Studies</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-on-surface-variant hover:text-primary transition-colors text-body-sm"
+                href="testimonials.html"
+                >Testimonials</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-on-surface-variant hover:text-primary transition-colors text-body-sm"
+                href="blog.html"
+                >Blog</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4
+            class="text-primary-fixed-dim font-bold mb-md uppercase tracking-wider text-xs"
+          >
+            Connect
+          </h4>
+          <ul class="space-y-sm">
+            <li>
+              <a
+                class="text-on-surface-variant hover:text-primary transition-colors text-body-sm flex items-center gap-xs"
+                href="https://www.linkedin.com/in/lukeleigh"
+                >Luke on LinkedIn</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-on-surface-variant hover:text-primary transition-colors text-body-sm flex items-center gap-xs"
+                href="https://www.linkedin.com/in/markleigh"
+                >Mark on LinkedIn</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-on-surface-variant hover:text-primary transition-colors text-body-sm flex items-center gap-xs"
+                href="https://github.com/BanterBoy"
+                >GitHub (BanterBoy)</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-on-surface-variant hover:text-primary transition-colors text-body-sm flex items-center gap-xs"
+                href="https://blog.lukeleigh.com"
+                >Luke's Blog</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="max-w-7xl mx-auto px-lg py-md border-t border-outline-variant flex justify-between items-center"
+      >
+        <p class="font-body-sm text-body-sm text-on-surface-variant opacity-60">
+          © 2024-2026 Leigh IT Services Ltd. All rights reserved.
+        </p>
+      </div>
+    </footer>
+    <script>
+      // Intersection Observer for highlighting the active section in nav if it was on a single page,
+      // but since it's a dedicated Services page we just ensure the hash links scroll nicely.
+      document
+        .querySelectorAll('a[href^="services.html#"]')
+        .forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            const targetId = this.getAttribute("href").split("#")[1];
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+              e.preventDefault();
+              window.scrollTo({
+                top: targetElement.offsetTop - 100,
+                behavior: "smooth",
+              });
+            }
+          });
+        });
 
-		<!-- Heading -->
-			<div id="heading">
-				<h1>Our Services</h1>
-			</div>
+      // Simple scroll reveal for cards
+      const observerOptions = {
+        threshold: 0.1,
+      };
 
-		<!-- Main -->
-			<section id="main" class="wrapper">
-				<div class="inner">
-					<div class="content">
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("opacity-100", "translate-y-0");
+            entry.target.classList.remove("opacity-0", "translate-y-8");
+          }
+        });
+      }, observerOptions);
 
-						<header>
-							<h2>What We Do</h2>
-							<p>Leigh Services brings together deep expertise across infrastructure engineering, automation, data platforms and security compliance. We work with organisations of all sizes to deliver reliable, well-engineered solutions — without the overhead of a large consultancy.</p>
-						</header>
-
-						<!-- IT Infrastructure -->
-						<div class="service-section" id="it-infrastructure">
-							<p class="service-icon"><i class="icon fa-server"></i></p>
-							<h2>IT Infrastructure</h2>
-							<p>End-to-end infrastructure design, implementation and ongoing support. From server management and virtualisation to Microsoft 365 and Azure deployments — we keep your systems running reliably and securely.</p>
-							<p>Our infrastructure work spans on-premises, hybrid and cloud environments. We have delivered projects across retail, financial services, insurance and managed service providers — including full data centre migrations, Exchange deployments, VMware virtualisation, and network redesigns. Where many engineers handle individual components, we understand how the whole system fits together.</p>
-							<p>Key areas: Windows Server, Active Directory, VMware, Microsoft 365, Exchange Online, Azure, Hyper-V, Mimecast, Juniper networking.</p>
-							<p class="service-cta"><a href="contact.html" class="button small">Discuss Your Infrastructure</a></p>
-						</div>
-
-						<!-- PowerShell & Automation -->
-						<div class="service-section" id="powershell-automation">
-							<p class="service-icon"><i class="icon fa-cogs"></i></p>
-							<h2>PowerShell &amp; Automation</h2>
-							<p>Specialist PowerShell development for infrastructure automation, toolmaking and DevOps workflows. From custom modules and scheduled jobs to full automation pipelines — we remove manual effort and enforce consistency at scale.</p>
-							<p>Luke has been writing production PowerShell since 2008 and publishes open-source tooling on GitHub and the PowerShell Gallery. We build automation that is readable, maintainable and safe — including error handling, logging, testing and documentation as standard, not as an afterthought.</p>
-							<p>Key areas: PowerShell modules, CI/CD integration, Exchange automation, Active Directory scripting, scheduled tasks, DSC, GitHub Actions.</p>
-							<p class="service-cta"><a href="contact.html" class="button small">Talk Automation</a></p>
-						</div>
-
-						<!-- Cloud Solutions -->
-						<div class="service-section" id="cloud-solutions">
-							<p class="service-icon"><i class="icon fa-cloud"></i></p>
-							<h2>Cloud Solutions</h2>
-							<p>Cloud architecture, migration and ongoing management across Microsoft Azure and Google Cloud Platform. We handle licensing, identity, storage, networking and SaaS integration — designed for security and cost-efficiency from the outset.</p>
-							<p>We have delivered on-premises to Microsoft 365 migrations including Exchange Online, Teams, SharePoint and Azure Active Directory. On the GCP side, Mark led a complex platform migration at Swarovski — delivering €1m in annual cost savings within 9 months. Whether you are starting your cloud journey or optimising an existing footprint, we provide the engineering expertise to do it properly.</p>
-							<p>Key areas: Microsoft Azure, GCP, Microsoft 365, Exchange Online, Azure AD / Entra ID, Teams, SharePoint, cloud security posture.</p>
-							<p class="service-cta"><a href="contact.html" class="button small">Plan Your Cloud Move</a></p>
-						</div>
-
-						<!-- Data Engineering -->
-						<div class="service-section" id="data-engineering">
-							<p class="service-icon"><i class="icon fa-database"></i></p>
-							<h2>Data Engineering</h2>
-							<p>Building and stabilising data pipelines, and improving the integrity and reliability of data platforms. From legacy SAS migrations to modern cloud data lakes, we make your data accurate, complete and trustworthy.</p>
-							<p>Much of our data engineering work begins when something is not quite right — pipelines that fail silently, data that cannot be trusted, or reports that contradict each other. We specialise in root cause analysis and remediation: diagnosing what is actually wrong beneath the surface, and putting in place solutions that are stable, predictable and auditable.</p>
-							<p>Key areas: Python, SQL, SAS, Google Cloud Platform, BigQuery, data pipeline security, data integrity &amp; lineage, regulatory reporting (FINREP, Basel).</p>
-							<p class="service-cta"><a href="contact.html" class="button small">Talk Data Engineering</a></p>
-						</div>
-
-						<!-- Security & Compliance -->
-						<div class="service-section" id="security-compliance">
-							<p class="service-icon"><i class="icon fa-shield"></i></p>
-							<h2>Security &amp; Compliance</h2>
-							<p>PCI DSS compliance, security hardening, Active Directory governance and audit-ready frameworks. Practical security delivered by engineers who have achieved compliance on real-world, complex infrastructures under genuine time pressure.</p>
-							<p>Luke led a PCI DSS compliance programme at Insure and Go spanning eight years — owning the WAN infrastructure and delivering compliance across four offices and a full data centre migration. He subsequently delivered a full PCI compliance programme at Ventrica within a fixed deadline. Mark holds CompTIA Security+ and is progressing CREST CPSA, bringing a security-first perspective to data platform design and DevSecOps practices.</p>
-							<p>Key areas: PCI DSS, ISO 27001, Active Directory hardening, firewall management, patch governance, SIEM, vulnerability management, audit readiness.</p>
-							<p class="service-cta"><a href="contact.html" class="button small">Discuss Security &amp; Compliance</a></p>
-						</div>
-
-						<!-- DevSecOps -->
-						<div class="service-section" id="devsecops">
-							<p class="service-icon"><i class="icon fa-lock"></i></p>
-							<h2>DevSecOps</h2>
-							<p>Integrating security into platforms from the ground up. Pipeline hardening, vulnerability management, SIEM analysis and risk reduction — built into your development and operational processes rather than bolted on afterwards.</p>
-							<p>We approach DevSecOps as a discipline that belongs at the engineering level, not as a separate audit function. Mark's data engineering work is informed by security considerations at every stage — from pipeline design and access control to secret management and incident detection. Across both disciplines, we help organisations move towards a posture where security is a property of the system, not a checklist.</p>
-							<p>Key areas: pipeline security, secrets management, container security, dependency scanning, SIEM analysis, GitHub Actions security, policy as code.</p>
-							<p class="service-cta"><a href="contact.html" class="button small">Talk DevSecOps</a></p>
-						</div>
-
-					</div>
-				</div>
-			</section>
-
-		<!-- Footer -->
-			<footer id="footer">
-				<div class="inner">
-					<div class="content">
-						<section>
-							<h3>Leigh Services</h3>
-							<p>Expert IT Infrastructure, Automation and Data Engineering consulting based in Southend-on-Sea, Essex. Serving clients across the UK and internationally.</p>
-							<p>63 Archer Avenue, Southend on Sea, Essex SS2 4QU</p>
-						</section>
-						<section>
-							<h4>Services</h4>
-							<ul class="alt">
-								<li><a href="services.html#it-infrastructure">IT Infrastructure</a></li>
-								<li><a href="services.html#powershell-automation">PowerShell &amp; Automation</a></li>
-								<li><a href="services.html#cloud-solutions">Cloud Solutions</a></li>
-								<li><a href="services.html#data-engineering">Data Engineering</a></li>
-								<li><a href="services.html#security-compliance">Security &amp; Compliance</a></li>
-								<li><a href="services.html#devsecops">DevSecOps</a></li>
-							</ul>
-						</section>
-						<section>
-							<h4>Connect</h4>
-							<ul class="plain">
-								<li><a href="https://www.linkedin.com/in/lukeleigh" target="_blank" rel="noopener noreferrer"><i class="icon fa-linkedin">&nbsp;</i>Luke on LinkedIn</a></li>
-								<li><a href="https://www.linkedin.com/in/markleigh" target="_blank" rel="noopener noreferrer"><i class="icon fa-linkedin">&nbsp;</i>Mark on LinkedIn</a></li>
-								<li><a href="https://github.com/BanterBoy" target="_blank" rel="noopener noreferrer"><i class="icon fa-github">&nbsp;</i>GitHub (BanterBoy)</a></li>
-								<li><a href="https://blog.lukeleigh.com" target="_blank" rel="noopener noreferrer"><i class="icon fa-rss">&nbsp;</i>Luke's Blog</a></li>
-							</ul>
-						</section>
-					</div>
-					<div class="copyright">
-						&copy; 2024&ndash;2026 Leigh IT Services Ltd. All rights reserved.
-					</div>
-				</div>
-			</footer>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+      document.querySelectorAll(".service-card").forEach((card) => {
+        card.classList.add(
+          "opacity-0",
+          "translate-y-8",
+          "transition-all",
+          "duration-700",
+        );
+        observer.observe(card);
+      });
+    </script>
+  </body>
 </html>

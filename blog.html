@@ -1,150 +1,1072 @@
-<!DOCTYPE HTML>
-<html lang="en-gb">
-	<head>
-		<title>Blog &amp; Insights | Leigh Services</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="Technical articles, guides and insights from the Leigh Services team — covering PowerShell, IT infrastructure, automation and data engineering." />
-		<meta name="keywords" content="PowerShell blog, IT infrastructure, automation, data engineering, technical articles, Luke Leigh" />
-		<meta property="og:title" content="Blog &amp; Insights | Leigh Services" />
-		<meta property="og:description" content="Technical articles and insights on PowerShell, infrastructure automation and data engineering." />
-		<meta property="og:url" content="https://leigh-services.com/blog.html" />
-		<meta property="og:image" content="https://leigh-services.com/images/banner.jpg" />
-		<meta property="og:type" content="website" />
-		<meta property="og:site_name" content="Leigh Services" />
-		<meta http-equiv="content-language" content="en-gb" />
-		<link rel="canonical" href="https://leigh-services.com/blog.html" />
-		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:title" content="Blog &amp; Insights | Leigh Services" />
-		<meta name="twitter:description" content="Technical articles and insights on PowerShell, infrastructure automation and data engineering." />
-		<meta name="twitter:image" content="https://leigh-services.com/images/banner.jpg" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<script src="assets/js/metrics.js"></script>
-	</head>
-	<body class="is-preload">
-		<!-- Google Tag Manager (noscript) -->
-		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5NBQFP8F" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-		<!-- End Google Tag Manager (noscript) -->
+<!doctype html>
+<html class="dark" lang="en-gb">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Blog &amp; Insights | Leigh Services</title>
+    <meta
+      name="description"
+      content="Technical articles, guides and insights from the Leigh Services team — covering PowerShell, IT infrastructure, automation and data engineering."
+    />
+    <meta
+      name="keywords"
+      content="PowerShell blog, IT infrastructure, automation, data engineering, technical articles, Luke Leigh"
+    />
+    <meta property="og:title" content="Blog &amp; Insights | Leigh Services" />
+    <meta
+      property="og:description"
+      content="Technical articles and insights on PowerShell, infrastructure automation and data engineering."
+    />
+    <meta property="og:url" content="https://leigh-services.com/blog.html" />
+    <meta
+      property="og:image"
+      content="https://leigh-services.com/images/banner.jpg"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Leigh Services" />
+    <meta http-equiv="content-language" content="en-gb" />
+    <link rel="canonical" href="https://leigh-services.com/blog.html" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Blog &amp; Insights | Leigh Services" />
+    <meta
+      name="twitter:description"
+      content="Technical articles and insights on PowerShell, infrastructure automation and data engineering."
+    />
+    <meta
+      name="twitter:image"
+      content="https://leigh-services.com/images/banner.jpg"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;family=Geist:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="assets/js/metrics.js"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-low": "#131c2b",
+              "outline-variant": "#3b494c",
+              "on-error": "#690005",
+              "on-tertiary-fixed": "#001945",
+              "surface-container-lowest": "#060e1d",
+              "on-background": "#dbe2f8",
+              "error-container": "#93000a",
+              "on-secondary": "#1b247f",
+              "surface-tint": "#00daf3",
+              "tertiary-container": "#bfd0ff",
+              "primary-container": "#00e5ff",
+              "on-tertiary-fixed-variant": "#00429c",
+              "on-secondary-fixed-variant": "#343d96",
+              "inverse-surface": "#dbe2f8",
+              "inverse-primary": "#006875",
+              "surface-container": "#18202f",
+              surface: "#0b1323",
+              "on-primary-container": "#00626e",
+              "on-primary-fixed": "#001f24",
+              error: "#ffb4ab",
+              "surface-container-high": "#222a3a",
+              "secondary-fixed": "#e0e0ff",
+              "on-secondary-container": "#a8afff",
+              "tertiary-fixed-dim": "#b0c6ff",
+              "secondary-container": "#343d96",
+              "primary-fixed-dim": "#00daf3",
+              tertiary: "#e8ecff",
+              "on-tertiary-container": "#2455af",
+              "on-primary-fixed-variant": "#004f58",
+              "on-secondary-fixed": "#000767",
+              primary: "#c3f5ff",
+              background: "#0b1323",
+              "on-tertiary": "#002d6f",
+              "on-primary": "#00363d",
+              "on-error-container": "#ffdad6",
+              "inverse-on-surface": "#283041",
+              "surface-variant": "#2d3546",
+              "surface-container-highest": "#2d3546",
+              secondary: "#bdc2ff",
+              outline: "#849396",
+              "on-surface-variant": "#bac9cc",
+              "surface-bright": "#31394a",
+              "primary-fixed": "#9cf0ff",
+              "tertiary-fixed": "#d9e2ff",
+              "surface-dim": "#0b1323",
+              "on-surface": "#dbe2f8",
+              "secondary-fixed-dim": "#bdc2ff",
+            },
+            borderRadius: {
+              DEFAULT: "0.125rem",
+              lg: "0.25rem",
+              xl: "0.5rem",
+              full: "0.75rem",
+            },
+            spacing: {
+              xs: "4px",
+              margin: "24px",
+              lg: "24px",
+              xl: "40px",
+              gutter: "16px",
+              base: "4px",
+              sm: "8px",
+              md: "16px",
+            },
+            fontFamily: {
+              "headline-lg-mobile": ["Geist"],
+              "title-md": ["Geist"],
+              "label-sm": ["JetBrains Mono"],
+              "headline-lg": ["Geist"],
+              "body-sm": ["Geist"],
+              "label-md": ["JetBrains Mono"],
+              "body-lg": ["Geist"],
+              "display-lg": ["Geist"],
+            },
+            fontSize: {
+              "headline-lg-mobile": [
+                "24px",
+                { lineHeight: "32px", fontWeight: "600" },
+              ],
+              "title-md": ["20px", { lineHeight: "28px", fontWeight: "500" }],
+              "label-sm": [
+                "10px",
+                {
+                  lineHeight: "14px",
+                  letterSpacing: "0.05em",
+                  fontWeight: "500",
+                },
+              ],
+              "headline-lg": [
+                "32px",
+                { lineHeight: "40px", fontWeight: "600" },
+              ],
+              "body-sm": ["14px", { lineHeight: "20px", fontWeight: "400" }],
+              "label-md": [
+                "12px",
+                {
+                  lineHeight: "16px",
+                  letterSpacing: "0.05em",
+                  fontWeight: "500",
+                },
+              ],
+              "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+              "display-lg": [
+                "48px",
+                {
+                  lineHeight: "56px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "700",
+                },
+              ],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      .glass-card {
+        background: rgba(24, 32, 47, 0.7);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(0, 229, 255, 0.1);
+      }
+      .hover-glow:hover {
+        box-shadow: 0 0 15px rgba(0, 229, 255, 0.3);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background text-on-background font-body-lg selection:bg-primary-container selection:text-on-primary-container"
+  >
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-5NBQFP8F"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
 
-		<!-- Header -->
-			<header id="header">
-				<a class="logo" href="index.html">Leigh Services</a>
-				<nav>
-					<a href="#menu">Menu</a>
-				</nav>
-			</header>
+    <!-- Header -->
+    <header
+      class="bg-surface-container-lowest border-b border-outline-variant sticky top-0 z-50"
+    >
+      <nav class="px-lg py-md w-full max-w-7xl mx-auto">
+        <div class="flex justify-between items-center">
+          <a
+            class="font-headline-lg text-headline-lg font-bold text-primary-fixed-dim tracking-tight"
+            href="index.html"
+            >Leigh Services</a
+          >
+          <div class="hidden md:flex gap-lg items-center">
+            <a
+              class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200"
+              href="index.html"
+              >Home</a
+            >
+            <a
+              class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200"
+              href="services.html"
+              >Services</a
+            >
+            <a
+              class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200"
+              href="team.html"
+              >Meet the Team</a
+            >
+            <a
+              class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200"
+              href="certifications.html"
+              >Certifications</a
+            >
+            <a
+              class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200"
+              href="case-studies.html"
+              >Case Studies</a
+            >
+            <a
+              class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200"
+              href="testimonials.html"
+              >Testimonials</a
+            >
+            <a
+              class="text-primary-fixed-dim font-bold border-b-2 border-primary-fixed-dim pb-1"
+              href="blog.html"
+              >Blog</a
+            >
+            <a
+              class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200"
+              href="contact.html"
+              >Contact</a
+            >
+            <a
+              class="ml-md bg-primary-container text-on-primary-fixed px-md py-sm rounded font-bold hover:opacity-80 transition-all"
+              href="contact.html"
+              >Consultation</a
+            >
+          </div>
+          <!-- Mobile Menu Toggle -->
+          <button
+            class="md:hidden text-primary-fixed-dim"
+            onclick="
+              document.getElementById('mobile-menu').classList.toggle('hidden')
+            "
+            aria-label="Open menu"
+          >
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+        </div>
+      </nav>
+    </header>
 
-		<!-- Nav -->
-			<nav id="menu">
-				<ul class="links">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="services.html">Services</a></li>
-					<li><a href="team.html">Meet the Team</a></li>
-					<li><a href="certifications.html">Certifications</a></li>
-					<li><a href="case-studies.html">Case Studies</a></li>
-					<li><a href="testimonials.html">Testimonials</a></li>
-					<li><a href="blog.html">Blog</a></li>
-					<li><a href="contact.html">Contact</a></li>
-				</ul>
-			</nav>
+    <!-- Mobile Menu -->
+    <div
+      class="hidden md:hidden fixed inset-0 z-[110] bg-surface-container-lowest p-lg"
+      id="mobile-menu"
+    >
+      <div class="flex flex-col gap-md">
+        <div class="flex justify-between items-center mb-xl">
+          <span
+            class="font-headline-lg-mobile text-headline-lg-mobile text-primary-fixed-dim"
+            >Leigh Services</span
+          >
+          <button
+            onclick="
+              document.getElementById('mobile-menu').classList.add('hidden')
+            "
+            aria-label="Close menu"
+          >
+            <span class="material-symbols-outlined">close</span>
+          </button>
+        </div>
+        <a class="text-title-md py-sm" href="index.html">Home</a>
+        <a class="text-title-md py-sm" href="services.html">Services</a>
+        <a class="text-title-md py-sm" href="team.html">Meet the Team</a>
+        <a class="text-title-md py-sm" href="certifications.html"
+          >Certifications</a
+        >
+        <a class="text-title-md py-sm" href="case-studies.html">Case Studies</a>
+        <a class="text-title-md py-sm" href="testimonials.html">Testimonials</a>
+        <a
+          class="text-title-md py-sm text-primary-fixed-dim font-bold"
+          href="blog.html"
+          >Blog</a
+        >
+        <a class="text-title-md py-sm" href="contact.html">Contact</a>
+        <a
+          class="mt-md bg-primary-container text-on-primary-fixed text-center px-md py-md rounded font-bold"
+          href="contact.html"
+          >Consultation</a
+        >
+      </div>
+    </div>
 
-		<!-- Heading -->
-			<div id="heading">
-				<h1>Blog &amp; Insights</h1>
-			</div>
+    <main class="w-full">
+      <!-- Hero Section -->
+      <section
+        class="relative h-[409px] min-h-[400px] flex items-center overflow-hidden border-b border-outline-variant"
+      >
+        <div class="absolute inset-0 z-0">
+          <div
+            class="absolute inset-0 bg-gradient-to-b from-background/0 via-background/20 to-background"
+          ></div>
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-lg w-full">
+          <div class="max-w-2xl">
+            <span
+              class="font-label-md text-label-md text-primary-fixed-dim uppercase tracking-widest bg-primary-container/10 px-sm py-xs mb-md inline-block"
+              >Insights &amp; Analysis</span
+            >
+            <h1
+              class="font-display-lg text-display-lg mb-md leading-none text-primary"
+            >
+              Blog &amp; Insights.
+            </h1>
+            <p class="font-body-lg text-on-surface-variant max-w-xl">
+              Guides, tooling write-ups and insights from the Leigh Services
+              team. Full posts are published on
+              <a
+                class="text-primary-fixed-dim hover:underline"
+                href="https://blog.lukeleigh.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Luke's Blog</a
+              >
+              — this page curates selected highlights.
+            </p>
+          </div>
+        </div>
+      </section>
 
-		<!-- Blog Posts -->
-			<section class="wrapper">
-				<div class="inner">
-					<header class="special">
-						<h2>Technical Articles</h2>
-						<p>Guides, tooling write-ups and insights from the Leigh Services team. Full posts are published on <a href="https://blog.lukeleigh.com" target="_blank" rel="noopener noreferrer">Luke's Blog</a> — this page curates selected highlights.</p>
-					</header>
-					<div class="highlights">
+      <!-- Main Content Grid -->
+      <section class="max-w-7xl mx-auto px-lg py-xl">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-lg">
+          <!-- Featured & Feed (8 cols) -->
+          <div class="lg:col-span-8 space-y-xl">
+            <!-- Featured Article: The Blinking Cursor Problem -->
+            <article
+              class="glass-card rounded-xl overflow-hidden group hover-glow transition-all"
+            >
+              <div class="grid md:grid-cols-2">
+                <div
+                  class="relative h-64 md:h-auto overflow-hidden bg-primary-container/10 flex items-center justify-center"
+                >
+                  <span
+                    class="material-symbols-outlined text-primary-fixed-dim"
+                    style="font-size: 96px"
+                    >smart_toy</span
+                  >
+                  <div class="absolute top-md left-md">
+                    <span
+                      class="font-label-sm text-label-sm bg-primary-fixed-dim text-on-primary-fixed px-sm py-xs rounded"
+                      >FEATURED</span
+                    >
+                  </div>
+                </div>
+                <div class="p-xl flex flex-col justify-center">
+                  <div class="flex items-center gap-sm mb-md text-outline">
+                    <span class="font-label-sm text-label-sm"
+                      >AI &middot; PRODUCTIVITY</span
+                    >
+                    <span class="w-1 h-1 bg-outline rounded-full"></span>
+                    <span class="font-label-sm text-label-sm">10 MIN READ</span>
+                  </div>
+                  <h2
+                    class="font-headline-lg text-headline-lg mb-md group-hover:text-primary-fixed-dim transition-colors"
+                  >
+                    The Blinking Cursor Problem &mdash; Getting More Out of A.I.
+                  </h2>
+                  <p class="text-on-surface-variant font-body-lg mb-xl">
+                    Most people treat A.I. like a search engine &mdash; type
+                    three words, hit enter, wonder why it's rubbish. It isn't
+                    the tool that's the problem. A practical guide to using AI
+                    properly as an engineer.
+                  </p>
+                  <div class="mt-auto flex items-center justify-between">
+                    <div class="flex items-center gap-sm">
+                      <div
+                        class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center border border-outline-variant"
+                      >
+                        <span
+                          class="material-symbols-outlined text-primary-fixed-dim"
+                          >person</span
+                        >
+                      </div>
+                      <div>
+                        <div class="font-label-md text-label-md">
+                          Luke Leigh
+                        </div>
+                        <div class="font-label-sm text-label-sm text-outline">
+                          blog.lukeleigh.com
+                        </div>
+                      </div>
+                    </div>
+                    <a
+                      class="text-primary-fixed-dim flex items-center gap-xs font-bold hover:gap-sm transition-all"
+                      href="https://blog.lukeleigh.com/blog/the-blinking-cursor-problem/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Read More
+                      <span class="material-symbols-outlined text-sm"
+                        >arrow_forward</span
+                      >
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
 
-						<section>
-							<div class="content">
-								<header>
-									<a href="https://blog.lukeleigh.com" target="_blank" rel="noopener noreferrer" class="icon fa-terminal"><span class="label">PowerShell</span></a>
-									<h3>PowerShell Scripting &amp; Automation</h3>
-								</header>
-								<p>Articles covering PowerShell best practices, module development, toolmaking and real-world automation patterns — from simple one-liners to production-grade tooling published on the PowerShell Gallery.</p>
-								<p><a href="https://blog.lukeleigh.com" target="_blank" rel="noopener noreferrer">Read on Luke's Blog &rarr;</a></p>
-							</div>
-						</section>
+            <!-- Bento Grid for Articles -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+              <!-- Article: DigitalTAK Part 4 -->
+              <article
+                class="glass-card rounded-xl p-lg flex flex-col hover-glow transition-all"
+              >
+                <div class="mb-md">
+                  <span
+                    class="font-label-sm text-label-sm text-primary-fixed-dim uppercase"
+                    >DigitalTAK &middot; PowerShell</span
+                  >
+                </div>
+                <h3 class="font-title-md text-title-md mb-sm">
+                  DigitalTAK, Part 4 &mdash; Running the Deployment
+                </h3>
+                <p
+                  class="text-on-surface-variant font-body-sm mb-xl line-clamp-3"
+                >
+                  Prerequisites, one command, twenty minutes, a working TAK
+                  Server. A walkthrough of Deploy-TAKServer.ps1 covering what
+                  actually happens, what you need before you start, and what you
+                  get at the end.
+                </p>
+                <div
+                  class="mt-auto pt-md border-t border-outline-variant flex items-center justify-between"
+                >
+                  <span class="font-label-sm text-label-sm text-outline"
+                    >5 MIN READ</span
+                  >
+                  <a
+                    class="w-8 h-8 rounded-full border border-outline-variant flex items-center justify-center hover:bg-primary-fixed-dim hover:text-on-primary-fixed transition-colors"
+                    href="https://blog.lukeleigh.com/blog/digitaltak-part4-running-the-deployment/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Read: DigitalTAK Part 4"
+                  >
+                    <span class="material-symbols-outlined text-sm"
+                      >north_east</span
+                    >
+                  </a>
+                </div>
+              </article>
 
-						<section>
-							<div class="content">
-								<header>
-									<a href="https://blog.lukeleigh.com" target="_blank" rel="noopener noreferrer" class="icon fa-server"><span class="label">Infrastructure</span></a>
-									<h3>IT Infrastructure &amp; Microsoft 365</h3>
-								</header>
-								<p>Practical guides on Windows Server, Active Directory, Exchange Online, Azure and Microsoft 365 administration — including migration patterns, troubleshooting and real-world configuration examples.</p>
-								<p><a href="https://blog.lukeleigh.com" target="_blank" rel="noopener noreferrer">Read on Luke's Blog &rarr;</a></p>
-							</div>
-						</section>
+              <!-- Article: UserAdminModule -->
+              <article
+                class="glass-card rounded-xl p-lg flex flex-col hover-glow transition-all"
+              >
+                <div class="mb-md">
+                  <span
+                    class="font-label-sm text-label-sm text-primary-fixed-dim uppercase"
+                    >PowerShell &middot; Modules</span
+                  >
+                </div>
+                <h3 class="font-title-md text-title-md mb-sm">
+                  Stop Dot-Sourcing. Start Managing.
+                </h3>
+                <p
+                  class="text-on-surface-variant font-body-sm mb-xl line-clamp-3"
+                >
+                  Introducing UserAdminModule &mdash; a PowerShell module built
+                  to solve a problem quietly ignored for years: a $PROFILE full
+                  of dot-sourcing held together by hope.
+                </p>
+                <div
+                  class="mt-auto pt-md border-t border-outline-variant flex items-center justify-between"
+                >
+                  <span class="font-label-sm text-label-sm text-outline"
+                    >5 MIN READ</span
+                  >
+                  <a
+                    class="w-8 h-8 rounded-full border border-outline-variant flex items-center justify-center hover:bg-primary-fixed-dim hover:text-on-primary-fixed transition-colors"
+                    href="https://blog.lukeleigh.com/blog/stop-dot-sourcing-start-managing-introducing-useradminmodule/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Read: UserAdminModule"
+                  >
+                    <span class="material-symbols-outlined text-sm"
+                      >north_east</span
+                    >
+                  </a>
+                </div>
+              </article>
 
-						<section>
-							<div class="content">
-								<header>
-									<a href="https://blog.lukeleigh.com" target="_blank" rel="noopener noreferrer" class="icon fa-shield"><span class="label">Security</span></a>
-									<h3>Security, Compliance &amp; Hardening</h3>
-								</header>
-								<p>Write-ups on PCI DSS compliance delivery, Active Directory hardening, firewall management and security tooling — covering what we have encountered and how we have addressed it in practice.</p>
-								<p><a href="https://blog.lukeleigh.com" target="_blank" rel="noopener noreferrer">Read on Luke's Blog &rarr;</a></p>
-							</div>
-						</section>
+              <!-- Article: PSReadLine history -->
+              <article
+                class="glass-card rounded-xl p-lg flex flex-col hover-glow transition-all"
+              >
+                <div class="mb-md">
+                  <span
+                    class="font-label-sm text-label-sm text-primary-fixed-dim uppercase"
+                    >PowerShell &middot; PSReadLine</span
+                  >
+                </div>
+                <h3 class="font-title-md text-title-md mb-sm">
+                  Your PowerShell History is Smarter Than You Think
+                </h3>
+                <p
+                  class="text-on-surface-variant font-body-sm mb-xl line-clamp-3"
+                >
+                  PSReadLine has been quietly saving your command history for
+                  years. Here are the bits most admins never get around to
+                  discovering &mdash; including the ones that genuinely save
+                  hours.
+                </p>
+                <div
+                  class="mt-auto pt-md border-t border-outline-variant flex items-center justify-between"
+                >
+                  <span class="font-label-sm text-label-sm text-outline"
+                    >4 MIN READ</span
+                  >
+                  <a
+                    class="w-8 h-8 rounded-full border border-outline-variant flex items-center justify-center hover:bg-primary-fixed-dim hover:text-on-primary-fixed transition-colors"
+                    href="https://blog.lukeleigh.com/blog/your-powershell-history-is-smarter-than-you-think/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Read: PowerShell History"
+                  >
+                    <span class="material-symbols-outlined text-sm"
+                      >north_east</span
+                    >
+                  </a>
+                </div>
+              </article>
 
-					</div>
+              <!-- Article: New-Shell -->
+              <article
+                class="glass-card rounded-xl p-lg flex flex-col hover-glow transition-all"
+              >
+                <div class="mb-md">
+                  <span
+                    class="font-label-sm text-label-sm text-primary-fixed-dim uppercase"
+                    >PowerShell &middot; Productivity</span
+                  >
+                </div>
+                <h3 class="font-title-md text-title-md mb-sm">
+                  New-Shell &mdash; Stop Right-Clicking, Start Scripting
+                </h3>
+                <p
+                  class="text-on-surface-variant font-body-sm mb-xl line-clamp-3"
+                >
+                  One function, five ways to open a PowerShell session.
+                  Standard, elevated, as a different user, in Windows Terminal,
+                  elevated in Windows Terminal &mdash; without touching a mouse.
+                </p>
+                <div
+                  class="mt-auto pt-md border-t border-outline-variant flex items-center justify-between"
+                >
+                  <span class="font-label-sm text-label-sm text-outline"
+                    >4 MIN READ</span
+                  >
+                  <a
+                    class="w-8 h-8 rounded-full border border-outline-variant flex items-center justify-center hover:bg-primary-fixed-dim hover:text-on-primary-fixed transition-colors"
+                    href="https://blog.lukeleigh.com/blog/new-shell-stop-right-clicking-start-scripting/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Read: New-Shell"
+                  >
+                    <span class="material-symbols-outlined text-sm"
+                      >north_east</span
+                    >
+                  </a>
+                </div>
+              </article>
 
-					<div style="text-align:center; margin-top:3em;">
-						<a href="https://blog.lukeleigh.com" target="_blank" rel="noopener noreferrer" class="button primary">Visit the Full Blog</a>
-					</div>
-				</div>
-			</section>
+              <!-- Article: Get-GistIframe (full width) -->
+              <article
+                class="glass-card rounded-xl p-lg flex flex-col hover-glow transition-all md:col-span-2"
+              >
+                <div class="mb-md flex items-center justify-between">
+                  <span
+                    class="font-label-sm text-label-sm text-primary-fixed-dim uppercase"
+                    >PowerShell &middot; Scripting</span
+                  >
+                  <span class="font-label-sm text-label-sm text-outline"
+                    >5 MIN READ</span
+                  >
+                </div>
+                <h3 class="font-title-md text-title-md mb-sm">
+                  Get-GistIframe &mdash; Embedding GitHub Gists Without the
+                  Liquid Nonsense
+                </h3>
+                <p
+                  class="text-on-surface-variant font-body-sm mb-xl line-clamp-2"
+                >
+                  A small but genuinely useful utility that converts a GitHub
+                  Gist script tag into a properly styled iframe and copies it to
+                  your clipboard.
+                </p>
+                <div
+                  class="mt-auto pt-md border-t border-outline-variant flex items-center justify-between"
+                >
+                  <a
+                    class="text-primary-fixed-dim flex items-center gap-xs font-bold hover:gap-sm transition-all"
+                    href="https://blog.lukeleigh.com/blog/get-gistiframe/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Read on the blog
+                    <span class="material-symbols-outlined text-sm"
+                      >arrow_forward</span
+                    >
+                  </a>
+                  <a
+                    class="font-label-sm text-label-sm text-outline hover:text-primary-fixed-dim transition-colors"
+                    href="https://blog.lukeleigh.com/posts/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Browse all posts &rarr;</a
+                  >
+                </div>
+              </article>
+            </div>
+          </div>
 
-		<!-- Footer -->
-			<footer id="footer">
-				<div class="inner">
-					<div class="content">
-						<section>
-							<h3>Leigh Services</h3>
-							<p>Expert IT Infrastructure, Automation and Data Engineering consulting based in Southend-on-Sea, Essex. Serving clients across the UK and internationally.</p>
-							<p>63 Archer Avenue, Southend on Sea, Essex SS2 4QU</p>
-						</section>
-						<section>
-							<h4>Services</h4>
-							<ul class="alt">
-								<li><a href="services.html#it-infrastructure">IT Infrastructure</a></li>
-								<li><a href="services.html#powershell-automation">PowerShell &amp; Automation</a></li>
-								<li><a href="services.html#cloud-solutions">Cloud Solutions</a></li>
-								<li><a href="services.html#data-engineering">Data Engineering</a></li>
-								<li><a href="services.html#security-compliance">Security &amp; Compliance</a></li>
-								<li><a href="services.html#devsecops">DevSecOps</a></li>
-							</ul>
-						</section>
-						<section>
-							<h4>Connect</h4>
-							<ul class="plain">
-								<li><a href="https://www.linkedin.com/in/lukeleigh" target="_blank" rel="noopener noreferrer"><i class="icon fa-linkedin">&nbsp;</i>Luke on LinkedIn</a></li>
-								<li><a href="https://www.linkedin.com/in/markleigh" target="_blank" rel="noopener noreferrer"><i class="icon fa-linkedin">&nbsp;</i>Mark on LinkedIn</a></li>
-								<li><a href="https://github.com/BanterBoy" target="_blank" rel="noopener noreferrer"><i class="icon fa-github">&nbsp;</i>GitHub (BanterBoy)</a></li>
-								<li><a href="https://blog.lukeleigh.com" target="_blank" rel="noopener noreferrer"><i class="icon fa-rss">&nbsp;</i>Luke's Blog</a></li>
-							</ul>
-						</section>
-					</div>
-					<div class="copyright">
-						&copy; 2024&ndash;2026 Leigh IT Services Ltd. All rights reserved.
-					</div>
-				</div>
-			</footer>
+          <!-- Sidebar (4 cols) -->
+          <aside class="lg:col-span-4 space-y-lg">
+            <!-- Search & Filter -->
+            <div
+              class="bg-surface-container rounded-xl p-lg border border-outline-variant"
+            >
+              <h4
+                class="font-label-md text-label-md text-primary-fixed-dim mb-md uppercase"
+              >
+                Search Insights
+              </h4>
+              <div class="relative">
+                <input
+                  class="w-full bg-background border border-outline-variant rounded-lg px-md py-sm text-body-sm focus:border-primary-fixed-dim focus:ring-1 focus:ring-primary-fixed-dim transition-all"
+                  placeholder="Keywords, tech stack..."
+                  type="text"
+                  aria-label="Search insights"
+                />
+                <span
+                  class="material-symbols-outlined absolute right-md top-1/2 -translate-y-1/2 text-outline pointer-events-none"
+                  aria-hidden="true"
+                  >search</span
+                >
+              </div>
+            </div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+            <!-- Newsletter -->
+            <div
+              class="bg-primary-container/10 border border-primary-container/20 rounded-xl p-lg"
+            >
+              <h4
+                class="font-title-md text-title-md mb-sm text-primary-fixed-dim"
+              >
+                Infrastructure Newsletter
+              </h4>
+              <p class="font-body-sm text-on-surface-variant mb-md">
+                Get monthly technical breakdowns and security alerts delivered
+                to your inbox.
+              </p>
+              <form class="space-y-sm" action="https://formspree.io/xvowjgjd" method="post">
+                <input
+                  class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg px-md py-sm text-body-sm focus:border-primary-fixed-dim outline-none"
+                  placeholder="email@enterprise.com"
+                  type="email"
+                  name="email"
+                  aria-label="Email address"
+                />
+                <button
+                  type="submit"
+                  class="w-full bg-primary-fixed-dim text-on-primary-fixed font-bold py-sm rounded-lg hover:opacity-90 transition-opacity"
+                >
+                  Subscribe
+                </button>
+              </form>
+              <p class="font-label-sm text-label-sm text-outline mt-sm">
+                Zero spam. Hard technical data only.
+              </p>
+            </div>
 
-	</body>
+            <!-- Topics Cloud -->
+            <div
+              class="bg-surface-container rounded-xl p-lg border border-outline-variant"
+            >
+              <h4
+                class="font-label-md text-label-md text-primary-fixed-dim mb-md uppercase"
+              >
+                Trending Topics
+              </h4>
+              <div class="flex flex-wrap gap-sm">
+                <a
+                  class="font-label-sm text-label-sm bg-surface-container-high px-sm py-xs rounded-full border border-outline-variant hover:border-primary-fixed-dim transition-colors"
+                  href="https://blog.lukeleigh.com/categories/#powershell"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >PowerShell</a
+                >
+                <a
+                  class="font-label-sm text-label-sm bg-surface-container-high px-sm py-xs rounded-full border border-outline-variant hover:border-primary-fixed-dim transition-colors"
+                  href="https://blog.lukeleigh.com/categories/#digitaltak"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >DigitalTAK</a
+                >
+                <a
+                  class="font-label-sm text-label-sm bg-surface-container-high px-sm py-xs rounded-full border border-outline-variant hover:border-primary-fixed-dim transition-colors"
+                  href="https://blog.lukeleigh.com/tags/#modules"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Modules</a
+                >
+                <a
+                  class="font-label-sm text-label-sm bg-surface-container-high px-sm py-xs rounded-full border border-outline-variant hover:border-primary-fixed-dim transition-colors"
+                  href="https://blog.lukeleigh.com/categories/#ai"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >AI</a
+                >
+                <a
+                  class="font-label-sm text-label-sm bg-surface-container-high px-sm py-xs rounded-full border border-outline-variant hover:border-primary-fixed-dim transition-colors"
+                  href="https://blog.lukeleigh.com/tags/#scripting"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Scripting</a
+                >
+                <a
+                  class="font-label-sm text-label-sm bg-surface-container-high px-sm py-xs rounded-full border border-outline-variant hover:border-primary-fixed-dim transition-colors"
+                  href="https://blog.lukeleigh.com/tags/#security"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Security</a
+                >
+                <a
+                  class="font-label-sm text-label-sm bg-surface-container-high px-sm py-xs rounded-full border border-outline-variant hover:border-primary-fixed-dim transition-colors"
+                  href="https://blog.lukeleigh.com/tags/#admin"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Admin</a
+                >
+                <a
+                  class="font-label-sm text-label-sm bg-surface-container-high px-sm py-xs rounded-full border border-outline-variant hover:border-primary-fixed-dim transition-colors"
+                  href="https://blog.lukeleigh.com/tags/#tak"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >TAK</a
+                >
+              </div>
+            </div>
+
+            <!-- Must Reads -->
+            <div
+              class="bg-surface-container rounded-xl p-lg border border-outline-variant"
+            >
+              <h4
+                class="font-label-md text-label-md text-primary-fixed-dim mb-md uppercase"
+              >
+                Must Reads
+              </h4>
+              <div class="space-y-md">
+                <a
+                  class="group block"
+                  href="https://blog.lukeleigh.com/blog/digitaltak-part1-what-is-tak/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div class="font-label-sm text-label-sm text-outline mb-xs">
+                    01 / SERIES
+                  </div>
+                  <div
+                    class="font-body-lg text-body-lg group-hover:text-primary-fixed-dim transition-colors"
+                  >
+                    DigitalTAK, Part 1 &mdash; What on Earth is TAK?
+                  </div>
+                </a>
+                <a
+                  class="group block"
+                  href="https://blog.lukeleigh.com/blog/the-powershell-profile/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div class="font-label-sm text-label-sm text-outline mb-xs">
+                    02 / GUIDE
+                  </div>
+                  <div
+                    class="font-body-lg text-body-lg group-hover:text-primary-fixed-dim transition-colors"
+                  >
+                    The PowerShell Profile &mdash; under-utilised admin
+                    assistant
+                  </div>
+                </a>
+                <a
+                  class="group block"
+                  href="https://blog.lukeleigh.com/blog/60-seconds-with-luke-leigh/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div class="font-label-sm text-label-sm text-outline mb-xs">
+                    03 / PROFILE
+                  </div>
+                  <div
+                    class="font-body-lg text-body-lg group-hover:text-primary-fixed-dim transition-colors"
+                  >
+                    60 Seconds With&hellip; Luke Leigh
+                  </div>
+                </a>
+                <a
+                  class="group block pt-md border-t border-outline-variant"
+                  href="https://blog.lukeleigh.com/posts/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div
+                    class="font-label-sm text-label-sm text-primary-fixed-dim mb-xs uppercase tracking-wider"
+                  >
+                    Browse all posts &rarr;
+                  </div>
+                  <div
+                    class="font-body-sm text-body-sm text-on-surface-variant"
+                  >
+                    Full archive on blog.lukeleigh.com
+                  </div>
+                </a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- CTA Band -->
+      <section
+        class="bg-surface-container-high py-xl border-y border-outline-variant overflow-hidden relative"
+      >
+        <div class="max-w-7xl mx-auto px-lg relative z-10 text-center">
+          <h2 class="font-display-lg text-display-lg mb-md text-primary">
+            Read more on the blog.
+          </h2>
+          <p
+            class="font-body-lg text-on-surface-variant max-w-2xl mx-auto mb-xl"
+          >
+            Full technical articles, walkthroughs and PowerShell tooling are
+            published on Luke's blog — or get in touch if you need engineering
+            help on your own infrastructure.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-md justify-center">
+            <a
+              class="bg-primary-container text-on-primary-fixed px-xl py-md rounded font-bold hover:scale-105 transition-transform flex items-center justify-center gap-sm"
+              href="https://blog.lukeleigh.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Visit the Full Blog
+              <span class="material-symbols-outlined">rocket_launch</span>
+            </a>
+            <a
+              class="border border-outline-variant text-on-surface px-xl py-md rounded font-bold hover:bg-surface-container-highest transition-colors"
+              href="contact.html"
+            >
+              Get in Touch
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-surface-container-lowest border-t border-outline-variant">
+      <div
+        class="grid grid-cols-1 md:grid-cols-4 gap-xl px-lg py-xl max-w-7xl mx-auto"
+      >
+        <div>
+          <div
+            class="font-title-md text-title-md font-bold text-primary-fixed-dim mb-md"
+          >
+            Leigh Services
+          </div>
+          <p
+            class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+          >
+            Expert IT Infrastructure, Automation and Data Engineering consulting
+            based in Southend-on-Sea, Essex. Serving clients across the UK and
+            internationally.
+          </p>
+          <p
+            class="font-body-sm text-body-sm text-on-surface-variant mt-md italic"
+          >
+            63 Archer Avenue, Southend on Sea, Essex SS2 4QU
+          </p>
+        </div>
+        <div>
+          <div
+            class="font-label-md text-label-md text-primary-fixed-dim mb-md uppercase tracking-wider"
+          >
+            Services
+          </div>
+          <ul class="flex flex-col gap-sm">
+            <li>
+              <a
+                class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
+                href="services.html#it-infrastructure"
+                >IT Infrastructure</a
+              >
+            </li>
+            <li>
+              <a
+                class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
+                href="services.html#powershell-automation"
+                >PowerShell &amp; Automation</a
+              >
+            </li>
+            <li>
+              <a
+                class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
+                href="services.html#cloud-solutions"
+                >Cloud Solutions</a
+              >
+            </li>
+            <li>
+              <a
+                class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
+                href="services.html#data-engineering"
+                >Data Engineering</a
+              >
+            </li>
+            <li>
+              <a
+                class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
+                href="services.html#security-compliance"
+                >Security &amp; Compliance</a
+              >
+            </li>
+            <li>
+              <a
+                class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
+                href="services.html#devsecops"
+                >DevSecOps</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <div
+            class="font-label-md text-label-md text-primary-fixed-dim mb-md uppercase tracking-wider"
+          >
+            Quick Links
+          </div>
+          <ul class="flex flex-col gap-sm">
+            <li>
+              <a
+                class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
+                href="team.html"
+                >Meet the Team</a
+              >
+            </li>
+            <li>
+              <a
+                class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
+                href="case-studies.html"
+                >Case Studies</a
+              >
+            </li>
+            <li>
+              <a
+                class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
+                href="testimonials.html"
+                >Testimonials</a
+              >
+            </li>
+            <li>
+              <a
+                class="font-body-sm text-body-sm text-primary-fixed-dim font-bold"
+                href="blog.html"
+                >Blog</a
+              >
+            </li>
+            <li>
+              <a
+                class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
+                href="contact.html"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <div
+            class="font-label-md text-label-md text-primary-fixed-dim mb-md uppercase tracking-wider"
+          >
+            Connect
+          </div>
+          <ul class="flex flex-col gap-sm">
+            <li>
+              <a
+                class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors inline-flex items-center gap-xs"
+                href="https://www.linkedin.com/in/lukeleigh"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="material-symbols-outlined text-sm">link</span> Luke
+                on LinkedIn
+              </a>
+            </li>
+            <li>
+              <a
+                class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors inline-flex items-center gap-xs"
+                href="https://www.linkedin.com/in/markleigh"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="material-symbols-outlined text-sm">link</span> Mark
+                on LinkedIn
+              </a>
+            </li>
+            <li>
+              <a
+                class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors inline-flex items-center gap-xs"
+                href="https://github.com/BanterBoy"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="material-symbols-outlined text-sm">code</span>
+                GitHub (BanterBoy)
+              </a>
+            </li>
+            <li>
+              <a
+                class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors inline-flex items-center gap-xs"
+                href="https://blog.lukeleigh.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="material-symbols-outlined text-sm">rss_feed</span>
+                Luke's Blog
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="max-w-7xl mx-auto px-lg py-md border-t border-outline-variant/30"
+      >
+        <p
+          class="font-body-sm text-body-sm text-on-surface-variant text-center"
+        >
+          &copy; 2024&ndash;2026 Leigh IT Services Ltd. All rights reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>
