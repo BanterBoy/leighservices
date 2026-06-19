@@ -40,8 +40,8 @@ jobs:
       - name: Compile SCSS
         run: npm run build:sass
 
-      - name: Compile Tailwind
-        run: npm run build:tailwind
+      - name: Compile utilities CSS
+        run: npm run build:utilities
 
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v6

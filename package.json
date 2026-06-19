@@ -4,9 +4,9 @@
   "private": true,
   "description": "Build tooling for leigh-services.com (Tailwind + Sass). Used by CI only — no runtime dependencies on the static site.",
   "scripts": {
-    "build:tailwind": "tailwindcss -i ./assets/css/utilities.src.css -o ./assets/css/utilities.css --minify",
+    "build:utilities": "tailwindcss -i ./assets/css/utilities.src.css -o ./assets/css/utilities.css --minify",
     "build:sass": "sass assets/sass/main.scss assets/css/main.css --style=compressed --no-source-map",
-    "build": "npm run build:sass && npm run build:tailwind"
+    "build": "npm run build:sass && npm run build:utilities"
   },
   "devDependencies": {
     "@tailwindcss/container-queries": "^0.1.1",
